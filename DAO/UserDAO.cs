@@ -6,11 +6,13 @@ namespace DAO
 {
     public class UserDAO
     {
-        public static User CheckLogin(string username, string password)
+        
+        public static User CheckLogin(string username, string password,ref string response)
         {
             try
             {
-                using (SqlConnection conn = DBProvider.GetOpenConnection())
+                SqlConnection conn = DBProvider.GetOpenConnection();
+                using (new DBProvider.OpenedContext(conn))
                 {
                     string query = "SELECT TenDangNhap FROM NguoiDung WHERE TenDangNhap = @username";
                     SqlCommand cmdGetID = new SqlCommand(query, conn);
@@ -32,19 +34,23 @@ namespace DAO
                             }
                             else
                             {
+                                response = "WRONGPASS";
                                 return null;
                             }
                         }
                     }
                     else
                     {
+                        response = "NOTFOUND";
                         return null;
                     }
+                    
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
+                response = ex.Message;
                 return null;
             }
         }

@@ -140,6 +140,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Resource\banlanhdao.png" />
+    <Content Include="Resource\bld.png" />
     <Content Include="Resource\left.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

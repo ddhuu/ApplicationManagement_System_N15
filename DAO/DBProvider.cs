@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace DTO
 {
-    public class DBProvider : IDisposable
+    public class DBProvider
     {
         private static Lazy<SqlConnection> lazyConnection = new Lazy<SqlConnection>(() =>
             new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString));
@@ -20,12 +20,21 @@ namespace DTO
             return connection;
         }
 
-        public void Dispose()
+        internal class OpenedContext : IDisposable
         {
-            if (lazyConnection.IsValueCreated)
+            private SqlConnection _connection;
+
+            public OpenedContext(SqlConnection conn)
             {
-                lazyConnection.Value.Dispose();
+                _connection = conn;
+                if (_connection.State != System.Data.ConnectionState.Open) _connection.Open();
             }
+
+            public void Dispose()
+            {
+                if (_connection.State != System.Data.ConnectionState.Closed) _connection.Close();
+            }
+
         }
     }
 }
