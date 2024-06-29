@@ -3,9 +3,9 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace DAO
+namespace DTO
 {
-    public class DBConnect : IDisposable
+    public class DBProvider : IDisposable
     {
         private static Lazy<SqlConnection> lazyConnection = new Lazy<SqlConnection>(() =>
             new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString));

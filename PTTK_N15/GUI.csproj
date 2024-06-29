@@ -129,6 +129,14 @@
       <Project>{756571b9-130a-4f79-be8a-46c6a7acef3a}</Project>
       <Name>BUS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{fd71d5eb-2f51-4c0e-a9f5-d7ceb88519d9}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{9b7db0d8-7a18-4835-a14d-bf6be5fe8ea9}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
