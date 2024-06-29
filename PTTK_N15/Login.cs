@@ -64,5 +64,22 @@ namespace PTTK_N15
         {
 
         }
+
+        private void registerForDNBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Enterprise.Register f = new Enterprise.Register();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void registerForUVBtn_Click(object sender, EventArgs e)
+        {
+            
+            Candidate.Register f = new Candidate.Register();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

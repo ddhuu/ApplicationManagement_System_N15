@@ -16,7 +16,7 @@ namespace PTTK_N15
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Leadership.ContractList_View());
+            Application.Run(new Login());
         }
     }
 }

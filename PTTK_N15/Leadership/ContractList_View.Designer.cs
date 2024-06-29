@@ -47,9 +47,6 @@ namespace PTTK_N15.Leadership
             this.searchBar = new Guna.UI2.WinForms.Guna2TextBox();
             this.contractCount = new System.Windows.Forms.Label();
             this.title = new System.Windows.Forms.Label();
-            // Initialize the DataGridView
-            
-
             this.categorySection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractList)).BeginInit();
@@ -127,7 +124,6 @@ namespace PTTK_N15.Leadership
             this.dateSignCol,
             this.outOfDateCol,
             this.actionsCol});
-
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,7 +169,6 @@ namespace PTTK_N15.Leadership
             this.idCol.MinimumWidth = 6;
             this.idCol.Name = "idCol";
             this.idCol.ReadOnly = true;
-            this.idCol.Width = 50;
             // 
             // nameContractCol
             // 
