@@ -15,7 +15,7 @@ namespace DAO
             try
             {
                 SqlConnection conn = DBProvider.GetOpenConnection();
-                using (new DBProvider.OpenedContext(conn))
+                using (new DBProvider.OpenedContext())
                 {
                     string query = "SELECT Top 1 Vaitro FROM NguoiDung WHERE TenDangNhap = @username";
                     SqlCommand cmdGetID = new SqlCommand(query, conn);

@@ -1,4 +1,8 @@
-﻿create procedure checkLogin( @username varchar(30), @password varchar(255))
+﻿use QLHoSoUngTuyen;
+drop procedure checkLogin;
+drop procedure addUserDN;
+drop procedure addUserUV;
+create procedure checkLogin( @username varchar(30), @password varchar(255))
 as
 BEGIN
 	if exists (select 1 from NguoiDung where TenDangNhap = @username AND MatKhau	= @password)
@@ -21,7 +25,7 @@ BEGIN
 				set @idUser = 1;
 			else
 				set @idUser = @idUser + 1;
-			insert into NguoiDung values(@idUser,@username,@password,N'Doanh nghiệp');
+			insert into NguoiDung values(@idUser,@username,@password,'DoanhNghiep');
 			SELECT TOP 1 @id = MADN FROM DoanhNghiep ORDER BY MADN DESC;
 			if @id is null
 				set @id = 1;
@@ -46,7 +50,7 @@ BEGIN
 				set @idUser = 1;
 			else
 				set @idUser = @idUser + 1;
-			insert into NguoiDung values(@idUser,@username,@password,N'Ứng viên');
+			insert into NguoiDung values(@idUser,@username,@password,'UngVien');
 			SELECT TOP 1 @id = MAUV FROM UngVien ORDER BY MAUV DESC;
 			if @id is null
 				set @id = 1;
