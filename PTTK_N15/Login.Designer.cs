@@ -75,7 +75,7 @@ namespace PTTK_N15
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(133, 264);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 80);
+            this.label1.Size = new System.Drawing.Size(134, 66);
             this.label1.TabIndex = 50;
             this.label1.Text = "ABC";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
@@ -87,7 +87,7 @@ namespace PTTK_N15
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
             this.label2.Location = new System.Drawing.Point(677, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 37);
+            this.label2.Size = new System.Drawing.Size(146, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Đăng nhập";
             // 
@@ -97,7 +97,7 @@ namespace PTTK_N15
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label5.Location = new System.Drawing.Point(505, 265);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 22);
+            this.label5.Size = new System.Drawing.Size(69, 18);
             this.label5.TabIndex = 6;
             this.label5.Text = "Mật khẩu";
             // 
@@ -107,7 +107,7 @@ namespace PTTK_N15
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label4.Location = new System.Drawing.Point(501, 182);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 22);
+            this.label4.Size = new System.Drawing.Size(73, 18);
             this.label4.TabIndex = 8;
             this.label4.Text = "Tài khoản";
             this.label4.Click += new System.EventHandler(this.label4_Click_1);
@@ -242,6 +242,7 @@ namespace PTTK_N15
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);

@@ -9,11 +9,14 @@ namespace PTTK_N15
 {
     public partial class Login : Form
 
+
     {
-        public static SqlConnection con = DBProvider.GetOpenConnection();
+        public event EventHandler btnClick;
+        public static SqlConnection conn;
         public Login()
         {
             InitializeComponent();
+            conn = DBProvider.GetOpenConnection();
         }
 
 
@@ -100,12 +103,14 @@ namespace PTTK_N15
             User result = UserBus.CheckLogin(tbxUserName.Text, tbxPassWord.Text);
             if (result != null)
             {
-                // Thông báo đăng nhập thành công
+
                 MessageBox.Show("Đăng nhập thành công!");
+                MainFrame mf = new MainFrame(result.UserName, result.Role);
+                this.Hide();
+                mf.Show();
             }
             else
             {
-                // Thông báo đăng nhập thất bại
                 MessageBox.Show("Đăng nhập thất bại. Vui lòng kiểm tra lại tên đăng nhập và mật khẩu.");
             }
         }

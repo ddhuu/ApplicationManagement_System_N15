@@ -1,30 +1,39 @@
 ﻿using System;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 
-namespace DTO
+public class DBProvider
 {
-    public class DBProvider : IDisposable
-    {
-        private static Lazy<SqlConnection> lazyConnection = new Lazy<SqlConnection>(() =>
-            new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString));
 
-        public static SqlConnection GetOpenConnection()
+    private static string GetConnectionString()
+    {
+        return ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+    }
+
+
+    public static SqlConnection GetOpenConnection()
+    {
+        var connection = new SqlConnection(GetConnectionString());
+        connection.Open();
+        return connection;
+    }
+
+    internal class OpenedContext : IDisposable
+    {
+        private SqlConnection _connection;
+
+        public OpenedContext()
         {
-            var connection = lazyConnection.Value;
-            if (connection.State != ConnectionState.Open)
-            {
-                connection.Open();
-            }
-            return connection;
+            _connection = GetOpenConnection();
         }
+
+        public SqlConnection Connection => _connection;
 
         public void Dispose()
         {
-            if (lazyConnection.IsValueCreated)
+            if (_connection != null && _connection.State == System.Data.ConnectionState.Open)
             {
-                lazyConnection.Value.Dispose();
+                _connection.Close();
             }
         }
     }
