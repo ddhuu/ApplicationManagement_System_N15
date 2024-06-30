@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public class EnterpriseDAO
+    public class CandidateDAO
     {
-        public static void createAUser(string username, string password,string companyName,string taxCode,string nameDD,string address,string email, ref string response)
+        public static void createAUser(string username, string password, string candidateName,string gender, string address,string cccd,string phoneNumber, string email, ref string response)
         {
             try
             {
@@ -23,15 +23,16 @@ namespace DAO
                     object result = cmdGetID.ExecuteScalar();
                     if (result == null)
                     {
-                        SqlCommand cmd = new SqlCommand("addUserDN", conn);
+                        SqlCommand cmd = new SqlCommand("addUserUV", conn);
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@username", username);
                         cmd.Parameters.AddWithValue("@password", password);
-                        cmd.Parameters.AddWithValue("@companyName", companyName);
-                        cmd.Parameters.AddWithValue("@taxCode", taxCode);
-                        cmd.Parameters.AddWithValue("@nameDD", nameDD);
+                        cmd.Parameters.AddWithValue("@candidateName", candidateName);
+                        cmd.Parameters.AddWithValue("@gender", gender);
                         cmd.Parameters.AddWithValue("@address", address);
+                        cmd.Parameters.AddWithValue("@CCCD", cccd);
                         cmd.Parameters.AddWithValue("@email", email);
+                        cmd.Parameters.AddWithValue("@phoneNumber", phoneNumber);
                         cmd.ExecuteNonQuery();
                     }
                     else
