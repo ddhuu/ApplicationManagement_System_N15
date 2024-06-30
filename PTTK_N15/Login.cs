@@ -100,10 +100,10 @@ namespace PTTK_N15
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            User result = UserBus.CheckLogin(tbxUserName.Text, tbxPassWord.Text);
+            string response = ""; // Dùng kiểm tra đăng nhập do sai mật khẩu hoặc không tồn tại
+            User result = UserBus.CheckLogin(tbxUserName.Text, tbxPassWord.Text, ref response);
             if (result != null)
             {
-
                 MessageBox.Show("Đăng nhập thành công!");
                 MainFrame mf = new MainFrame(result.UserName, result.Role);
                 this.Hide();
@@ -111,7 +111,20 @@ namespace PTTK_N15
             }
             else
             {
-                MessageBox.Show("Đăng nhập thất bại. Vui lòng kiểm tra lại tên đăng nhập và mật khẩu.");
+                if(response == "WRONGPASS")
+                {
+                    // Thông báo đăng nhập thất bại do sai mật khẩu
+                    MessageBox.Show("Đăng nhập thất bại. Vui lòng kiểm tra lại mật khẩu.");
+                }
+                else if(response == "NOTFOUND")
+                {
+                    MessageBox.Show("Đăng nhập thất bại. Tài khoản không tồn tại" +
+                        ", vùi lòng đăng ký ứng viện hoặc doanh nghiệp");
+                }
+                else
+                {
+                    MessageBox.Show(response);
+                }               
             }
         }
     }
