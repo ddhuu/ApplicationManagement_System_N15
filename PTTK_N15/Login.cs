@@ -107,7 +107,8 @@ namespace PTTK_N15
                 MessageBox.Show("Đăng nhập thành công!");
                 MainFrame mf = new MainFrame(result.UserName, result.Role);
                 this.Hide();
-                mf.Show();
+                mf.ShowDialog();
+                this.Show();
             }
             else
             {

@@ -202,9 +202,7 @@ namespace PTTK_N15
             {
                 con.Close();
             }
-            this.Close();
-            Login loginForm = new Login();
-            loginForm.Show();
+            this.Dispose();
 
         }
     }

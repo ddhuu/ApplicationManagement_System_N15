@@ -1,20 +1,21 @@
 using System;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 
 public class DBProvider
 {
 
-    private static string GetConnectionString()
-    {
-        return ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-    }
-
+    private static Lazy<SqlConnection> lazyConnection = new Lazy<SqlConnection>(() =>
+            new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString));
 
     public static SqlConnection GetOpenConnection()
     {
-        var connection = new SqlConnection(GetConnectionString());
-        connection.Open();
+        var connection = lazyConnection.Value;
+        if (connection.State != ConnectionState.Open)
+        {
+            connection.Open();
+        }
         return connection;
     }
 
@@ -24,17 +25,19 @@ public class DBProvider
 
         public OpenedContext()
         {
-            _connection = GetOpenConnection();
+            _connection = lazyConnection.Value;
+            if (_connection.State != System.Data.ConnectionState.Open) _connection.Open();
         }
-
-        public SqlConnection Connection => _connection;
 
         public void Dispose()
         {
-            if (_connection != null && _connection.State == System.Data.ConnectionState.Open)
-            {
-                _connection.Close();
-            }
+            if (_connection.State != System.Data.ConnectionState.Closed) _connection.Close();
         }
+
+    }
+
+    ~DBProvider()
+    {
+        lazyConnection.Value.Dispose();
     }
 }
