@@ -205,5 +205,10 @@ namespace PTTK_N15
             this.Dispose();
 
         }
+
+        private void pnlCommon111_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
