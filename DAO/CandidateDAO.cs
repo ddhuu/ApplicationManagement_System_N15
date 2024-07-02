@@ -1,8 +1,10 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -46,6 +48,29 @@ namespace DAO
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
                 response = ex.Message;
+            }
+        }
+    
+        public static void getPosts(ref DataTable response)
+        {
+            try
+            {
+                SqlConnection conn = DBProvider.GetOpenConnection();
+                using (new DBProvider.OpenedContext())
+                {
+                    using (SqlCommand cmd = new SqlCommand("GetPosts", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(response);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
     }

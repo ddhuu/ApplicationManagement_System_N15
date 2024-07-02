@@ -1,6 +1,7 @@
 ﻿using DAO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -68,6 +69,14 @@ namespace BUS
             }
 
             CandidateDAO.createAUser(username, password, candidateName, gender,address,cccd,phoneNumber,email,ref response);
+        }
+    
+        public static DataTable getPosts()
+        {
+            DataTable result = new DataTable();
+            CandidateDAO.getPosts(ref result);
+            Console.WriteLine(result);
+            return result;
         }
     }
 }

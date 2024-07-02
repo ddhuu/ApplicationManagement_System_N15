@@ -67,7 +67,8 @@ namespace PTTK_N15
                     lbUserRole.Text = "Nhân viên đăng tuyển";
                     break;
                 case "UngVien":
-
+                    viewPostsBTN.Visible = true;
+                    lbUserRole.Text = "Ứng Viên";
                     break;
                 default:
                     break;
@@ -82,7 +83,7 @@ namespace PTTK_N15
             btnPostJob.Visible = false;
             btnRequestPost.Visible = false;
             btnViewPosts.Visible = false;
-
+            viewPostsBTN.Visible = false;
         }
 
         private void InitForm(string role)
@@ -103,6 +104,8 @@ namespace PTTK_N15
                         PostJob();
                     break;
                 case "UngVien":
+                    lbTitle.Text = "Các vị trí ứng tuyển";
+                    formToLoad = new Candidate.ViewPosts();
                     break;
                 default:
                     MessageBox.Show("Unknown role. No form to load.");
@@ -207,6 +210,11 @@ namespace PTTK_N15
         }
 
         private void pnlCommon111_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
 
         }
