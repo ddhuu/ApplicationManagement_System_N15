@@ -100,6 +100,7 @@
             this.Controls.Add(this.listPostsDGV);
             this.Name = "ViewPosts";
             this.Text = "ViewPosts";
+            this.Load += new System.EventHandler(this.ViewPosts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listPostsDGV)).EndInit();
             this.ResumeLayout(false);
 

@@ -32,6 +32,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbUserRole = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.viewPostsBTN = new Guna.UI2.WinForms.Guna2Button();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewPosts = new Guna.UI2.WinForms.Guna2Button();
             this.btnPostJob = new Guna.UI2.WinForms.Guna2Button();
@@ -39,7 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbTitle = new System.Windows.Forms.Label();
             this.pnlCommon111 = new System.Windows.Forms.Panel();
-            this.viewPostsBTN = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +82,24 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(383, 785);
             this.guna2Panel2.TabIndex = 3;
+            // 
+            // viewPostsBTN
+            // 
+            this.viewPostsBTN.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.viewPostsBTN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.viewPostsBTN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.viewPostsBTN.Dock = System.Windows.Forms.DockStyle.Top;
+            this.viewPostsBTN.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
+            this.viewPostsBTN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.viewPostsBTN.ForeColor = System.Drawing.Color.Black;
+            this.viewPostsBTN.Image = ((System.Drawing.Image)(resources.GetObject("viewPostsBTN.Image")));
+            this.viewPostsBTN.Location = new System.Drawing.Point(0, 262);
+            this.viewPostsBTN.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.viewPostsBTN.Name = "viewPostsBTN";
+            this.viewPostsBTN.Size = new System.Drawing.Size(383, 92);
+            this.viewPostsBTN.TabIndex = 10;
+            this.viewPostsBTN.Text = "Xem vị trí tuyển dụng";
+            this.viewPostsBTN.Click += new System.EventHandler(this.viewPostsBTN_Click);
             // 
             // btnSignOut
             // 
@@ -186,24 +204,6 @@
             this.pnlCommon111.TabIndex = 3;
             this.pnlCommon111.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCommon111_Paint);
             // 
-            // viewPostsBTN
-            // 
-            this.viewPostsBTN.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.viewPostsBTN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.viewPostsBTN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.viewPostsBTN.Dock = System.Windows.Forms.DockStyle.Top;
-            this.viewPostsBTN.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
-            this.viewPostsBTN.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.viewPostsBTN.ForeColor = System.Drawing.Color.Black;
-            this.viewPostsBTN.Image = ((System.Drawing.Image)(resources.GetObject("viewPostsBTN.Image")));
-            this.viewPostsBTN.Location = new System.Drawing.Point(0, 262);
-            this.viewPostsBTN.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.viewPostsBTN.Name = "viewPostsBTN";
-            this.viewPostsBTN.Size = new System.Drawing.Size(383, 92);
-            this.viewPostsBTN.TabIndex = 10;
-            this.viewPostsBTN.Text = "Xem vị trí tuyển dụng";
-            this.viewPostsBTN.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -218,6 +218,7 @@
             this.Name = "MainFrame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainFrame";
+            this.Load += new System.EventHandler(this.MainFrame_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -64,6 +64,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Candidate\Applying.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\Applying.Designer.cs">
+      <DependentUpon>Applying.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Candidate\PostDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\PostDetail.Designer.cs">
+      <DependentUpon>PostDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Candidate\ViewPosts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +132,12 @@
     <Compile Include="Recruiter\PostJob.Designer.cs">
       <DependentUpon>PostJob.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Candidate\Applying.resx">
+      <DependentUpon>Applying.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\PostDetail.resx">
+      <DependentUpon>PostDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Candidate\ViewPosts.resx">
       <DependentUpon>ViewPosts.cs</DependentUpon>
     </EmbeddedResource>

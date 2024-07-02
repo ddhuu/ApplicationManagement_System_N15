@@ -73,5 +73,49 @@ namespace DAO
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
+
+        public static void getPostDetail(int id, ref DataTable response)
+        {
+            try
+            {
+                SqlConnection conn = DBProvider.GetOpenConnection();
+                using (new DBProvider.OpenedContext())
+                {
+                    using (SqlCommand cmd = new SqlCommand("GetPostDetail", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@id", id);
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        adapter.Fill(response);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
+
+        public static void getCandidateInformation(string username, ref DataTable response)
+        {
+            try
+            {
+                SqlConnection conn = DBProvider.GetOpenConnection();
+                using (new DBProvider.OpenedContext())
+                {
+                    using (SqlCommand cmd = new SqlCommand("GetCandidateInformation", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@username", username);
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        adapter.Fill(response);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
     }
 }

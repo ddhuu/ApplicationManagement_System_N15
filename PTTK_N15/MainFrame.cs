@@ -105,7 +105,7 @@ namespace PTTK_N15
                     break;
                 case "UngVien":
                     lbTitle.Text = "Các vị trí ứng tuyển";
-                    formToLoad = new Candidate.ViewPosts();
+                    formToLoad = new Candidate.ViewPosts(UserName);
                     break;
                 default:
                     MessageBox.Show("Unknown role. No form to load.");
@@ -196,7 +196,12 @@ namespace PTTK_N15
 
         #endregion Recruiter
 
-
+        
+        private void viewPostsBTN_Click(object sender, EventArgs e)
+        {
+            lbTitle.Text = "Các vị trí ứng tuyển";
+            OpenChildForm(new Candidate.ViewPosts(UserName), sender);
+        }
 
 
         private void btnSignOut_Click(object sender, EventArgs e)
@@ -214,7 +219,7 @@ namespace PTTK_N15
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void MainFrame_Load(object sender, EventArgs e)
         {
 
         }

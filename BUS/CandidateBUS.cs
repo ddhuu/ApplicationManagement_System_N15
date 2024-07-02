@@ -75,7 +75,18 @@ namespace BUS
         {
             DataTable result = new DataTable();
             CandidateDAO.getPosts(ref result);
-            Console.WriteLine(result);
+            return result;
+        }
+        public static DataTable getPostDetail(int id)
+        {
+            DataTable result = new DataTable();
+            CandidateDAO.getPostDetail(id, ref result);
+            return result;
+        }
+        public static DataTable getCandidateInformation(string username)
+        {
+            DataTable result = new DataTable();
+            CandidateDAO.getCandidateInformation(username, ref result);
             return result;
         }
     }

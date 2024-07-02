@@ -2,6 +2,9 @@
 drop procedure checkLogin;
 drop procedure addUserDN;
 drop procedure addUserUV;
+drop procedure GetPosts;
+drop procedure GetPostDetail;
+
 create procedure checkLogin( @username varchar(30), @password varchar(255))
 as
 BEGIN
@@ -61,3 +64,33 @@ BEGIN
 END;
 
 EXEC addUserUV @username = 'bakiet', @password = '123', @candidateName = 'kiet', @gender = 'Nam', @address = 'abc', @CCCD = '0123123',@phoneNumber ='123213213',@email ='abc@gamil.com';
+
+CREATE PROCEDURE GetPosts
+AS
+BEGIN
+    select ROW_NUMBER() OVER (ORDER BY d.TenDN) AS STT, p.MaPhieuDT, d.TenDN, d.Email, n.ViTriCanTuyen, n.SoLuongTuyen, n.NgayBatDau
+    from PhieuDangTuyen as p, DoanhNghiep as d, NoiDungDangTuyen as n
+	where p.MaDN = d.MaDN and p.MaND = n.MaND and p.TrangThai = N'Chấp nhận'
+END;
+
+exec GetPosts
+
+CREATE PROCEDURE GetPostDetail @id int
+AS
+BEGIN
+    select d.TenDN, d.DiaChi, d.Email, n.*, t.MoTa
+    from PhieuDangTuyen as p, DoanhNghiep as d, NoiDungDangTuyen as n, TieuChi as t
+	where p.MaDN = d.MaDN and p.MaND = n.MaND and t.MaND = n.MaND and p.TrangThai = N'Chấp nhận' and p.MaPhieuDT = @id
+END;
+
+exec GetPostDetail 15
+
+CREATE PROCEDURE GetCandidateInformation @username varchar(50)
+AS
+BEGIN
+    select u.*
+	from NguoiDung n, UngVien u
+	where n.ID = u.ID_NguoiDung and n.TenDangNhap = @username
+END;
+
+exec GetCandidateInformation NgoQuocHuy
