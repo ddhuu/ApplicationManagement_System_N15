@@ -117,5 +117,45 @@ namespace DAO
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
+
+        public static void addPUT(string viTri, int maUV, int maPhieuDT, ref string response, ref int maPUT)
+        {
+            try
+            {
+                SqlConnection conn = DBProvider.GetOpenConnection();
+                using (new DBProvider.OpenedContext())
+                {
+                    using (SqlCommand cmd = new SqlCommand("AddPUT", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@ViTri", viTri);
+                        cmd.Parameters.AddWithValue("@MaUV", maUV);
+                        cmd.Parameters.AddWithValue("@MaPhieuDT", maPhieuDT);
+
+                        SqlParameter messageParam = new SqlParameter("@Message", SqlDbType.NVarChar, 255)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+                        cmd.Parameters.Add(messageParam);
+
+                        SqlParameter newMaPhieuUTParam = new SqlParameter("@NewMaPhieuUT", SqlDbType.Int)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+                        cmd.Parameters.Add(newMaPhieuUTParam);
+
+                        cmd.ExecuteNonQuery();
+
+                        response = messageParam.Value.ToString();
+                        maPUT = int.Parse(newMaPhieuUTParam.Value.ToString());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
     }
 }

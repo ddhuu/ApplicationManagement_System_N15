@@ -1,9 +1,12 @@
 ﻿use QLHoSoUngTuyen;
+
 drop procedure checkLogin;
 drop procedure addUserDN;
 drop procedure addUserUV;
 drop procedure GetPosts;
 drop procedure GetPostDetail;
+drop procedure GetCandidateInformation;
+drop procedure AddPUT;
 
 create procedure checkLogin( @username varchar(30), @password varchar(255))
 as
@@ -70,7 +73,7 @@ AS
 BEGIN
     select ROW_NUMBER() OVER (ORDER BY d.TenDN) AS STT, p.MaPhieuDT, d.TenDN, d.Email, n.ViTriCanTuyen, n.SoLuongTuyen, n.NgayBatDau
     from PhieuDangTuyen as p, DoanhNghiep as d, NoiDungDangTuyen as n
-	where p.MaDN = d.MaDN and p.MaND = n.MaND and p.TrangThai = N'Chấp nhận'
+	where p.MaDN = d.MaDN and p.MaND = n.MaND and p.TrangThai = N'Chấp nhận' and n.NgayKetThuc > GETDATE()
 END;
 
 exec GetPosts
@@ -78,7 +81,7 @@ exec GetPosts
 CREATE PROCEDURE GetPostDetail @id int
 AS
 BEGIN
-    select d.TenDN, d.DiaChi, d.Email, n.*, t.MoTa
+    select d.TenDN, d.DiaChi, d.Email, n.*, t.MoTa as TieuChi
     from PhieuDangTuyen as p, DoanhNghiep as d, NoiDungDangTuyen as n, TieuChi as t
 	where p.MaDN = d.MaDN and p.MaND = n.MaND and t.MaND = n.MaND and p.TrangThai = N'Chấp nhận' and p.MaPhieuDT = @id
 END;
@@ -94,3 +97,31 @@ BEGIN
 END;
 
 exec GetCandidateInformation NgoQuocHuy
+
+CREATE PROCEDURE AddPUT @ViTri nvarchar(20), @MaUV int, @MaPhieuDT int, @Message nvarchar(255) OUTPUT, @NewMaPhieuUT int OUTPUT
+AS
+BEGIN
+	IF EXISTS (SELECT 1 FROM PhieuUngTuyen WHERE MaUV = @MaUV AND MaPhieuDT = @MaPhieuDT)
+    BEGIN
+        SET @Message = N'Ứng viên đã ứng tuyển vị trí này, không thể ứng tuyển nữa.';
+        RETURN;
+    END
+
+    SELECT @NewMaPhieuUT = ISNULL(MAX(MaPhieuUT), 0) + 1 FROM PhieuUngTuyen;
+
+    INSERT INTO PhieuUngTuyen (MaPhieuUT, ViTri, NgayNop, TrangThai, MaUV, MaPhieuDT, TenHoSo, TrangThaiHoSo)
+    VALUES (@NewMaPhieuUT, @ViTri, GETDATE(), N'Đang xét duyệt', @MaUV, @MaPhieuDT, NULL, NULL);
+
+    SET @Message = N'Ứng tuyển thành công.';
+END;
+
+
+
+
+
+
+
+
+
+
+

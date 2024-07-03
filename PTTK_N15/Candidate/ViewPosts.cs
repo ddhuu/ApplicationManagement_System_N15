@@ -9,16 +9,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PTTK_N15.Candidate
 {
     public partial class ViewPosts : Form
     {
+        private MainFrame mainFrame;
+        private Label lbTitle;
         private string username;
-        public ViewPosts(string username)
+        public ViewPosts(string username, MainFrame form, Label lbTitle)
         {
             InitializeComponent();
             this.username = username;
+            mainFrame = form;
+            this.lbTitle = lbTitle;
         }
 
         private void listPostsDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -33,8 +38,8 @@ namespace PTTK_N15.Candidate
             if (value != null)
             {
                 int cellValue = int.Parse(value.ToString());
-                PostDetail detailForm = new PostDetail(cellValue, username);
-                detailForm.ShowDialog();
+                lbTitle.Text = "Chi tiết công việc";
+                mainFrame.OpenChildForm(new PostDetail(cellValue, username, mainFrame, lbTitle), sender);
             }
             else
             {

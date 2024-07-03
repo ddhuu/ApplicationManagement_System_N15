@@ -270,3 +270,6 @@ FOREIGN KEY (MaHopDong) REFERENCES HopDong(MaHopDong);
 
 ALTER TABLE UngVien
 ADD NgaySinh DATE;
+
+ALTER TABLE NoiDungDangTuyen
+ADD MoTa text;

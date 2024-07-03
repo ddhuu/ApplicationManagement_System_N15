@@ -62,12 +62,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.listPostsDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.listPostsDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.listPostsDGV.Location = new System.Drawing.Point(15, 12);
+            this.listPostsDGV.Location = new System.Drawing.Point(12, 12);
             this.listPostsDGV.Name = "listPostsDGV";
             this.listPostsDGV.RowHeadersVisible = false;
             this.listPostsDGV.RowHeadersWidth = 82;
             this.listPostsDGV.RowTemplate.Height = 33;
-            this.listPostsDGV.Size = new System.Drawing.Size(1467, 1005);
+            this.listPostsDGV.Size = new System.Drawing.Size(1563, 765);
             this.listPostsDGV.TabIndex = 0;
             this.listPostsDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.listPostsDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -96,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1494, 1029);
+            this.ClientSize = new System.Drawing.Size(1587, 822);
             this.Controls.Add(this.listPostsDGV);
             this.Name = "ViewPosts";
             this.Text = "ViewPosts";
