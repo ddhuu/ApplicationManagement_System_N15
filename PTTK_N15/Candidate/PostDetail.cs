@@ -96,10 +96,5 @@ namespace PTTK_N15.Candidate
             lbTitle.Text = "Thông tin ứng tuyển";
             mainFrame.OpenChildForm(new Applying(username, id, mainFrame, lbTitle), sender);
         }
-
-        private void descriptionTB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

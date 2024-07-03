@@ -231,7 +231,6 @@
             this.descriptionTB.SelectedText = "";
             this.descriptionTB.Size = new System.Drawing.Size(652, 238);
             this.descriptionTB.TabIndex = 18;
-            this.descriptionTB.TextChanged += new System.EventHandler(this.descriptionTB_TextChanged);
             // 
             // numRecruitTB
             // 
