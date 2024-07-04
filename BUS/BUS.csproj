@@ -48,8 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvertiseBUS.cs" />
     <Compile Include="CandidateBUS.cs" />
     <Compile Include="EnterpriseBUS.cs" />
+    <Compile Include="JobDetailBUS.cs" />
+    <Compile Include="JobPostingBUS.cs" />
     <Compile Include="UserBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

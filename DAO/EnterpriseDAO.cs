@@ -1,16 +1,13 @@
-﻿using DTO;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAO
 {
     public class EnterpriseDAO
     {
-        public static void createAUser(string username, string password,string companyName,string taxCode,string nameDD,string address,string email, ref string response)
+        private static SqlConnection con = DBProvider.GetOpenConnection();
+        public static void createAUser(string username, string password, string companyName, string taxCode, string nameDD, string address, string email, ref string response)
         {
             try
             {
@@ -45,6 +42,36 @@ namespace DAO
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
                 response = ex.Message;
+            }
+        }
+
+        public static double GetDiscount(string userName)
+        {
+            try
+            {
+                double discount = 0;
+
+                using (SqlCommand cmd = new SqlCommand("GetDiscount", con))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@userName", userName);
+
+                    SqlParameter paramID = new SqlParameter("@discount", SqlDbType.Int);
+                    paramID.Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add(paramID);
+                    cmd.ExecuteNonQuery();
+                    if (paramID.Value != DBNull.Value)
+                    {
+                        discount = Convert.ToDouble(paramID.Value) / 100;
+                    }
+
+                }
+                return discount;
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine($"An SQL error occurred: {ex.Message}");
+                return 0;
             }
         }
     }
