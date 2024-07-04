@@ -36,6 +36,7 @@ namespace PTTK_N15.Enterprise
                 {
                     tbxPosition.Text = dataTable.Rows[0]["VT"].ToString();
                     tbxQuantity.Text = dataTable.Rows[0]["SL"].ToString();
+                    tbxDescript.Text = dataTable.Rows[0]["MT"].ToString();
                     dtpStartDate.Value = Convert.ToDateTime(dataTable.Rows[0]["NBD"]);
                     dtpEndDate.Value = Convert.ToDateTime(dataTable.Rows[0]["NKT"]);
                     tbxTypeAd.Text = dataTable.Rows[0]["HTDT"].ToString();

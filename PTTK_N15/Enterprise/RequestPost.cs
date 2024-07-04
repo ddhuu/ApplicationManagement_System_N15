@@ -64,7 +64,7 @@ namespace PTTK_N15.Enterprise
 
             try
             {
-                var jobDetail = new JobDetailDTO(tbxPosition.Text, int.Parse(tbxQuantity.Text), dtpStartDate.Value, dtpEndDate.Value);
+                var jobDetail = new JobDetailDTO(tbxPosition.Text, int.Parse(tbxQuantity.Text), tbxDescript.Text, dtpStartDate.Value, dtpEndDate.Value);
                 var idJobDetail = JobDetailBUS.AddJobDetail(jobDetail);
 
 
