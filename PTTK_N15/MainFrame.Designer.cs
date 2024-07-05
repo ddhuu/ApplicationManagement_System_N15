@@ -56,7 +56,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(258, 610);
+            this.guna2Panel1.Size = new System.Drawing.Size(258, 631);
             this.guna2Panel1.TabIndex = 0;
             // 
             // lbUserRole
@@ -82,28 +82,9 @@
             this.guna2Panel2.Controls.Add(this.btnRequestPost);
             this.guna2Panel2.Location = new System.Drawing.Point(0, 107);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(255, 502);
+            this.guna2Panel2.Size = new System.Drawing.Size(255, 521);
             this.guna2Panel2.TabIndex = 3;
             this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
-            // 
-            // btnSignOut
-            // 
-            this.btnSignOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSignOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSignOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSignOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
-            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSignOut.ForeColor = System.Drawing.Color.Black;
-            this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
-            this.btnSignOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSignOut.Location = new System.Drawing.Point(48, 442);
-            this.btnSignOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(160, 36);
-            this.btnSignOut.TabIndex = 9;
-            this.btnSignOut.Text = "Đăng xuất";
-            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // processAplicationBtn
             // 
@@ -244,10 +225,10 @@
             // 
             // pnlCommon111
             // 
-            this.pnlCommon111.Location = new System.Drawing.Point(261, 59);
+            this.pnlCommon111.Location = new System.Drawing.Point(261, 58);
             this.pnlCommon111.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlCommon111.Name = "pnlCommon111";
-            this.pnlCommon111.Size = new System.Drawing.Size(907, 550);
+            this.pnlCommon111.Size = new System.Drawing.Size(1090, 573);
             this.pnlCommon111.TabIndex = 3;
             // 
             // lbTitle
@@ -256,7 +237,7 @@
             this.lbTitle.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lbTitle.Location = new System.Drawing.Point(261, 18);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(904, 39);
+            this.lbTitle.Size = new System.Drawing.Size(1090, 39);
             this.lbTitle.TabIndex = 2;
             this.lbTitle.Text = "Yêu cầu đăng tuyển";
             this.lbTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -266,7 +247,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1169, 610);
+            this.ClientSize = new System.Drawing.Size(1352, 631);
             this.Controls.Add(this.pnlCommon111);
             this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.guna2Panel1);

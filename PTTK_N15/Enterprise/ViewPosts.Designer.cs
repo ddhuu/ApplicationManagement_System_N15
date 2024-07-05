@@ -49,15 +49,15 @@
             this.dgv_JobPost.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
             this.dgv_JobPost.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_JobPost.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_JobPost.ColumnHeadersHeight = 22;
+            this.dgv_JobPost.ColumnHeadersHeight = 35;
             this.dgv_JobPost.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgv_JobPost.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -74,7 +74,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_JobPost.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_JobPost.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgv_JobPost.Location = new System.Drawing.Point(12, 12);
+            this.dgv_JobPost.Location = new System.Drawing.Point(16, 15);
+            this.dgv_JobPost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_JobPost.Name = "dgv_JobPost";
             this.dgv_JobPost.ReadOnly = true;
             this.dgv_JobPost.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -89,7 +90,7 @@
             this.dgv_JobPost.RowHeadersVisible = false;
             this.dgv_JobPost.RowHeadersWidth = 51;
             this.dgv_JobPost.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgv_JobPost.Size = new System.Drawing.Size(770, 403);
+            this.dgv_JobPost.Size = new System.Drawing.Size(1043, 496);
             this.dgv_JobPost.TabIndex = 0;
             this.dgv_JobPost.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.FeterRiver;
             this.dgv_JobPost.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
@@ -104,7 +105,7 @@
             this.dgv_JobPost.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_JobPost.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_JobPost.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_JobPost.ThemeStyle.HeaderStyle.Height = 22;
+            this.dgv_JobPost.ThemeStyle.HeaderStyle.Height = 35;
             this.dgv_JobPost.ThemeStyle.ReadOnly = true;
             this.dgv_JobPost.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
             this.dgv_JobPost.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -158,11 +159,11 @@
             // 
             // ViewPosts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 427);
+            this.ClientSize = new System.Drawing.Size(1072, 526);
             this.Controls.Add(this.dgv_JobPost);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ViewPosts";
             this.Text = "ViewPosts";
             this.Load += new System.EventHandler(this.ViewPosts_Load);

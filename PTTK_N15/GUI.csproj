@@ -87,6 +87,7 @@
     </Compile>
     <Compile Include="Enterprise\ApproveCandidates.Designer.cs">
       <DependentUpon>ApproveCandidates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enterprise\PostDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +168,12 @@
     <Compile Include="Recruiter\ProcessApplication.Designer.cs">
       <DependentUpon>ProcessApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Recruiter\PostJobDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recruiter\PostJobDetail.Designer.cs">
+      <DependentUpon>PostJobDetail.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Candidate\ApplicationDetail.resx">
       <DependentUpon>ApplicationDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,14 +182,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Enterprise\ApproveCandidates.resx">
       <DependentUpon>ApproveCandidates.cs</DependentUpon>
-    <Compile Include="Recruiter\PostJobDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Recruiter\PostJobDetail.Designer.cs">
-      <DependentUpon>PostJobDetail.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Candidate\Register.resx">
-      <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Enterprise\PostDetail.resx">
       <DependentUpon>PostDetail.cs</DependentUpon>

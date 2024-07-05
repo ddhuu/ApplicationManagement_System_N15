@@ -62,10 +62,10 @@
             this.btnRequestPost.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(231)))), ((int)(((byte)(216)))));
             this.btnRequestPost.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnRequestPost.ForeColor = System.Drawing.Color.Black;
-            this.btnRequestPost.Location = new System.Drawing.Point(430, 375);
-            this.btnRequestPost.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRequestPost.Location = new System.Drawing.Point(573, 462);
+            this.btnRequestPost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRequestPost.Name = "btnRequestPost";
-            this.btnRequestPost.Size = new System.Drawing.Size(154, 41);
+            this.btnRequestPost.Size = new System.Drawing.Size(205, 50);
             this.btnRequestPost.TabIndex = 34;
             this.btnRequestPost.Text = "Thanh toán";
             // 
@@ -77,12 +77,12 @@
             this.dtpEndDate.FillColor = System.Drawing.Color.White;
             this.dtpEndDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpEndDate.Location = new System.Drawing.Point(575, 152);
-            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpEndDate.Location = new System.Drawing.Point(767, 187);
+            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEndDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpEndDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(188, 34);
+            this.dtpEndDate.Size = new System.Drawing.Size(251, 42);
             this.dtpEndDate.TabIndex = 33;
             this.dtpEndDate.Value = new System.DateTime(2024, 6, 30, 0, 12, 2, 862);
             // 
@@ -94,12 +94,12 @@
             this.dtpStartDate.FillColor = System.Drawing.Color.White;
             this.dtpStartDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpStartDate.Location = new System.Drawing.Point(575, 97);
-            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpStartDate.Location = new System.Drawing.Point(767, 119);
+            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpStartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpStartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(188, 35);
+            this.dtpStartDate.Size = new System.Drawing.Size(251, 43);
             this.dtpStartDate.TabIndex = 32;
             this.dtpStartDate.Value = new System.DateTime(2024, 6, 30, 0, 12, 2, 862);
             // 
@@ -117,10 +117,10 @@
             this.cbxPaymentType.Items.AddRange(new object[] {
             "Tiền mặt",
             "Chuyển khoản"});
-            this.cbxPaymentType.Location = new System.Drawing.Point(575, 265);
-            this.cbxPaymentType.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxPaymentType.Location = new System.Drawing.Point(767, 326);
+            this.cbxPaymentType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxPaymentType.Name = "cbxPaymentType";
-            this.cbxPaymentType.Size = new System.Drawing.Size(189, 36);
+            this.cbxPaymentType.Size = new System.Drawing.Size(251, 36);
             this.cbxPaymentType.TabIndex = 31;
             // 
             // cbxPaymentKind
@@ -137,18 +137,17 @@
             this.cbxPaymentKind.Items.AddRange(new object[] {
             "Theo đợt",
             "Toàn bộ"});
-            this.cbxPaymentKind.Location = new System.Drawing.Point(575, 204);
-            this.cbxPaymentKind.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxPaymentKind.Location = new System.Drawing.Point(767, 251);
+            this.cbxPaymentKind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxPaymentKind.Name = "cbxPaymentKind";
-            this.cbxPaymentKind.Size = new System.Drawing.Size(189, 36);
+            this.cbxPaymentKind.Size = new System.Drawing.Size(251, 36);
             this.cbxPaymentKind.TabIndex = 30;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(431, 265);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(575, 326);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(164, 20);
             this.label6.TabIndex = 28;
@@ -158,8 +157,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(431, 212);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(575, 261);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(160, 20);
             this.label5.TabIndex = 27;
@@ -169,8 +167,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(431, 166);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(575, 204);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 20);
             this.label4.TabIndex = 26;
@@ -180,8 +177,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(426, 107);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(568, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 20);
             this.label3.TabIndex = 25;
@@ -191,8 +187,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(426, 60);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(568, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 20);
             this.label2.TabIndex = 24;
@@ -210,21 +205,20 @@
             this.tbxDescript.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbxDescript.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbxDescript.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbxDescript.Location = new System.Drawing.Point(34, 190);
-            this.tbxDescript.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxDescript.Location = new System.Drawing.Point(45, 234);
+            this.tbxDescript.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxDescript.Name = "tbxDescript";
             this.tbxDescript.PasswordChar = '\0';
             this.tbxDescript.PlaceholderText = "";
             this.tbxDescript.SelectedText = "";
-            this.tbxDescript.Size = new System.Drawing.Size(358, 196);
+            this.tbxDescript.Size = new System.Drawing.Size(477, 241);
             this.tbxDescript.TabIndex = 23;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 152);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(48, 187);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 22;
@@ -242,21 +236,20 @@
             this.tbxQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbxQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbxQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbxQuantity.Location = new System.Drawing.Point(164, 97);
-            this.tbxQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxQuantity.Location = new System.Drawing.Point(219, 119);
+            this.tbxQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxQuantity.Name = "tbxQuantity";
             this.tbxQuantity.PasswordChar = '\0';
             this.tbxQuantity.PlaceholderText = "";
             this.tbxQuantity.SelectedText = "";
-            this.tbxQuantity.Size = new System.Drawing.Size(228, 35);
+            this.tbxQuantity.Size = new System.Drawing.Size(304, 43);
             this.tbxQuantity.TabIndex = 21;
             // 
             // lbSLCT
             // 
             this.lbSLCT.AutoSize = true;
             this.lbSLCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSLCT.Location = new System.Drawing.Point(30, 107);
-            this.lbSLCT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbSLCT.Location = new System.Drawing.Point(40, 132);
             this.lbSLCT.Name = "lbSLCT";
             this.lbSLCT.Size = new System.Drawing.Size(151, 20);
             this.lbSLCT.TabIndex = 20;
@@ -274,21 +267,20 @@
             this.tbxPosition.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbxPosition.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbxPosition.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbxPosition.Location = new System.Drawing.Point(165, 53);
-            this.tbxPosition.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxPosition.Location = new System.Drawing.Point(220, 65);
+            this.tbxPosition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxPosition.Name = "tbxPosition";
             this.tbxPosition.PasswordChar = '\0';
             this.tbxPosition.PlaceholderText = "";
             this.tbxPosition.SelectedText = "";
-            this.tbxPosition.Size = new System.Drawing.Size(228, 36);
+            this.tbxPosition.Size = new System.Drawing.Size(304, 44);
             this.tbxPosition.TabIndex = 19;
             // 
             // lbVTTD
             // 
             this.lbVTTD.AutoSize = true;
             this.lbVTTD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVTTD.Location = new System.Drawing.Point(30, 64);
-            this.lbVTTD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbVTTD.Location = new System.Drawing.Point(40, 79);
             this.lbVTTD.Name = "lbVTTD";
             this.lbVTTD.Size = new System.Drawing.Size(130, 20);
             this.lbVTTD.TabIndex = 18;
@@ -304,10 +296,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(616, 375);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Location = new System.Drawing.Point(821, 462);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(164, 41);
+            this.guna2Button1.Size = new System.Drawing.Size(219, 50);
             this.guna2Button1.TabIndex = 35;
             this.guna2Button1.Text = "Hiệu chỉnh";
             // 
@@ -318,10 +310,11 @@
             this.btnGoBack.Image = ((System.Drawing.Image)(resources.GetObject("btnGoBack.Image")));
             this.btnGoBack.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnGoBack.ImageRotate = 0F;
-            this.btnGoBack.Location = new System.Drawing.Point(27, 12);
+            this.btnGoBack.Location = new System.Drawing.Point(36, 15);
+            this.btnGoBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGoBack.Name = "btnGoBack";
             this.btnGoBack.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnGoBack.Size = new System.Drawing.Size(34, 22);
+            this.btnGoBack.Size = new System.Drawing.Size(45, 27);
             this.btnGoBack.TabIndex = 36;
             this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
             // 
@@ -337,21 +330,20 @@
             this.tbxTypeAd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbxTypeAd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbxTypeAd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbxTypeAd.Location = new System.Drawing.Point(575, 48);
-            this.tbxTypeAd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxTypeAd.Location = new System.Drawing.Point(767, 59);
+            this.tbxTypeAd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxTypeAd.Name = "tbxTypeAd";
             this.tbxTypeAd.PasswordChar = '\0';
             this.tbxTypeAd.PlaceholderText = "";
             this.tbxTypeAd.SelectedText = "";
-            this.tbxTypeAd.Size = new System.Drawing.Size(189, 36);
+            this.tbxTypeAd.Size = new System.Drawing.Size(252, 44);
             this.tbxTypeAd.TabIndex = 37;
             // 
             // lblTotalPrice
             // 
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPrice.Location = new System.Drawing.Point(431, 328);
-            this.lblTotalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotalPrice.Location = new System.Drawing.Point(575, 404);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(78, 20);
             this.lblTotalPrice.TabIndex = 38;
@@ -369,20 +361,20 @@
             this.tbxTotalPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbxTotalPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbxTotalPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbxTotalPrice.Location = new System.Drawing.Point(574, 312);
-            this.tbxTotalPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxTotalPrice.Location = new System.Drawing.Point(765, 384);
+            this.tbxTotalPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxTotalPrice.Name = "tbxTotalPrice";
             this.tbxTotalPrice.PasswordChar = '\0';
             this.tbxTotalPrice.PlaceholderText = "";
             this.tbxTotalPrice.SelectedText = "";
-            this.tbxTotalPrice.Size = new System.Drawing.Size(189, 36);
+            this.tbxTotalPrice.Size = new System.Drawing.Size(252, 44);
             this.tbxTotalPrice.TabIndex = 39;
             // 
             // PostDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 427);
+            this.ClientSize = new System.Drawing.Size(1072, 526);
             this.Controls.Add(this.tbxTotalPrice);
             this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.tbxTypeAd);
@@ -404,6 +396,7 @@
             this.Controls.Add(this.lbSLCT);
             this.Controls.Add(this.tbxPosition);
             this.Controls.Add(this.lbVTTD);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PostDetail";
             this.Text = "PostDetail";
             this.Load += new System.EventHandler(this.PostDetail_Load);

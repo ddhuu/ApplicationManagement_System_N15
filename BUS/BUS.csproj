@@ -48,20 +48,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="ApplicationBUS.cs" />
     <Compile Include="CandidateBUS.cs" />
     <Compile Include="ContractBUS.cs" />
     <Compile Include="EnterpriseBUS.cs" />
     <Compile Include="StrategyBUS.cs" />
-=======
     <Compile Include="AdvertiseBUS.cs" />
-    <Compile Include="CandidateBUS.cs" />
-    <Compile Include="ContractBUS.cs" />
-    <Compile Include="EnterpriseBUS.cs" />
     <Compile Include="JobDetailBUS.cs" />
     <Compile Include="JobPostingBUS.cs" />
->>>>>>> 567736b8194d5d0b77c24218a907bd8b412ca159
     <Compile Include="UserBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

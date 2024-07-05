@@ -67,11 +67,11 @@ namespace PTTK_N15
                 case "NhanVienDangTuyen":
                     btnPostJob.Visible = true;
                     lbUserRole.Text = "Nhân viên đăng tuyển";
-                    
                     break;
                 case "NhaVienDuyetHS":
                     processAplicationBtn.Visible= true;
                     lbUserRole.Text = "Duyệt hồ sơ";
+                    break;
                 case "NhanVien":
                     string roleEmp = "";
                     using (SqlCommand cmd = new SqlCommand("checkRoleEmp", con))
@@ -266,12 +266,13 @@ namespace PTTK_N15
             
         }
 
-        
+
 
         private void processAplicationBtn_Click_1(object sender, EventArgs e)
         {
             lbTitle.Text = "Xử lí hồ sơ";
             OpenChildForm(new PostToProcess_View(0, this), sender);
+        }
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
         {
 

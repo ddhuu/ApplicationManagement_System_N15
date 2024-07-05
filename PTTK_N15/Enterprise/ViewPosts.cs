@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-﻿using System.Windows.Forms;
-=======
 ﻿using BUS;
 using System;
 using System.Data;
 using System.Windows.Forms;
->>>>>>> 567736b8194d5d0b77c24218a907bd8b412ca159
 
 namespace PTTK_N15.Enterprise
 {

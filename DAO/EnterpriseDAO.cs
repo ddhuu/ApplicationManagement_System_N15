@@ -1,5 +1,7 @@
 ﻿using System;
+using DTO;
 using System.Data;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace DAO
@@ -46,7 +48,6 @@ namespace DAO
             }
         }
 
-<<<<<<< HEAD
         public static EnterpriseDTO getBusinessByContractID(int idContract)
         {
             EnterpriseDTO enterprise = new EnterpriseDTO(); // Initialize as null to check later if it has been set
@@ -218,8 +219,6 @@ namespace DAO
 
         }
 
-
-=======
         public static double GetDiscount(string userName)
         {
             try
@@ -249,6 +248,5 @@ namespace DAO
                 return 0;
             }
         }
->>>>>>> 567736b8194d5d0b77c24218a907bd8b412ca159
     }
 }

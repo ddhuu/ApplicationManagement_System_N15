@@ -49,11 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="ApplicationDAO.cs" />
-=======
     <Compile Include="AdvertiseDAO.cs" />
->>>>>>> 567736b8194d5d0b77c24218a907bd8b412ca159
     <Compile Include="CandidateDAO.cs" />
     <Compile Include="ContractDAO.cs" />
     <Compile Include="DBProvider.cs" />

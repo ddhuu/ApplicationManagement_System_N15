@@ -94,7 +94,7 @@ namespace PTTK_N15.Recruiter
             var postToProcess = new PostToProcess_View(enterpriseID, mainFrame);
             postToProcess.Show();
             postToProcess.ReLoadData();
-            MainFrame f = new MainFrame(mainFrame.UserName, mainFrame.Role);
+            MainFrame f = new MainFrame(mainFrame.UserName, mainFrame.Role, mainFrame.Id);
             f.Show();
             //mainFrame.Show();
             //mainFrame.OpenChildForm(postToProcess, sender);
