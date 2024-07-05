@@ -19,5 +19,15 @@ namespace BUS
         {
             return JobPostingDAO.GetPostById(idPost);
         }
+
+        public static DataSet GetListPaymentPost()
+        {
+            return JobPostingDAO.GetListPaymentPost();
+        }
+
+        public static void PostJob(int idPost, int idUser)
+        {
+            JobPostingDAO.PostJob(idPost, idUser);
+        }
     }
 }

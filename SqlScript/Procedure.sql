@@ -284,6 +284,64 @@ begin
 end
 
 
+create or alter proc checkRoleEmp 
+	@id varchar(30)
+AS
+BEGIN
+	select nv.ViTri  from NguoiDung nd,  NhanVien nv where nd.ID = nv.ID_NguoiDung and nd.ID = @id;
+END
+go
+
+
+
+CREATE OR ALTER PROCEDURE GetListPaymentPost
+AS
+BEGIN
+    SELECT 
+        P.MaPhieuDT as MP,
+        D.TenDN as DN,
+		D.Email as EM,
+        ND.ViTriCanTuyen as VT,
+        ND.SoLuongTuyen as SL,
+        ND.NgayBatDau as NBD,
+		ND.NgayKetThuc as NKT
+       
+    FROM 
+        PhieuDangTuyen P
+    INNER JOIN 
+        DoanhNghiep D ON P.MaDN = D.MaDN
+    INNER JOIN 
+        NoiDungDangTuyen ND ON ND.MaND = P.MaND
+    INNER JOIN 
+        HopDong H ON H.MaPhieuDT = P.MaPhieuDT
+	WHERE 
+        H.TrangThai = N'Đang hiệu lực'
+        AND P.TrangThai = N'Đang xét duyệt'
+    
+END;
+
+
+
+CREATE OR ALTER PROCEDURE PostJob
+    @idPost int,
+    @idUser int
+AS
+BEGIN
+    
+    DECLARE @MaNV int;
+    SELECT @MaNV = MaNV FROM NhanVien WHERE ID_NguoiDung = @idUser;
+
+    
+    IF (@MaNV IS NOT NULL)
+    BEGIN
+        
+        UPDATE PhieuDangTuyen
+        SET TrangThai = N'Chấp nhận', MaNVDangTuyen = @MaNV
+        WHERE MaPhieuDT = @idPost;
+    END
+END;
+GO
+
 
 
 

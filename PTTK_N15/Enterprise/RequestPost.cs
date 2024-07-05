@@ -46,8 +46,9 @@ namespace PTTK_N15.Enterprise
 
             if (daysCount < 0)
             {
-                MessageBox.Show(this, "End date must be after the start date!", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                dtpEndDate.Value = DateTime.Today;
+                MessageBox.Show(this, "End date must be after the start date!");
+                dtpStartDate.Value = DateTime.Today;
+                dtpEndDate.Value = DateTime.Today.AddDays(1);
 
             }
 
@@ -57,7 +58,7 @@ namespace PTTK_N15.Enterprise
         {
             if (string.IsNullOrWhiteSpace(tbxPosition.Text) || !int.TryParse(tbxQuantity.Text, out int quantity) || quantity < 1 || string.IsNullOrWhiteSpace(tbxDescript.Text))
             {
-                MessageBox.Show(this, "Invalid Data!", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(this, "Thông tin không hợp lệ!", "Thông tin không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 RequestPost_Load(sender, e);
             }
 

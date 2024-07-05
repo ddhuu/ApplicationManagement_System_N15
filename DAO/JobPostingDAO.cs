@@ -41,6 +41,10 @@ namespace DAO
         {
             return GetData("GetListPost");
         }
+        public static DataSet GetListPaymentPost()
+        {
+            return GetData("GetListPaymentPost");
+        }
 
         public static DataSet GetPostByUser(string userName)
         {
@@ -52,6 +56,36 @@ namespace DAO
         {
             return GetData("GetPostById", new SqlParameter("@idPost", idPost));
         }
+
+
+        public static void PostJob(int idPost, int idUser)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("PostJob", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@idPost", idPost);
+                    cmd.Parameters.AddWithValue("@idUser", idUser);
+
+
+
+
+                    cmd.ExecuteNonQuery();
+
+
+
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("SQL Error: " + ex.Message);
+
+            }
+        }
+
+
         public static int AddJobPost(JobPostingDTO post, int idJobDetail)
         {
             try

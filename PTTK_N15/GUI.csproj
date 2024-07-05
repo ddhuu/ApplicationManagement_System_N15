@@ -126,6 +126,12 @@
     <Compile Include="Recruiter\PostJob.Designer.cs">
       <DependentUpon>PostJob.cs</DependentUpon>
     </Compile>
+    <Compile Include="Recruiter\PostJobDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recruiter\PostJobDetail.Designer.cs">
+      <DependentUpon>PostJobDetail.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Candidate\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +168,9 @@
     </Compile>
     <EmbeddedResource Include="Recruiter\PostJob.resx">
       <DependentUpon>PostJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recruiter\PostJobDetail.resx">
+      <DependentUpon>PostJobDetail.cs</DependentUpon>
     </EmbeddedResource>
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />

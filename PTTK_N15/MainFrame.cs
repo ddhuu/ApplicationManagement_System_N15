@@ -39,11 +39,6 @@ namespace PTTK_N15
 
 
 
-
-
-
-
-
         private void RenderUI(string userName, string role)
         {
             pnlCommon111.Controls.Clear();
@@ -64,9 +59,31 @@ namespace PTTK_N15
                     break;
                 case "BanLanhDao":
                     break;
-                case "NhanVienDangTuyen":
-                    btnPostJob.Visible = true;
-                    lbUserRole.Text = "Nhân viên đăng tuyển";
+                case "NhanVien":
+                    string roleEmp = "";
+                    using (SqlCommand cmd = new SqlCommand("checkRoleEmp", con))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@id", Id);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                roleEmp = reader["ViTri"].ToString();
+                            }
+                        }
+                    }
+                    switch (roleEmp)
+                    {
+                        case "NVDangTuyen":
+                            btnPostJob.Visible = true;
+                            lbUserRole.Text = "Nhân viên đăng tuyển";
+
+                            break;
+                        default:
+                            break;
+                    }
+                    role = roleEmp;
                     break;
                 case "UngVien":
 
@@ -99,16 +116,15 @@ namespace PTTK_N15
                     break;
                 case "BanLanhDao":
                     break;
-                case "NhanVienDangTuyen":
+                case "NVDangTuyen":
                     lbTitle.Text = "Đăng tuyển dụng";
                     formToLoad = new
-                        PostJob();
+                        PostJob(UserName, Id);
                     break;
                 case "UngVien":
                     break;
                 default:
-                    MessageBox.Show("Unknown role. No form to load.");
-                    return;
+                    break;
             }
 
             if (formToLoad != null)
@@ -189,7 +205,7 @@ namespace PTTK_N15
         private void btnPostJob_Click(object sender, EventArgs e)
         {
             lbTitle.Text = "Đăng tuyển dụng";
-            OpenChildForm(new PostJob(), sender);
+            OpenChildForm(new PostJob(UserName, Id), sender);
 
         }
 
