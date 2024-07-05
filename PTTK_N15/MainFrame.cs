@@ -99,7 +99,12 @@ namespace PTTK_N15
                     role = roleEmp;
                     break;
                 case "UngVien":
-
+                    viewPostsBTN.Visible = true;
+                    lbUserRole.Text = "Ứng Viên";
+                    break;
+                case "NhanVienThanhToan":
+                    thanhToanBtn.Visible = true;
+                    lbUserRole.Text = "Nhân viên thanh toán";
                     break;
                 default:
                     break;
@@ -117,6 +122,8 @@ namespace PTTK_N15
             btnViewContract.Visible = false;
             processAplicationBtn.Visible = false;
             approveCandidatesBtn.Visible = false;
+            viewPostsBTN.Visible = false;
+            thanhToanBtn.Visible = false;
         }
 
         private void InitForm(string role)
@@ -145,6 +152,12 @@ namespace PTTK_N15
                     formToLoad = new PostToProcess_View(0, this);
                     break;
                 case "UngVien":
+                    lbTitle.Text = "Các vị trí ứng tuyển";
+                    formToLoad = new Candidate.ViewPosts(UserName, this, lbTitle);
+                    break;
+                case "NhanVienThanhToan":
+                    lbTitle.Text = "Thanh toán";
+                    formToLoad = new NVThanhToan.payListForm(UserName);
                     break;
                 default:
                     break;
@@ -234,7 +247,12 @@ namespace PTTK_N15
 
         #endregion Recruiter
 
-
+        
+        private void viewPostsBTN_Click(object sender, EventArgs e)
+        {
+            lbTitle.Text = "Các vị trí ứng tuyển";
+            OpenChildForm(new Candidate.ViewPosts(UserName, this, lbTitle), sender);
+        }
 
 
         private void btnSignOut_Click(object sender, EventArgs e)
@@ -277,5 +295,23 @@ namespace PTTK_N15
         {
 
         }
+        #region NhanVienThanhToan
+        private void thanhToanBtn_Click(object sender, EventArgs e)
+        {
+            lbTitle.Text = "Thanh toán";
+            OpenChildForm(new NVThanhToan.payListForm(UserName), sender);
+        }
+        #endregion NhanVienThanhToan
+
+        private void pnlCommon111_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MainFrame_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

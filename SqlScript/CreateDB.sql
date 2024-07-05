@@ -1,6 +1,8 @@
-create database QLHoSoUngTuyen
+﻿create database QLHoSoUngTuyen
 use QLHoSoUngTuyen
 go
+
+--drop database QLHoSoUngTuyen
 
 create table NguoiDung (
 	ID int,
@@ -10,8 +12,6 @@ create table NguoiDung (
 	primary key (ID),
 )
 go
-
-insert into NguoiDung values(1,'rivenkiet','123','wibu chua');
 
 
 
@@ -34,6 +34,7 @@ create table UngVien (
 	MaUV int,
 	TenUV nvarchar(50),
 	GioiTinh nvarchar(5),
+	NgaySinh DATE,
 	DiaChi nvarchar(50),
 	CCCD varchar(12),
 	SoDT varchar(12),
@@ -50,29 +51,8 @@ create table PhieuUngTuyen (
 	TrangThai nvarchar(50),
 	MaUV int,
 	MaPhieuDT int,
-	TenHoSo nvarchar(50),
-	TrangThaiHoSo nvarchar(50),
+	MaHoSo varchar(255),
 	primary key (MaPhieuUT)
-)
-go
-
-create table BangCap (
-	MaBangCap int,
-	TenBang nvarchar(50),
-	Loai nvarchar(20),
-	NgayCap date,
-	MaPhieuUT int,
-	primary key (MaBangCap)
-)
-go
-
-create table ChungTu (
-	MaChungTu int,
-	TenChungTu nvarchar(50),
-	Loai nvarchar(20),
-	NgayCap date,
-	MaPhieuUT int,
-	primary key (MaChungTu)
 )
 go
 
@@ -81,6 +61,7 @@ create table DoanhNghiep (
 	TenDN nvarchar(50),
 	DiaChi nvarchar(50),
 	NguoiDaiDien nvarchar(50),
+	MaSoThue varchar(20),
 	Email varchar(50),
 	TiemNang int,
 	ID_NguoiDung int,
@@ -104,6 +85,7 @@ create table NoiDungDangTuyen (
 	SoLuongTuyen int,
 	ViTriCanTuyen nvarchar(50),
 	ThoiGianDangTuyen int,
+	MoTa text,
 	NgayBatDau date,
 	NgayKetThuc date,
 	primary key (MaND)
@@ -161,6 +143,7 @@ create table HopDong (
 	NgayHetHan date,
 	TrangThai nvarchar(50),
 	MaPhieuDT int,
+	LanGiaHan int,
 	primary key (MaHopDong)
 )
 go
@@ -184,13 +167,6 @@ create table DoanhNghiep_UuDai (
 )
 go
 
-create table GiaHanHD (
-	MaHopDong int,
-	NgayGiaHan datetime,
-	MaNVGiaHan int,
-	primary key (MaHopDong, NgayGiaHan)
-)
-go
 
 ALTER TABLE NhanVien
 ADD CONSTRAINT FK_NhanVien_NguoiDung
@@ -209,14 +185,6 @@ ADD CONSTRAINT FK_PhieuUngTuyen_UngVien
 FOREIGN KEY (MaUV) REFERENCES UngVien(MaUV),
 	CONSTRAINT FK_PhieuUngTuyen_PhieuDangTuyen
 FOREIGN KEY (MaPhieuDT) REFERENCES PhieuDangTuyen(MaPhieuDT);
-
-ALTER TABLE BangCap
-ADD CONSTRAINT FK_PhieuUngTuyen_BangCap
-FOREIGN KEY (MaPhieuUT) REFERENCES PhieuUngTuyen(MaPhieuUT);
-
-ALTER TABLE ChungTu
-ADD CONSTRAINT FK_PhieuUngTuyen_ChungTu
-FOREIGN KEY (MaPhieuUT) REFERENCES PhieuUngTuyen(MaPhieuUT);
 
 ALTER TABLE PhieuDangTuyen
 ADD CONSTRAINT FK_PhieuDangTuyen_NhanVien
@@ -262,8 +230,18 @@ FOREIGN KEY (MaDN) REFERENCES DoanhNghiep(MaDN),
 	CONSTRAINT FK_DoanhNghiep_UuDai_ChienLuocUuDai
 FOREIGN KEY (MaChienLuoc) REFERENCES ChienLuocUuDai(MaChienLuoc);
 
-ALTER TABLE GiaHanHD
-ADD CONSTRAINT FK_GiaHanHD_NhanVien
-FOREIGN KEY (MaNVGiaHan) REFERENCES NhanVien(MaNV),
-	CONSTRAINT FK_GiaHanHD_HopDong
-FOREIGN KEY (MaHopDong) REFERENCES HopDong(MaHopDong);
+
+ALTER TABLE PhieuDangTuyen
+ADD CONSTRAINT Domain_TrangThai_PhieuDangTuyen
+CHECK (TrangThai in (N'Đang xét duyệt', N'Chấp nhận', N'Từ chối'));
+
+ALTER TABLE PhieuUngTuyen
+ADD CONSTRAINT Domain_TrangThai_PhieuUngTuyen
+CHECK (TrangThai in (N'Đang xét duyệt', N'Không đủ điều kiện', N'Đã xử lý', N'Đạt', N'Không đạt'));
+
+ALTER TABLE HopDong
+ADD CONSTRAINT Domain_TrangThai_HopDong
+CHECK (TrangThai in (N'Chưa thanh toán', N'Đang hiệu lực', N'Hết hạn'));
+
+
+

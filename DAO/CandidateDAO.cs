@@ -1,5 +1,12 @@
-﻿using System;
+﻿using DTO;
+using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DAO
 {
@@ -41,6 +48,114 @@ namespace DAO
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
                 response = ex.Message;
+            }
+        }
+    
+        public static void getPosts(ref DataTable response)
+        {
+            try
+            {
+                SqlConnection conn = DBProvider.GetOpenConnection();
+                using (new DBProvider.OpenedContext())
+                {
+                    using (SqlCommand cmd = new SqlCommand("GetPosts", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(response);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
+
+        public static void getPostDetail(int id, ref DataTable response)
+        {
+            try
+            {
+                SqlConnection conn = DBProvider.GetOpenConnection();
+                using (new DBProvider.OpenedContext())
+                {
+                    using (SqlCommand cmd = new SqlCommand("GetPostDetail", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@id", id);
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        adapter.Fill(response);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
+
+        public static void getCandidateInformation(string username, ref DataTable response)
+        {
+            try
+            {
+                SqlConnection conn = DBProvider.GetOpenConnection();
+                using (new DBProvider.OpenedContext())
+                {
+                    using (SqlCommand cmd = new SqlCommand("GetCandidateInformation", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@username", username);
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        adapter.Fill(response);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
+
+        public static void addPUT(string viTri, int maUV, int maPhieuDT, string username, ref string response, ref int maPUT)
+        {
+            try
+            {
+                SqlConnection conn = DBProvider.GetOpenConnection();
+                using (new DBProvider.OpenedContext())
+                {
+                    using (SqlCommand cmd = new SqlCommand("AddPUT", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@ViTri", viTri);
+                        cmd.Parameters.AddWithValue("@MaUV", maUV);
+                        cmd.Parameters.AddWithValue("@MaPhieuDT", maPhieuDT);
+                        cmd.Parameters.AddWithValue("@username", username);
+
+                        SqlParameter messageParam = new SqlParameter("@Message", SqlDbType.NVarChar, 255)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+                        cmd.Parameters.Add(messageParam);
+
+                        SqlParameter newMaPhieuUTParam = new SqlParameter("@NewMaPhieuUT", SqlDbType.Int)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+                        cmd.Parameters.Add(newMaPhieuUTParam);
+
+                        cmd.ExecuteNonQuery();
+
+                        response = messageParam.Value.ToString();
+                        maPUT = int.Parse(newMaPhieuUTParam.Value.ToString());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
     }

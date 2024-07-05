@@ -61,6 +61,7 @@
     <Compile Include="JobDetailDTO.cs" />
     <Compile Include="JobPostingDTO.cs" />
     <Compile Include="UserDTO.cs" />
+    <Compile Include="PhieuDangTuyenChoTT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
