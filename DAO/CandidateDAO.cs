@@ -118,7 +118,7 @@ namespace DAO
             }
         }
 
-        public static void addPUT(string viTri, int maUV, int maPhieuDT, ref string response, ref int maPUT)
+        public static void addPUT(string viTri, int maUV, int maPhieuDT, string username, ref string response, ref int maPUT)
         {
             try
             {
@@ -132,6 +132,7 @@ namespace DAO
                         cmd.Parameters.AddWithValue("@ViTri", viTri);
                         cmd.Parameters.AddWithValue("@MaUV", maUV);
                         cmd.Parameters.AddWithValue("@MaPhieuDT", maPhieuDT);
+                        cmd.Parameters.AddWithValue("@username", username);
 
                         SqlParameter messageParam = new SqlParameter("@Message", SqlDbType.NVarChar, 255)
                         {

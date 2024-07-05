@@ -2,6 +2,8 @@
 use QLHoSoUngTuyen
 go
 
+--drop database QLHoSoUngTuyen
+
 create table NguoiDung (
 	ID int,
 	TenDangNhap varchar(50),
@@ -230,15 +232,15 @@ FOREIGN KEY (MaChienLuoc) REFERENCES ChienLuocUuDai(MaChienLuoc);
 
 
 ALTER TABLE PhieuDangTuyen
-ADD CONSTRAINT Domain_TrangThai
+ADD CONSTRAINT Domain_TrangThai_PhieuDangTuyen
 CHECK (TrangThai in (N'Đang xét duyệt', N'Chấp nhận', N'Từ chối'));
 
 ALTER TABLE PhieuUngTuyen
-ADD CONSTRAINT Domain_TrangThai
+ADD CONSTRAINT Domain_TrangThai_PhieuUngTuyen
 CHECK (TrangThai in (N'Đang xét duyệt', N'Không đủ điều kiện', N'Đã xử lý', N'Đạt', N'Không đạt'));
 
 ALTER TABLE HopDong
-ADD CONSTRAINT Domain_TrangThai
+ADD CONSTRAINT Domain_TrangThai_HopDong
 CHECK (TrangThai in (N'Chưa thanh toán', N'Đang hiệu lực', N'Hết hạn'));
 
 

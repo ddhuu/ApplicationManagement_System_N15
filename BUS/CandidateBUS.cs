@@ -89,10 +89,10 @@ namespace BUS
             CandidateDAO.getCandidateInformation(username, ref result);
             return result;
         }
-        public static string addPUT(string viTri, int maUV, int maPhieuDT, ref int maPUT)
+        public static string addPUT(string viTri, int maUV, int maPhieuDT, string username, ref int maPUT)
         {
             string result = "";
-            CandidateDAO.addPUT(viTri, maUV, maPhieuDT, ref result, ref maPUT);
+            CandidateDAO.addPUT(viTri, maUV, maPhieuDT, username, ref result, ref maPUT);
             return result;
         }
 

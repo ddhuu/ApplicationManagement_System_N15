@@ -113,7 +113,7 @@ namespace PTTK_N15.Candidate
             else
             {
                 int maPUT = 0;
-                string message = CandidateBUS.addPUT(viTri, maUV, id_PDT, ref maPUT);
+                string message = CandidateBUS.addPUT(viTri, maUV, id_PDT, username, ref maPUT);
                 if (message.ToLower().Contains("thành công"))
                 {
                     string relativeDirectory = @"..\..\..\Resume\";

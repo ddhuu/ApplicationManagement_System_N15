@@ -104,7 +104,7 @@ END;
 
 exec GetCandidateInformation NgoQuocHuy
 
-CREATE PROCEDURE AddPUT @ViTri nvarchar(20), @MaUV int, @MaPhieuDT int, @Message nvarchar(255) OUTPUT, @NewMaPhieuUT int OUTPUT
+CREATE PROCEDURE AddPUT @ViTri nvarchar(20), @MaUV int, @MaPhieuDT int, @username varchar(255), @Message nvarchar(255) OUTPUT, @NewMaPhieuUT int OUTPUT
 AS
 BEGIN
 	IF EXISTS (SELECT 1 FROM PhieuUngTuyen WHERE MaUV = @MaUV AND MaPhieuDT = @MaPhieuDT)
@@ -115,8 +115,8 @@ BEGIN
 
     SELECT @NewMaPhieuUT = ISNULL(MAX(MaPhieuUT), 0) + 1 FROM PhieuUngTuyen;
 
-    INSERT INTO PhieuUngTuyen (MaPhieuUT, ViTri, NgayNop, TrangThai, MaUV, MaPhieuDT)
-    VALUES (@NewMaPhieuUT, @ViTri, GETDATE(), N'Đang xét duyệt', @MaUV, @MaPhieuDT);
+    INSERT INTO PhieuUngTuyen (MaPhieuUT, ViTri, NgayNop, TrangThai, MaUV, MaPhieuDT, MaHoSo)
+    VALUES (@NewMaPhieuUT, @ViTri, GETDATE(), N'Đang xét duyệt', @MaUV, @MaPhieuDT, @MaPhieuDT + '_' + @username + '_' + CAST(@NewMaPhieuUT AS varchar(50)) + '.pdf');
 
     SET @Message = N'Ứng tuyển thành công.';
 END;
