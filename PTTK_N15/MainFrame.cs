@@ -307,11 +307,5 @@ namespace PTTK_N15
         {
 
         }
-
-        private void MainFrame_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

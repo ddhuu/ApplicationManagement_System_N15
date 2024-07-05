@@ -150,8 +150,10 @@ AS
 BEGIN
 	SELECT MaPhieuDT,TongTien FROM PhieuDangTuyen Where MaPhieuDT IN (SELECT MaPhieuDT FROM HopDong WHERE TrangThai = N'Chưa thanh toán') 
 END;
+GO
 
 EXEC getListTT;
+GO
 
 -- Ngo Quoc Huy
 CREATE PROCEDURE GetPosts
@@ -161,6 +163,7 @@ BEGIN
     from PhieuDangTuyen as p, DoanhNghiep as d, NoiDungDangTuyen as n
 	where p.MaDN = d.MaDN and p.MaND = n.MaND and p.TrangThai = N'Chấp nhận' and n.NgayKetThuc > GETDATE()
 END;
+GO
 
 
 
@@ -171,6 +174,7 @@ BEGIN
     from PhieuDangTuyen as p, DoanhNghiep as d, NoiDungDangTuyen as n, TieuChi as t
 	where p.MaDN = d.MaDN and p.MaND = n.MaND and t.MaND = n.MaND and p.TrangThai = N'Chấp nhận' and p.MaPhieuDT = @id
 END;
+GO
 
 
 CREATE PROCEDURE GetCandidateInformation @username varchar(50)
@@ -180,8 +184,10 @@ BEGIN
 	from NguoiDung n, UngVien u
 	where n.ID = u.ID_NguoiDung and n.TenDangNhap = @username
 END;
+GO
 
 exec GetCandidateInformation NgoQuocHuy
+GO
 
 CREATE PROCEDURE AddPUT @ViTri nvarchar(20), @MaUV int, @MaPhieuDT int, @username varchar(255), @Message nvarchar(255) OUTPUT, @NewMaPhieuUT int OUTPUT
 AS
@@ -195,10 +201,11 @@ BEGIN
     SELECT @NewMaPhieuUT = ISNULL(MAX(MaPhieuUT), 0) + 1 FROM PhieuUngTuyen;
 
     INSERT INTO PhieuUngTuyen (MaPhieuUT, ViTri, NgayNop, TrangThai, MaUV, MaPhieuDT, MaHoSo)
-    VALUES (@NewMaPhieuUT, @ViTri, GETDATE(), N'Đang xét duyệt', @MaUV, @MaPhieuDT, @MaPhieuDT + '_' + @username + '_' + CAST(@NewMaPhieuUT AS varchar(50)) + '.pdf');
+    VALUES (@NewMaPhieuUT, @ViTri, GETDATE(), N'Đang xét duyệt', @MaUV, @MaPhieuDT, CAST(@MaPhieuDT AS varchar(50)) + '_' + @username + '_' + CAST(@NewMaPhieuUT AS varchar(50)) + '.pdf');
 
     SET @Message = N'Ứng tuyển thành công.';
 END;
+GO
 
 ---------------------------------------------------------------------------
 -- Doan Duc Huu

@@ -31,7 +31,7 @@ namespace PTTK_N15.Recruiter
             applicationList.AutoGenerateColumns = false;
             applicationList.DataSource = bindingSource;
             
-            string eyeIconPath = "D:\\InformationSysDesign\\PTTK-N15\\PTTK_N15\\Resource\\eyeIcon.png";
+            string eyeIconPath = "D:\\InformationSysDesign\\PTTK-N15\\PTTK_N15\\Resource\\eye-icon.png";
             DataGridViewImageColumn eyeIconColumn = new DataGridViewImageColumn();
             eyeIconColumn.Name = "ViewDetails";
             eyeIconColumn.HeaderText = "XEM CHI TIẾT";

@@ -76,6 +76,7 @@
     </Compile>
     <Compile Include="Candidate\ApplicationDetail.Designer.cs">
       <DependentUpon>ApplicationDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Candidate\Applying.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +207,7 @@
     </Compile>
     <EmbeddedResource Include="Candidate\ApplicationDetail.resx">
       <DependentUpon>ApplicationDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Candidate\Applying.resx">
       <DependentUpon>Applying.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +252,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NVThanhToan\payForm.resx">
       <DependentUpon>payForm.cs</DependentUpon>
