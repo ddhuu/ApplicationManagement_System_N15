@@ -1,12 +1,16 @@
 ﻿using DTO;
 using System;
+<<<<<<< HEAD
 using System.Collections.Generic;
+=======
+>>>>>>> 567736b8194d5d0b77c24218a907bd8b412ca159
 using System.Data.SqlClient;
 
 namespace DAO
 {
     public class ContractDAO
     {
+<<<<<<< HEAD
         public ContractDAO()
         {
 
@@ -77,10 +81,27 @@ namespace DAO
                             }
                         }
                     }
+=======
+        public static SqlConnection conn = DBProvider.GetOpenConnection();
+
+        public static void AddContract(ContractDTO cont, int idPost)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("AddContract", conn))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@signDate", cont.SignDate);
+                    cmd.Parameters.AddWithValue("@expiredDate", cont.ExpiredDate);
+                    cmd.Parameters.AddWithValue("@idPost", idPost);
+
+                    cmd.ExecuteNonQuery();
+>>>>>>> 567736b8194d5d0b77c24218a907bd8b412ca159
                 }
             }
             catch (Exception ex)
             {
+<<<<<<< HEAD
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
 
@@ -165,6 +186,10 @@ namespace DAO
                 }
             }
 
+=======
+                Console.WriteLine("SQL Error: " + ex.Message);
+            }
+>>>>>>> 567736b8194d5d0b77c24218a907bd8b412ca159
         }
     }
 }

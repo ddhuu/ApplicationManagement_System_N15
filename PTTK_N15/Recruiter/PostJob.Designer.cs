@@ -28,324 +28,178 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbVTTD = new System.Windows.Forms.Label();
-            this.tbxViTri = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbSLCT = new System.Windows.Forms.Label();
-            this.tbxSoLuong = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbxTypeAd = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbxPaymentChoice = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbxPaymentType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.dptStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dtpEndDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.btnRequestPost = new Guna.UI2.WinForms.Guna2Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgv_JobPost = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Enterprise = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_JobPost)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbVTTD
+            // dgv_JobPost
             // 
-            this.lbVTTD.AutoSize = true;
-            this.lbVTTD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVTTD.Location = new System.Drawing.Point(28, 67);
-            this.lbVTTD.Name = "lbVTTD";
-            this.lbVTTD.Size = new System.Drawing.Size(130, 20);
-            this.lbVTTD.TabIndex = 1;
-            this.lbVTTD.Text = "Vị trí tuyển dụng";
+            this.dgv_JobPost.AllowUserToAddRows = false;
+            this.dgv_JobPost.AllowUserToDeleteRows = false;
+            this.dgv_JobPost.AllowUserToResizeColumns = false;
+            this.dgv_JobPost.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            this.dgv_JobPost.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_JobPost.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_JobPost.ColumnHeadersHeight = 22;
+            this.dgv_JobPost.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv_JobPost.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Enterprise,
+            this.Email,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_JobPost.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_JobPost.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.dgv_JobPost.Location = new System.Drawing.Point(13, 33);
+            this.dgv_JobPost.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_JobPost.Name = "dgv_JobPost";
+            this.dgv_JobPost.ReadOnly = true;
+            this.dgv_JobPost.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_JobPost.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_JobPost.RowHeadersVisible = false;
+            this.dgv_JobPost.RowHeadersWidth = 51;
+            this.dgv_JobPost.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgv_JobPost.Size = new System.Drawing.Size(994, 496);
+            this.dgv_JobPost.TabIndex = 1;
+            this.dgv_JobPost.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.FeterRiver;
+            this.dgv_JobPost.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            this.dgv_JobPost.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgv_JobPost.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgv_JobPost.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgv_JobPost.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgv_JobPost.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_JobPost.ThemeStyle.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.dgv_JobPost.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            this.dgv_JobPost.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_JobPost.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_JobPost.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgv_JobPost.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv_JobPost.ThemeStyle.HeaderStyle.Height = 22;
+            this.dgv_JobPost.ThemeStyle.ReadOnly = true;
+            this.dgv_JobPost.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
+            this.dgv_JobPost.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_JobPost.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_JobPost.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgv_JobPost.ThemeStyle.RowsStyle.Height = 22;
+            this.dgv_JobPost.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
+            this.dgv_JobPost.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgv_JobPost.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_JobPost_CellContentClick);
             // 
-            // tbxViTri
+            // ID
             // 
-            this.tbxViTri.BorderRadius = 5;
-            this.tbxViTri.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbxViTri.DefaultText = "";
-            this.tbxViTri.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbxViTri.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbxViTri.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbxViTri.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbxViTri.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbxViTri.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbxViTri.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbxViTri.Location = new System.Drawing.Point(207, 54);
-            this.tbxViTri.Margin = new System.Windows.Forms.Padding(4);
-            this.tbxViTri.Name = "tbxViTri";
-            this.tbxViTri.PasswordChar = '\0';
-            this.tbxViTri.PlaceholderText = "";
-            this.tbxViTri.SelectedText = "";
-            this.tbxViTri.Size = new System.Drawing.Size(304, 44);
-            this.tbxViTri.TabIndex = 2;
+            this.ID.DataPropertyName = "MP";
+            this.ID.HeaderText = "#";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
-            // lbSLCT
+            // Enterprise
             // 
-            this.lbSLCT.AutoSize = true;
-            this.lbSLCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSLCT.Location = new System.Drawing.Point(28, 144);
-            this.lbSLCT.Name = "lbSLCT";
-            this.lbSLCT.Size = new System.Drawing.Size(151, 20);
-            this.lbSLCT.TabIndex = 3;
-            this.lbSLCT.Text = "Số lượng cần tuyển";
+            this.Enterprise.DataPropertyName = "DN";
+            this.Enterprise.HeaderText = "Doanh nghiệp";
+            this.Enterprise.MinimumWidth = 6;
+            this.Enterprise.Name = "Enterprise";
+            this.Enterprise.ReadOnly = true;
             // 
-            // tbxSoLuong
+            // Email
             // 
-            this.tbxSoLuong.BorderRadius = 5;
-            this.tbxSoLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbxSoLuong.DefaultText = "";
-            this.tbxSoLuong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbxSoLuong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbxSoLuong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbxSoLuong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbxSoLuong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbxSoLuong.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbxSoLuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbxSoLuong.Location = new System.Drawing.Point(207, 132);
-            this.tbxSoLuong.Margin = new System.Windows.Forms.Padding(4);
-            this.tbxSoLuong.Name = "tbxSoLuong";
-            this.tbxSoLuong.PasswordChar = '\0';
-            this.tbxSoLuong.PlaceholderText = "";
-            this.tbxSoLuong.SelectedText = "";
-            this.tbxSoLuong.Size = new System.Drawing.Size(304, 43);
-            this.tbxSoLuong.TabIndex = 4;
+            this.Email.DataPropertyName = "EM";
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
-            // label1
+            // Column1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 200);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Mô tả";
+            this.Column1.DataPropertyName = "VT";
+            this.Column1.HeaderText = "Vị trí";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // guna2TextBox1
+            // Column2
             // 
-            this.guna2TextBox1.BorderRadius = 5;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(33, 246);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(478, 127);
-            this.guna2TextBox1.TabIndex = 6;
+            this.Column2.DataPropertyName = "SL";
+            this.Column2.HeaderText = "Số lượng tuyển dụng";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
-            // label2
+            // Column3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(556, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 20);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Hình thức quảng cáo";
+            this.Column3.DataPropertyName = "NBD";
+            this.Column3.HeaderText = "Ngày bắt đầu";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
-            // label3
+            // Column4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(562, 144);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Thời gian bắt đầu";
+            this.Column4.DataPropertyName = "NKT";
+            this.Column4.HeaderText = "Ngày kết thúc";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(562, 214);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 20);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Thời gian kết thúc";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(562, 273);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(160, 20);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Loại hình thanh toán";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(559, 334);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 20);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Hình thức thanh toán";
-            // 
-            // cbxTypeAd
-            // 
-            this.cbxTypeAd.AllowDrop = true;
-            this.cbxTypeAd.BackColor = System.Drawing.Color.Transparent;
-            this.cbxTypeAd.BorderRadius = 5;
-            this.cbxTypeAd.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbxTypeAd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxTypeAd.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxTypeAd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxTypeAd.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbxTypeAd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbxTypeAd.FormattingEnabled = true;
-            this.cbxTypeAd.IntegralHeight = false;
-            this.cbxTypeAd.ItemHeight = 30;
-            this.cbxTypeAd.Location = new System.Drawing.Point(755, 58);
-            this.cbxTypeAd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbxTypeAd.Name = "cbxTypeAd";
-            this.cbxTypeAd.Size = new System.Drawing.Size(251, 36);
-            this.cbxTypeAd.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.cbxTypeAd.TabIndex = 12;
-            // 
-            // cbxPaymentChoice
-            // 
-            this.cbxPaymentChoice.BackColor = System.Drawing.Color.Transparent;
-            this.cbxPaymentChoice.BorderRadius = 5;
-            this.cbxPaymentChoice.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbxPaymentChoice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxPaymentChoice.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxPaymentChoice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxPaymentChoice.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbxPaymentChoice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbxPaymentChoice.ItemHeight = 30;
-            this.cbxPaymentChoice.Location = new System.Drawing.Point(755, 264);
-            this.cbxPaymentChoice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbxPaymentChoice.Name = "cbxPaymentChoice";
-            this.cbxPaymentChoice.Size = new System.Drawing.Size(251, 36);
-            this.cbxPaymentChoice.TabIndex = 13;
-            // 
-            // cbxPaymentType
-            // 
-            this.cbxPaymentType.BackColor = System.Drawing.Color.Transparent;
-            this.cbxPaymentType.BorderRadius = 5;
-            this.cbxPaymentType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbxPaymentType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxPaymentType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxPaymentType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxPaymentType.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbxPaymentType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbxPaymentType.ItemHeight = 30;
-            this.cbxPaymentType.Location = new System.Drawing.Point(755, 326);
-            this.cbxPaymentType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbxPaymentType.Name = "cbxPaymentType";
-            this.cbxPaymentType.Size = new System.Drawing.Size(251, 36);
-            this.cbxPaymentType.TabIndex = 14;
-            // 
-            // dptStartDate
-            // 
-            this.dptStartDate.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dptStartDate.BorderRadius = 5;
-            this.dptStartDate.Checked = true;
-            this.dptStartDate.FillColor = System.Drawing.Color.White;
-            this.dptStartDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dptStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dptStartDate.Location = new System.Drawing.Point(755, 132);
-            this.dptStartDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dptStartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dptStartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dptStartDate.Name = "dptStartDate";
-            this.dptStartDate.Size = new System.Drawing.Size(251, 43);
-            this.dptStartDate.TabIndex = 15;
-            this.dptStartDate.Value = new System.DateTime(2024, 6, 30, 0, 12, 2, 862);
-            // 
-            // dtpEndDate
-            // 
-            this.dtpEndDate.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dtpEndDate.BorderRadius = 5;
-            this.dtpEndDate.Checked = true;
-            this.dtpEndDate.FillColor = System.Drawing.Color.White;
-            this.dtpEndDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpEndDate.Location = new System.Drawing.Point(755, 200);
-            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpEndDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpEndDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(251, 42);
-            this.dtpEndDate.TabIndex = 16;
-            this.dtpEndDate.Value = new System.DateTime(2024, 6, 30, 0, 12, 2, 862);
-            // 
-            // btnRequestPost
-            // 
-            this.btnRequestPost.BorderRadius = 5;
-            this.btnRequestPost.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRequestPost.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRequestPost.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRequestPost.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRequestPost.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
-            this.btnRequestPost.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnRequestPost.ForeColor = System.Drawing.Color.Black;
-            this.btnRequestPost.Location = new System.Drawing.Point(455, 446);
-            this.btnRequestPost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRequestPost.Name = "btnRequestPost";
-            this.btnRequestPost.Size = new System.Drawing.Size(174, 51);
-            this.btnRequestPost.TabIndex = 17;
-            this.btnRequestPost.Text = "Đăng tuyển";
-            this.btnRequestPost.Click += new System.EventHandler(this.btnRequestPost_Click);
-            // 
-            // RequestPost
+            // PostJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 526);
-            this.Controls.Add(this.btnRequestPost);
-            this.Controls.Add(this.dtpEndDate);
-            this.Controls.Add(this.dptStartDate);
-            this.Controls.Add(this.cbxPaymentType);
-            this.Controls.Add(this.cbxPaymentChoice);
-            this.Controls.Add(this.cbxTypeAd);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbxSoLuong);
-            this.Controls.Add(this.lbSLCT);
-            this.Controls.Add(this.tbxViTri);
-            this.Controls.Add(this.lbVTTD);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "RequestPost";
-            this.Text = "RequestPost";
-            this.Load += new System.EventHandler(this.RequestPost_Load);
+            this.ClientSize = new System.Drawing.Size(1006, 533);
+            this.Controls.Add(this.dgv_JobPost);
+            this.Name = "PostJob";
+            this.Text = "PostJob";
+            this.Load += new System.EventHandler(this.PostJob_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_JobPost)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lbVTTD;
-        private Guna.UI2.WinForms.Guna2TextBox tbxViTri;
-        private System.Windows.Forms.Label lbSLCT;
-        private Guna.UI2.WinForms.Guna2TextBox tbxSoLuong;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2ComboBox cbxTypeAd;
-        private Guna.UI2.WinForms.Guna2ComboBox cbxPaymentChoice;
-        private Guna.UI2.WinForms.Guna2ComboBox cbxPaymentType;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dptStartDate;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpEndDate;
-        private Guna.UI2.WinForms.Guna2Button btnRequestPost;
+        private Guna.UI2.WinForms.Guna2DataGridView dgv_JobPost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Enterprise;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

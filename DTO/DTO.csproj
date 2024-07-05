@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="ApplicationDetailDTO.cs" />
     <Compile Include="ApplicationDTO.cs" />
     <Compile Include="ContractDTO.cs" />
@@ -57,6 +58,13 @@
     <Compile Include="RecruimentContentDTO.cs" />
     <Compile Include="StrategyDTO.cs" />
     <Compile Include="User.cs" />
+=======
+    <Compile Include="AdvertiseDTO.cs" />
+    <Compile Include="ContractDTO.cs" />
+    <Compile Include="JobDetailDTO.cs" />
+    <Compile Include="JobPostingDTO.cs" />
+    <Compile Include="UserDTO.cs" />
+>>>>>>> 567736b8194d5d0b77c24218a907bd8b412ca159
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

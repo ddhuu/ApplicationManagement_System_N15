@@ -13,7 +13,7 @@ namespace PTTK_N15
         private Form currentForm;
         public string UserName;
         public string Role;
-        
+        public int Id;
 
         public static SqlConnection con = Login.conn;
 
@@ -28,20 +28,16 @@ namespace PTTK_N15
 
         }
 
-        public MainFrame(string userName, string role)
+        public MainFrame(string userName, string role, int id)
         {
             this.Size = new Size(1800, 1100);
             InitializeComponent();
             this.UserName = userName;
             this.Role = role;
-            Console.WriteLine($"UserName: {this.UserName}, Role: {this.Role}");
+            this.Id = id;
+            Console.WriteLine($"UserName: {this.UserName}, Role: {this.Role}, Id: {this.Id}");
             RenderUI(this.UserName, this.Role);
         }
-
-
-
-
-
 
 
 
@@ -76,6 +72,31 @@ namespace PTTK_N15
                 case "NhaVienDuyetHS":
                     processAplicationBtn.Visible= true;
                     lbUserRole.Text = "Duyệt hồ sơ";
+                case "NhanVien":
+                    string roleEmp = "";
+                    using (SqlCommand cmd = new SqlCommand("checkRoleEmp", con))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@id", Id);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                roleEmp = reader["ViTri"].ToString();
+                            }
+                        }
+                    }
+                    switch (roleEmp)
+                    {
+                        case "NVDangTuyen":
+                            btnPostJob.Visible = true;
+                            lbUserRole.Text = "Nhân viên đăng tuyển";
+
+                            break;
+                        default:
+                            break;
+                    }
+                    role = roleEmp;
                     break;
                 case "UngVien":
 
@@ -107,17 +128,17 @@ namespace PTTK_N15
             {
                 case "DoanhNghiep":
                     lbTitle.Text = "Yêu cầu đăng tuyển";
-                    formToLoad = new Enterprise.RequestPost();
+                    formToLoad = new Enterprise.RequestPost(UserName, Role, Id);
                     break;
                 case "BLD":
                     lbTitle.Text = "Danh sách hợp đồng";
                     formToLoad = new
                         ContractList_View();
                     break;
-                case "NhanVienDangTuyen":
+                case "NVDangTuyen":
                     lbTitle.Text = "Đăng tuyển dụng";
                     formToLoad = new
-                        PostJob();
+                        PostJob(UserName, Id);
                     break;
                 case "NhanVienDuyetHS":
                     lbTitle.Text = "Xử lí hồ";
@@ -126,8 +147,7 @@ namespace PTTK_N15
                 case "UngVien":
                     break;
                 default:
-                    MessageBox.Show("Unknown role. No form to load.");
-                    return;
+                    break;
             }
 
             if (formToLoad != null)
@@ -188,13 +208,13 @@ namespace PTTK_N15
         private void btnRequestPost_Click_1(object sender, EventArgs e)
         {
             lbTitle.Text = "Yêu cầu đăng tuyển";
-            OpenChildForm(new Enterprise.RequestPost(), sender);
+            OpenChildForm(new Enterprise.RequestPost(UserName, Role, Id), sender);
         }
 
         private void btnXemBaiDangTuyen_Click_1(object sender, EventArgs e)
         {
             lbTitle.Text = "Xem bài đăng tuyển";
-            OpenChildForm(new Enterprise.ViewPosts(), sender);
+            OpenChildForm(new Enterprise.ViewPosts(UserName, Role), sender);
         }
 
 
@@ -208,7 +228,7 @@ namespace PTTK_N15
         private void btnPostJob_Click(object sender, EventArgs e)
         {
             lbTitle.Text = "Đăng tuyển dụng";
-            OpenChildForm(new PostJob(), sender);
+            OpenChildForm(new PostJob(UserName, Id), sender);
 
         }
 
@@ -252,6 +272,8 @@ namespace PTTK_N15
         {
             lbTitle.Text = "Xử lí hồ sơ";
             OpenChildForm(new PostToProcess_View(0, this), sender);
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

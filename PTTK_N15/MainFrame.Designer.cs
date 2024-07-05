@@ -84,6 +84,26 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(255, 502);
             this.guna2Panel2.TabIndex = 3;
+            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSignOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
+            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSignOut.ForeColor = System.Drawing.Color.Black;
+            this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
+            this.btnSignOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSignOut.Location = new System.Drawing.Point(48, 442);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(160, 36);
+            this.btnSignOut.TabIndex = 9;
+            this.btnSignOut.Text = "Đăng xuất";
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // processAplicationBtn
             // 

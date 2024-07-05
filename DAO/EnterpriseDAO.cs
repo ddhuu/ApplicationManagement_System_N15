@@ -1,6 +1,5 @@
-﻿using DTO;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace DAO
@@ -8,7 +7,8 @@ namespace DAO
     public class EnterpriseDAO
 
     {
-        public static void createAUser(string username, string password,string companyName,string taxCode,string nameDD,string address,string email, ref string response)
+        private static SqlConnection con = DBProvider.GetOpenConnection();
+        public static void createAUser(string username, string password, string companyName, string taxCode, string nameDD, string address, string email, ref string response)
         {
             try
             {
@@ -46,6 +46,7 @@ namespace DAO
             }
         }
 
+<<<<<<< HEAD
         public static EnterpriseDTO getBusinessByContractID(int idContract)
         {
             EnterpriseDTO enterprise = new EnterpriseDTO(); // Initialize as null to check later if it has been set
@@ -218,5 +219,36 @@ namespace DAO
         }
 
 
+=======
+        public static double GetDiscount(string userName)
+        {
+            try
+            {
+                double discount = 0;
+
+                using (SqlCommand cmd = new SqlCommand("GetDiscount", con))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@userName", userName);
+
+                    SqlParameter paramID = new SqlParameter("@discount", SqlDbType.Int);
+                    paramID.Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add(paramID);
+                    cmd.ExecuteNonQuery();
+                    if (paramID.Value != DBNull.Value)
+                    {
+                        discount = Convert.ToDouble(paramID.Value) / 100;
+                    }
+
+                }
+                return discount;
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine($"An SQL error occurred: {ex.Message}");
+                return 0;
+            }
+        }
+>>>>>>> 567736b8194d5d0b77c24218a907bd8b412ca159
     }
 }

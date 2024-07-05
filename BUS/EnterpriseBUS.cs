@@ -1,12 +1,7 @@
 ﻿using DAO;
-using DTO;
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace BUS
 {
@@ -50,12 +45,12 @@ namespace BUS
                     @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
                     RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
             }
-            catch (RegexMatchTimeoutException) 
+            catch (RegexMatchTimeoutException)
             {
                 return false;
             }
         }
-        public static void createAUser(string username, string password,string recheckPass, string companyName, string taxCode, string nameDD, string address, string email, ref string response)
+        public static void createAUser(string username, string password, string recheckPass, string companyName, string taxCode, string nameDD, string address, string email, ref string response)
         {
             if (username == "" || password == "" || recheckPass == "" || companyName == "" || taxCode == "" || nameDD == "" || address == "" || !IsValidEmail(email))
             {
@@ -67,8 +62,14 @@ namespace BUS
                 response = "Xác nhận mật khẩu không trùng khớp";
                 return;
             }
-            
-            EnterpriseDAO.createAUser(username, password,companyName,taxCode,nameDD,address,email, ref response);
+
+            EnterpriseDAO.createAUser(username, password, companyName, taxCode, nameDD, address, email, ref response);
+        }
+
+
+        public static double GetDiscount(string userName)
+        {
+            return EnterpriseBUS.GetDiscount(userName);
         }
 
         public static EnterpriseDTO getBusinessByContractID(int idContract)
