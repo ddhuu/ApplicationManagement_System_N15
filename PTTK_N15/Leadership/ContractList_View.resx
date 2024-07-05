@@ -120,20 +120,20 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnLogout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAALAAAACwARRqq2kAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAABNklEQVRIS+XVMUtCURjG8RuWUgRWkC3Val9CaDCaQj9AfgY3aYvWGoI+Q1JLLbUm0Vo6VK6agzVE
-        Q0uIS/2fc7lxEw3UVxB84AfnHLj3wHvfc643EdnEM75wiWWYZRev2MY8jnEFkxRQQ9LN/MyihSk3GzB6
-        +BCPWNVCR74R8Yf9J4Yz3CCuhS4ZeIMF3OIUUS30yDu0SS9tPCCL36gUTzjCUPUl01Dn1ZHRgl7+grwm
-        hkmjrEER+xoYR2VWuVyfJzQYQfRNvCZWNBhB3AYq0YEGxlHLuxKtoQHrj7wFtavLOqqwaNMZqIPUmTta
-        CLKIO6hk/x20D4QPVieV5R5/Xh5EdTtHCeZXRRCVSKXSyTa/7MLZg67rDTfzM4ehr+twcniDfjhLOME1
-        TJNCBZ+4gOkvc9zjeT/K/UQ9bq0VvQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        rwAAAK8BK7AVuQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAE2SURBVEhL5dUx
+        S0JRGMbxG5ZSBFaQLdVqX0JoMJpCP0B+Bjdpi9Yagj5DUksttSbRWjpUrpqDNURDS4hL/Z9zuXETDdRX
+        EHzgB+ccuPfAe99zrjcR2cQzvnCJZZhlF6/YxjyOcQWTFFBD0s38zKKFKTcbMHr4EI9Y1UJHvhHxh/0n
+        hjPcIK6FLhl4gwXc4hRRLfTIO7RJL208IIvfqBRPOMJQ9SXTUOfVkdGCXv6CvCaGSaOsQRH7GhhHZVa5
+        XJ8nNBhB9E28JlY0GEHcBirRgQbGUcu7Eq2hAeuPvAW1q8s6qrBo0xmog9SZO1oIsog7qGT/HbQPhA9W
+        J5XlHn9eHkR1O0cJ5ldFEJVIpdLJNr/swtmDrusNN/Mzh6Gv63ByeIN+OEs4wTVMk0IFn7iA6S9z3ON5
+        P8r9RD1urRW9AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="avatarBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAANIAAADbCAIAAACX9FjdAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cwAAEnMBjCK5BwAA/7JJREFUeF7kvXV0G9fa9n3+/9b6vvU+zzlNYlvMZGZmW7bMzMzMDHEYndhhatqk
+        cgAAEnIBXmVb4wAA/7JJREFUeF7kvXV0G9fa9n3+/9b6vvU+zzlNYlvMZGZmW7bMzMzMDHEYndhhatqk
         4aRp0qRhZgaHzbYs2WJjqOf57j3jqIoCTXvac/q+71rXmrU1Go2k2T9d933v2TP6m7j7Ma6hnieS3qcg
         ad8zrYb7n0v6O0HSgS5cw4Pdn9eIuAckG+rFJZf0fV4KaT8u5fCAVqqRQZBaJsalUQx+Rmr5AC6VrF81
         0q8e7vtQKmmvUtKjFTzUjPSPygbG5INfqHGF+EPpbYML1k8oh75YsPHghxpXDHwovW0+q49/Br2Pikv3

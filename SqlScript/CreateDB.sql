@@ -11,8 +11,6 @@ create table NguoiDung (
 )
 go
 
-insert into NguoiDung values(1,'rivenkiet','123','wibu chua');
-
 
 
 create table NhanVien (

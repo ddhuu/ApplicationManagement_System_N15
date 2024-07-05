@@ -70,6 +70,10 @@ namespace PTTK_N15
                     viewPostsBTN.Visible = true;
                     lbUserRole.Text = "Ứng Viên";
                     break;
+                case "NhanVienThanhToan":
+                    thanhToanBtn.Visible = true;
+                    lbUserRole.Text = "Nhân viên thanh toán";
+                    break;
                 default:
                     break;
             }
@@ -84,6 +88,7 @@ namespace PTTK_N15
             btnRequestPost.Visible = false;
             btnViewPosts.Visible = false;
             viewPostsBTN.Visible = false;
+            thanhToanBtn.Visible = false;
         }
 
         private void InitForm(string role)
@@ -106,6 +111,10 @@ namespace PTTK_N15
                 case "UngVien":
                     lbTitle.Text = "Các vị trí ứng tuyển";
                     formToLoad = new Candidate.ViewPosts(UserName, this, lbTitle);
+                    break;
+                case "NhanVienThanhToan":
+                    lbTitle.Text = "Thanh toán";
+                    formToLoad = new NVThanhToan.payListForm(UserName);
                     break;
                 default:
                     MessageBox.Show("Unknown role. No form to load.");
@@ -214,6 +223,14 @@ namespace PTTK_N15
 
         }
 
+        #region NhanVienThanhToan
+        private void thanhToanBtn_Click(object sender, EventArgs e)
+        {
+            lbTitle.Text = "Thanh toán";
+            OpenChildForm(new NVThanhToan.payListForm(UserName), sender);
+        }
+        #endregion NhanVienThanhToan
+
         private void pnlCommon111_Paint(object sender, PaintEventArgs e)
         {
 
@@ -223,5 +240,6 @@ namespace PTTK_N15
         {
 
         }
+
     }
 }

@@ -124,6 +124,18 @@
     <Compile Include="MainFrame.Designer.cs">
       <DependentUpon>MainFrame.cs</DependentUpon>
     </Compile>
+    <Compile Include="NVThanhToan\payForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVThanhToan\payForm.Designer.cs">
+      <DependentUpon>payForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVThanhToan\payListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVThanhToan\payListForm.Designer.cs">
+      <DependentUpon>payListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recruiter\PostJob.cs">
@@ -161,6 +173,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVThanhToan\payForm.resx">
+      <DependentUpon>payForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVThanhToan\payListForm.resx">
+      <DependentUpon>payListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

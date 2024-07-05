@@ -40,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbTitle = new System.Windows.Forms.Label();
             this.pnlCommon111 = new System.Windows.Forms.Panel();
+            this.thanhToanBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -52,19 +53,18 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(387, 930);
+            this.guna2Panel1.Size = new System.Drawing.Size(258, 595);
             this.guna2Panel1.TabIndex = 0;
             // 
             // lbUserRole
             // 
             this.lbUserRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
             this.lbUserRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUserRole.Location = new System.Drawing.Point(19, 76);
-            this.lbUserRole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbUserRole.Location = new System.Drawing.Point(13, 49);
             this.lbUserRole.Name = "lbUserRole";
-            this.lbUserRole.Size = new System.Drawing.Size(344, 52);
+            this.lbUserRole.Size = new System.Drawing.Size(229, 33);
             this.lbUserRole.TabIndex = 4;
             this.lbUserRole.Text = "User";
             this.lbUserRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -72,15 +72,15 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
+            this.guna2Panel2.Controls.Add(this.thanhToanBtn);
             this.guna2Panel2.Controls.Add(this.viewPostsBTN);
             this.guna2Panel2.Controls.Add(this.btnSignOut);
             this.guna2Panel2.Controls.Add(this.btnViewPosts);
             this.guna2Panel2.Controls.Add(this.btnPostJob);
             this.guna2Panel2.Controls.Add(this.btnRequestPost);
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 168);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 108);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(383, 785);
+            this.guna2Panel2.Size = new System.Drawing.Size(255, 502);
             this.guna2Panel2.TabIndex = 3;
             // 
             // viewPostsBTN
@@ -93,10 +93,10 @@
             this.viewPostsBTN.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.viewPostsBTN.ForeColor = System.Drawing.Color.Black;
             this.viewPostsBTN.Image = ((System.Drawing.Image)(resources.GetObject("viewPostsBTN.Image")));
-            this.viewPostsBTN.Location = new System.Drawing.Point(0, 262);
-            this.viewPostsBTN.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.viewPostsBTN.Location = new System.Drawing.Point(0, 168);
+            this.viewPostsBTN.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.viewPostsBTN.Name = "viewPostsBTN";
-            this.viewPostsBTN.Size = new System.Drawing.Size(383, 92);
+            this.viewPostsBTN.Size = new System.Drawing.Size(255, 59);
             this.viewPostsBTN.TabIndex = 10;
             this.viewPostsBTN.Text = "Xem vị trí tuyển dụng";
             this.viewPostsBTN.Click += new System.EventHandler(this.viewPostsBTN_Click);
@@ -112,10 +112,9 @@
             this.btnSignOut.ForeColor = System.Drawing.Color.Black;
             this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
             this.btnSignOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSignOut.Location = new System.Drawing.Point(72, 691);
-            this.btnSignOut.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSignOut.Location = new System.Drawing.Point(48, 442);
             this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(240, 56);
+            this.btnSignOut.Size = new System.Drawing.Size(160, 36);
             this.btnSignOut.TabIndex = 9;
             this.btnSignOut.Text = "Đăng xuất";
             this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
@@ -130,10 +129,10 @@
             this.btnViewPosts.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnViewPosts.ForeColor = System.Drawing.Color.Black;
             this.btnViewPosts.Image = ((System.Drawing.Image)(resources.GetObject("btnViewPosts.Image")));
-            this.btnViewPosts.Location = new System.Drawing.Point(0, 170);
-            this.btnViewPosts.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnViewPosts.Location = new System.Drawing.Point(0, 109);
+            this.btnViewPosts.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnViewPosts.Name = "btnViewPosts";
-            this.btnViewPosts.Size = new System.Drawing.Size(383, 92);
+            this.btnViewPosts.Size = new System.Drawing.Size(255, 59);
             this.btnViewPosts.TabIndex = 8;
             this.btnViewPosts.Text = "Xem bài đăng tuyển";
             this.btnViewPosts.Click += new System.EventHandler(this.btnXemBaiDangTuyen_Click_1);
@@ -148,10 +147,10 @@
             this.btnPostJob.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnPostJob.ForeColor = System.Drawing.Color.Black;
             this.btnPostJob.Image = ((System.Drawing.Image)(resources.GetObject("btnPostJob.Image")));
-            this.btnPostJob.Location = new System.Drawing.Point(0, 78);
-            this.btnPostJob.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnPostJob.Location = new System.Drawing.Point(0, 50);
+            this.btnPostJob.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnPostJob.Name = "btnPostJob";
-            this.btnPostJob.Size = new System.Drawing.Size(383, 92);
+            this.btnPostJob.Size = new System.Drawing.Size(255, 59);
             this.btnPostJob.TabIndex = 6;
             this.btnPostJob.Text = "Đăng tuyển dụng";
             this.btnPostJob.Click += new System.EventHandler(this.btnPostJob_Click);
@@ -168,9 +167,9 @@
             this.btnRequestPost.ForeColor = System.Drawing.Color.Black;
             this.btnRequestPost.Image = ((System.Drawing.Image)(resources.GetObject("btnRequestPost.Image")));
             this.btnRequestPost.Location = new System.Drawing.Point(0, 0);
-            this.btnRequestPost.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnRequestPost.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnRequestPost.Name = "btnRequestPost";
-            this.btnRequestPost.Size = new System.Drawing.Size(383, 78);
+            this.btnRequestPost.Size = new System.Drawing.Size(255, 50);
             this.btnRequestPost.TabIndex = 5;
             this.btnRequestPost.Text = "Yêu cầu đăng tuyển";
             this.btnRequestPost.Click += new System.EventHandler(this.btnRequestPost_Click_1);
@@ -178,43 +177,59 @@
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(53, 152);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(35, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 2);
+            this.label1.Size = new System.Drawing.Size(173, 1);
             this.label1.TabIndex = 2;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbTitle
             // 
             this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(1048, 56);
-            this.lbTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTitle.Location = new System.Drawing.Point(699, 36);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(553, 61);
+            this.lbTitle.Size = new System.Drawing.Size(369, 39);
             this.lbTitle.TabIndex = 2;
             this.lbTitle.Text = "Yêu cầu đăng tuyển";
             // 
             // pnlCommon111
             // 
-            this.pnlCommon111.Location = new System.Drawing.Point(403, 120);
-            this.pnlCommon111.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pnlCommon111.Location = new System.Drawing.Point(261, 76);
+            this.pnlCommon111.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.pnlCommon111.Name = "pnlCommon111";
-            this.pnlCommon111.Size = new System.Drawing.Size(1536, 906);
+            this.pnlCommon111.Size = new System.Drawing.Size(1024, 580);
             this.pnlCommon111.TabIndex = 3;
             this.pnlCommon111.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCommon111_Paint);
             // 
+            // thanhToanBtn
+            // 
+            this.thanhToanBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.thanhToanBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.thanhToanBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.thanhToanBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.thanhToanBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
+            this.thanhToanBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.thanhToanBtn.ForeColor = System.Drawing.Color.Black;
+            this.thanhToanBtn.Image = ((System.Drawing.Image)(resources.GetObject("thanhToanBtn.Image")));
+            this.thanhToanBtn.Location = new System.Drawing.Point(0, 227);
+            this.thanhToanBtn.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.thanhToanBtn.Name = "thanhToanBtn";
+            this.thanhToanBtn.Size = new System.Drawing.Size(255, 59);
+            this.thanhToanBtn.TabIndex = 11;
+            this.thanhToanBtn.Text = "Thanh Toán";
+            this.thanhToanBtn.Click += new System.EventHandler(this.thanhToanBtn_Click);
+            // 
             // MainFrame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1976, 930);
+            this.ClientSize = new System.Drawing.Size(1283, 595);
             this.Controls.Add(this.pnlCommon111);
             this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.Name = "MainFrame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainFrame";
@@ -238,5 +253,6 @@
         private Guna.UI2.WinForms.Guna2Button btnViewPosts;
         private Guna.UI2.WinForms.Guna2Button btnSignOut;
         private Guna.UI2.WinForms.Guna2Button viewPostsBTN;
+        private Guna.UI2.WinForms.Guna2Button thanhToanBtn;
     }
 }

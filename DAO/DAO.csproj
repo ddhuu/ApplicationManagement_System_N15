@@ -52,6 +52,7 @@
     <Compile Include="CandidateDAO.cs" />
     <Compile Include="DBProvider.cs" />
     <Compile Include="EnterpriseDAO.cs" />
+    <Compile Include="NVThanhToanDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDAO.cs" />
   </ItemGroup>
