@@ -49,6 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationDetailDTO.cs" />
+    <Compile Include="ApplicationDTO.cs" />
+    <Compile Include="ContractDTO.cs" />
+    <Compile Include="EnterpriseDTO.cs" />
+    <Compile Include="PostToProcessDTO.cs" />
+    <Compile Include="RecruimentContentDTO.cs" />
+    <Compile Include="StrategyDTO.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

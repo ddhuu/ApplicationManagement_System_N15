@@ -104,11 +104,11 @@ namespace PTTK_N15
             User result = UserBus.CheckLogin(tbxUserName.Text, tbxPassWord.Text, ref response);
             if (result != null)
             {
-                MessageBox.Show("Đăng nhập thành công!");
                 MainFrame mf = new MainFrame(result.UserName, result.Role);
                 this.Hide();
                 mf.ShowDialog();
                 this.Show();
+                
             }
             else
             {

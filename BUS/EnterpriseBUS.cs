@@ -70,5 +70,25 @@ namespace BUS
             
             EnterpriseDAO.createAUser(username, password,companyName,taxCode,nameDD,address,email, ref response);
         }
+
+        public static EnterpriseDTO getBusinessByContractID(int idContract)
+        {
+            return EnterpriseDAO.getBusinessByContractID(idContract);
+        }
+
+        public static List<RecruimentContentDTO> getPositions(int idContract)
+        {
+            return EnterpriseDAO.getPositions(idContract);
+        }
+
+        public static int getEnterpriseID(string username)
+        {
+            return EnterpriseDAO.getEnterpriseID(username);
+        }
+
+        public static bool updateEnterprise(EnterpriseDTO selectedEnterprise)
+        {
+            return EnterpriseDAO.updateEnterprise(selectedEnterprise);
+        }
     }
 }

@@ -63,11 +63,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Candidate\ApplicationDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\ApplicationDetail.Designer.cs">
+      <DependentUpon>ApplicationDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Candidate\Register.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Candidate\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprise\ApproveCandidates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enterprise\ApproveCandidates.Designer.cs">
+      <DependentUpon>ApproveCandidates.cs</DependentUpon>
     </Compile>
     <Compile Include="Enterprise\Register.cs">
       <SubType>Form</SubType>
@@ -87,11 +99,29 @@
     <Compile Include="Enterprise\ViewPosts.Designer.cs">
       <DependentUpon>ViewPosts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Leadership\BusinessDetail_View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Leadership\BusinessDetail_View.Designer.cs">
+      <DependentUpon>BusinessDetail_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Leadership\ContractDetail_View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Leadership\ContractDetail_View.Designer.cs">
+      <DependentUpon>ContractDetail_View.cs</DependentUpon>
+    </Compile>
     <Compile Include="Leadership\ContractList_View.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Leadership\ContractList_View.Designer.cs">
       <DependentUpon>ContractList_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Leadership\DetailInfo_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leadership\DetailInfo_View.Designer.cs">
+      <DependentUpon>DetailInfo_View.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -113,8 +143,26 @@
     <Compile Include="Recruiter\PostJob.Designer.cs">
       <DependentUpon>PostJob.cs</DependentUpon>
     </Compile>
+    <Compile Include="Recruiter\PostToProcess_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recruiter\PostToProcess_View.Designer.cs">
+      <DependentUpon>PostToProcess_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recruiter\ProcessApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recruiter\ProcessApplication.Designer.cs">
+      <DependentUpon>ProcessApplication.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Candidate\ApplicationDetail.resx">
+      <DependentUpon>ApplicationDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Candidate\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enterprise\ApproveCandidates.resx">
+      <DependentUpon>ApproveCandidates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Enterprise\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
@@ -125,8 +173,17 @@
     <EmbeddedResource Include="Enterprise\ViewPosts.resx">
       <DependentUpon>ViewPosts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Leadership\BusinessDetail_View.resx">
+      <DependentUpon>BusinessDetail_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leadership\ContractDetail_View.resx">
+      <DependentUpon>ContractDetail_View.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Leadership\ContractList_View.resx">
       <DependentUpon>ContractList_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leadership\DetailInfo_View.resx">
+      <DependentUpon>DetailInfo_View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -147,6 +204,12 @@
     <EmbeddedResource Include="Recruiter\PostJob.resx">
       <DependentUpon>PostJob.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Recruiter\PostToProcess_View.resx">
+      <DependentUpon>PostToProcess_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recruiter\ProcessApplication.resx">
+      <DependentUpon>ProcessApplication.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -157,6 +220,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resource\CV.pdf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -178,8 +242,10 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Resource\banlanhdao.png" />
-    <Content Include="Resource\bld.png" />
-    <Content Include="Resource\left.png" />
+    <Content Include="Resource\eye-icon.png" />
+    <Content Include="Resource\reload-icon.png" />
+    <Content Include="Resource\left-icon.png" />
+    <Content Include="Resource\toggle.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

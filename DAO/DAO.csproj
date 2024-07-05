@@ -49,10 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationDAO.cs" />
     <Compile Include="CandidateDAO.cs" />
+    <Compile Include="ContractDAO.cs" />
     <Compile Include="DBProvider.cs" />
     <Compile Include="EnterpriseDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StrategyDAO.cs" />
     <Compile Include="UserDAO.cs" />
   </ItemGroup>
   <ItemGroup>

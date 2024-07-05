@@ -19,6 +19,7 @@ public class DBProvider
         return connection;
     }
 
+
     internal class OpenedContext : IDisposable
     {
         private SqlConnection _connection;

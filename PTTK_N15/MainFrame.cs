@@ -1,4 +1,6 @@
-﻿using PTTK_N15.Recruiter;
+﻿using BUS;
+using PTTK_N15.Leadership;
+using PTTK_N15.Recruiter;
 using System;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -11,6 +13,7 @@ namespace PTTK_N15
         private Form currentForm;
         public string UserName;
         public string Role;
+        
 
         public static SqlConnection con = Login.conn;
 
@@ -58,13 +61,21 @@ namespace PTTK_N15
                 case "DoanhNghiep":
                     btnRequestPost.Visible = true;
                     btnViewPosts.Visible = true;
+                    approveCandidatesBtn.Visible = true;
                     lbUserRole.Text = "Doanh Nghiệp";
                     break;
-                case "BanLanhDao":
+                case "BLD":
+                    btnViewContract.Visible = true;
+                    lbUserRole.Text = "Ban lãnh đạo";
                     break;
                 case "NhanVienDangTuyen":
                     btnPostJob.Visible = true;
                     lbUserRole.Text = "Nhân viên đăng tuyển";
+                    
+                    break;
+                case "NhaVienDuyetHS":
+                    processAplicationBtn.Visible= true;
+                    lbUserRole.Text = "Duyệt hồ sơ";
                     break;
                 case "UngVien":
 
@@ -82,12 +93,15 @@ namespace PTTK_N15
             btnPostJob.Visible = false;
             btnRequestPost.Visible = false;
             btnViewPosts.Visible = false;
-
+            btnViewContract.Visible = false;
+            processAplicationBtn.Visible = false;
+            approveCandidatesBtn.Visible = false;
         }
 
         private void InitForm(string role)
         {
             Form formToLoad = null;
+            lbTitle.Text = "";
 
             switch (role)
             {
@@ -95,12 +109,19 @@ namespace PTTK_N15
                     lbTitle.Text = "Yêu cầu đăng tuyển";
                     formToLoad = new Enterprise.RequestPost();
                     break;
-                case "BanLanhDao":
+                case "BLD":
+                    lbTitle.Text = "Danh sách hợp đồng";
+                    formToLoad = new
+                        ContractList_View();
                     break;
                 case "NhanVienDangTuyen":
                     lbTitle.Text = "Đăng tuyển dụng";
                     formToLoad = new
                         PostJob();
+                    break;
+                case "NhanVienDuyetHS":
+                    lbTitle.Text = "Xử lí hồ";
+                    formToLoad = new PostToProcess_View(0, this);
                     break;
                 case "UngVien":
                     break;
@@ -123,7 +144,7 @@ namespace PTTK_N15
 
 
 
-        private void OpenChildForm(Form childForm, object sender)
+        public void OpenChildForm(Form childForm, object sender)
         {
             // Nếu form mới cùng loại với form đang mở
             if (currentForm != null && currentForm.GetType() == childForm.GetType())
@@ -203,6 +224,34 @@ namespace PTTK_N15
                 con.Close();
             }
             this.Dispose();
+
+        }
+
+        private void btnViewContract_Click(object sender, EventArgs e)
+        {
+            lbTitle.Text = "Danh sách hợp đồng";
+            OpenChildForm(new ContractList_View(), sender);
+        }
+
+        private void approveCandidatesBtn_Click(object sender, EventArgs e)
+        {
+            lbTitle.Text = "Duyệt ứng viên";
+            OpenChildForm(new PostToProcess_View(EnterpriseBUS.getEnterpriseID(UserName), this), sender);
+        }
+        
+        
+
+        private void MainFrame_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        
+
+        private void processAplicationBtn_Click_1(object sender, EventArgs e)
+        {
+            lbTitle.Text = "Xử lí hồ sơ";
+            OpenChildForm(new PostToProcess_View(0, this), sender);
 
         }
     }

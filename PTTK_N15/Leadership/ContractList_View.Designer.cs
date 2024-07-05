@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using Guna.UI2.WinForms;
+using System.Windows.Forms;
 
 namespace PTTK_N15.Leadership
 {
@@ -30,187 +31,65 @@ namespace PTTK_N15.Leadership
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContractList_View));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.categorySection = new Guna.UI2.WinForms.Guna2Panel();
-            this.roleLabel = new System.Windows.Forms.Label();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.avatarBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.contractList = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.idCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameContractCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateSignCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.outOfDateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actionsCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.searchBar = new Guna.UI2.WinForms.Guna2TextBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.userController = new Guna.UI2.WinForms.Guna2Panel();
+            this.reloadBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.contractCount = new System.Windows.Forms.Label();
-            this.title = new System.Windows.Forms.Label();
-            this.categorySection.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.avatarBox)).BeginInit();
+            this.searchBar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.contractList = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.idContractCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameContractCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusContractCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.signDateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.outOfDateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userController.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contractList)).BeginInit();
             this.SuspendLayout();
             // 
-            // categorySection
+            // userController
             // 
-            this.categorySection.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.categorySection.Controls.Add(this.roleLabel);
-            this.categorySection.Controls.Add(this.btnLogout);
-            this.categorySection.Controls.Add(this.avatarBox);
-            this.categorySection.Dock = System.Windows.Forms.DockStyle.Left;
-            this.categorySection.Location = new System.Drawing.Point(0, 0);
-            this.categorySection.Margin = new System.Windows.Forms.Padding(4);
-            this.categorySection.Name = "categorySection";
-            this.categorySection.Size = new System.Drawing.Size(168, 554);
-            this.categorySection.TabIndex = 0;
+            this.userController.Controls.Add(this.reloadBtn);
+            this.userController.Controls.Add(this.contractCount);
+            this.userController.Controls.Add(this.searchBar);
+            this.userController.Controls.Add(this.contractList);
+            this.userController.Location = new System.Drawing.Point(-1, -1);
+            this.userController.Name = "userController";
+            this.userController.Size = new System.Drawing.Size(891, 505);
+            this.userController.TabIndex = 0;
             // 
-            // roleLabel
+            // reloadBtn
             // 
-            this.roleLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.roleLabel.Location = new System.Drawing.Point(4, 156);
-            this.roleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.roleLabel.Name = "roleLabel";
-            this.roleLabel.Size = new System.Drawing.Size(160, 37);
-            this.roleLabel.TabIndex = 6;
-            this.roleLabel.Text = "Ban lãnh đạo";
-            this.roleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.reloadBtn.BackColor = System.Drawing.Color.Transparent;
+            this.reloadBtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.reloadBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reloadBtn.HoverState.ImageSize = new System.Drawing.Size(35, 35);
+            this.reloadBtn.Image = global::PTTK_N15.Properties.Resources.reload_icon;
+            this.reloadBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.reloadBtn.ImageRotate = 0F;
+            this.reloadBtn.ImageSize = new System.Drawing.Size(35, 35);
+            this.reloadBtn.Location = new System.Drawing.Point(128, 24);
+            this.reloadBtn.Name = "reloadBtn";
+            this.reloadBtn.PressedState.ImageSize = new System.Drawing.Size(35, 35);
+            this.reloadBtn.Size = new System.Drawing.Size(44, 55);
+            this.reloadBtn.TabIndex = 8;
+            this.reloadBtn.UseTransparentBackground = true;
+            this.reloadBtn.Click += new System.EventHandler(this.reloadBtn_Click);
             // 
-            // btnLogout
+            // contractCount
             // 
-            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.FillColor = System.Drawing.Color.LightSkyBlue;
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnLogout.ForeColor = System.Drawing.Color.Black;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogout.Location = new System.Drawing.Point(13, 500);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(136, 39);
-            this.btnLogout.TabIndex = 1;
-            this.btnLogout.Text = "Đăng xuất";
-            // 
-            // avatarBox
-            // 
-            this.avatarBox.BackColor = System.Drawing.Color.Transparent;
-            this.avatarBox.BorderRadius = 3;
-            this.avatarBox.Image = ((System.Drawing.Image)(resources.GetObject("avatarBox.Image")));
-            this.avatarBox.ImageRotate = 0F;
-            this.avatarBox.Location = new System.Drawing.Point(16, 15);
-            this.avatarBox.Margin = new System.Windows.Forms.Padding(4);
-            this.avatarBox.Name = "avatarBox";
-            this.avatarBox.Size = new System.Drawing.Size(133, 123);
-            this.avatarBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.avatarBox.TabIndex = 0;
-            this.avatarBox.TabStop = false;
-            this.avatarBox.UseTransparentBackground = true;
-            // 
-            // contractList
-            // 
-            this.contractList.AllowUserToAddRows = false;
-            this.contractList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.contractList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.contractList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.contractList.ColumnHeadersHeight = 34;
-            this.contractList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.contractList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idCol,
-            this.nameContractCol,
-            this.statusCol,
-            this.dateSignCol,
-            this.outOfDateCol,
-            this.actionsCol});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.contractList.DefaultCellStyle = dataGridViewCellStyle9;
-            this.contractList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.contractList.Location = new System.Drawing.Point(176, 123);
-            this.contractList.Margin = new System.Windows.Forms.Padding(4);
-            this.contractList.Name = "contractList";
-            this.contractList.ReadOnly = true;
-            this.contractList.RowHeadersVisible = false;
-            this.contractList.RowHeadersWidth = 51;
-            this.contractList.Size = new System.Drawing.Size(875, 416);
-            this.contractList.TabIndex = 2;
-            this.contractList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.contractList.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.contractList.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.contractList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.contractList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.contractList.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.contractList.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.contractList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.contractList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.contractList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contractList.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.contractList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.contractList.ThemeStyle.HeaderStyle.Height = 34;
-            this.contractList.ThemeStyle.ReadOnly = true;
-            this.contractList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.contractList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.contractList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contractList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.contractList.ThemeStyle.RowsStyle.Height = 22;
-            this.contractList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.contractList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // idCol
-            // 
-            this.idCol.HeaderText = "#";
-            this.idCol.MinimumWidth = 6;
-            this.idCol.Name = "idCol";
-            this.idCol.ReadOnly = true;
-            // 
-            // nameContractCol
-            // 
-            this.nameContractCol.HeaderText = "TÊN DOANH NGHIỆP";
-            this.nameContractCol.MinimumWidth = 6;
-            this.nameContractCol.Name = "nameContractCol";
-            this.nameContractCol.ReadOnly = true;
-            // 
-            // statusCol
-            // 
-            this.statusCol.HeaderText = "TRẠNG THÁI";
-            this.statusCol.MinimumWidth = 6;
-            this.statusCol.Name = "statusCol";
-            this.statusCol.ReadOnly = true;
-            // 
-            // dateSignCol
-            // 
-            this.dateSignCol.HeaderText = "NGÀY KÍ";
-            this.dateSignCol.MinimumWidth = 6;
-            this.dateSignCol.Name = "dateSignCol";
-            this.dateSignCol.ReadOnly = true;
-            // 
-            // outOfDateCol
-            // 
-            this.outOfDateCol.HeaderText = "NGÀY HẾT HẠN";
-            this.outOfDateCol.MinimumWidth = 6;
-            this.outOfDateCol.Name = "outOfDateCol";
-            this.outOfDateCol.ReadOnly = true;
-            // 
-            // actionsCol
-            // 
-            this.actionsCol.HeaderText = "ACTIONS";
-            this.actionsCol.MinimumWidth = 6;
-            this.actionsCol.Name = "actionsCol";
-            this.actionsCol.ReadOnly = true;
+            this.contractCount.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contractCount.Location = new System.Drawing.Point(14, 32);
+            this.contractCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.contractCount.Name = "contractCount";
+            this.contractCount.Size = new System.Drawing.Size(267, 37);
+            this.contractCount.TabIndex = 7;
+            this.contractCount.Text = "9 hợp đồng";
+            this.contractCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // searchBar
             // 
@@ -223,55 +102,144 @@ namespace PTTK_N15.Leadership
             this.searchBar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.searchBar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.searchBar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchBar.Location = new System.Drawing.Point(733, 74);
+            this.searchBar.Location = new System.Drawing.Point(556, 32);
             this.searchBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchBar.Name = "searchBar";
             this.searchBar.PasswordChar = '\0';
             this.searchBar.PlaceholderText = "Search...";
             this.searchBar.SelectedText = "";
             this.searchBar.Size = new System.Drawing.Size(317, 37);
-            this.searchBar.TabIndex = 3;
+            this.searchBar.TabIndex = 6;
+            this.searchBar.TextChanged += new System.EventHandler(this.searchBar_TextChanged);
             // 
-            // contractCount
+            // contractList
             // 
-            this.contractCount.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.contractCount.Location = new System.Drawing.Point(176, 74);
-            this.contractCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.contractCount.Name = "contractCount";
-            this.contractCount.Size = new System.Drawing.Size(267, 37);
-            this.contractCount.TabIndex = 4;
-            this.contractCount.Text = "9 hợp đồng";
-            this.contractCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.contractList.AllowUserToAddRows = false;
+            this.contractList.AllowUserToDeleteRows = false;
+            this.contractList.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.contractList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.contractList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.contractList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.contractList.ColumnHeadersHeight = 42;
+            this.contractList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.contractList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idContractCol,
+            this.nameContractCol,
+            this.statusContractCol,
+            this.signDateCol,
+            this.outOfDateCol});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.contractList.DefaultCellStyle = dataGridViewCellStyle4;
+            this.contractList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.contractList.Location = new System.Drawing.Point(18, 98);
+            this.contractList.Margin = new System.Windows.Forms.Padding(4);
+            this.contractList.Name = "contractList";
+            this.contractList.ReadOnly = true;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.contractList.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.contractList.RowHeadersVisible = false;
+            this.contractList.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.contractList.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.contractList.Size = new System.Drawing.Size(859, 378);
+            this.contractList.TabIndex = 5;
+            this.contractList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.contractList.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.contractList.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.contractList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.contractList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.contractList.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.contractList.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.contractList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.contractList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.contractList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contractList.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.contractList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.contractList.ThemeStyle.HeaderStyle.Height = 42;
+            this.contractList.ThemeStyle.ReadOnly = true;
+            this.contractList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.contractList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.contractList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contractList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.contractList.ThemeStyle.RowsStyle.Height = 22;
+            this.contractList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.contractList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // title
+            // idContractCol
             // 
-            this.title.BackColor = System.Drawing.SystemColors.Control;
-            this.title.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.title.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.title.Location = new System.Drawing.Point(176, 25);
-            this.title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(875, 37);
-            this.title.TabIndex = 5;
-            this.title.Text = "Danh sách hợp đồng";
-            this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.idContractCol.DataPropertyName = "idContract";
+            this.idContractCol.HeaderText = "#";
+            this.idContractCol.MinimumWidth = 6;
+            this.idContractCol.Name = "idContractCol";
+            this.idContractCol.ReadOnly = true;
+            // 
+            // nameContractCol
+            // 
+            this.nameContractCol.DataPropertyName = "nameContract";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.nameContractCol.DefaultCellStyle = dataGridViewCellStyle3;
+            this.nameContractCol.HeaderText = "TÊN HỢP ĐỒNG";
+            this.nameContractCol.MinimumWidth = 6;
+            this.nameContractCol.Name = "nameContractCol";
+            this.nameContractCol.ReadOnly = true;
+            // 
+            // statusContractCol
+            // 
+            this.statusContractCol.DataPropertyName = "statusContract";
+            this.statusContractCol.HeaderText = "TRẠNG THÁI";
+            this.statusContractCol.MinimumWidth = 6;
+            this.statusContractCol.Name = "statusContractCol";
+            this.statusContractCol.ReadOnly = true;
+            // 
+            // signDateCol
+            // 
+            this.signDateCol.DataPropertyName = "signDate";
+            this.signDateCol.HeaderText = "NGÀY KÍ";
+            this.signDateCol.MinimumWidth = 6;
+            this.signDateCol.Name = "signDateCol";
+            this.signDateCol.ReadOnly = true;
+            // 
+            // outOfDateCol
+            // 
+            this.outOfDateCol.DataPropertyName = "outOfDate";
+            this.outOfDateCol.HeaderText = "NGÀY HẾT HẠN";
+            this.outOfDateCol.MinimumWidth = 6;
+            this.outOfDateCol.Name = "outOfDateCol";
+            this.outOfDateCol.ReadOnly = true;
             // 
             // ContractList_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.title);
-            this.Controls.Add(this.contractCount);
-            this.Controls.Add(this.searchBar);
-            this.Controls.Add(this.contractList);
-            this.Controls.Add(this.categorySection);
+            this.ClientSize = new System.Drawing.Size(889, 503);
+            this.Controls.Add(this.userController);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ContractList_View";
             this.Text = "Danh sách hợp đồng";
-            this.Load += new System.EventHandler(this.ContractList_View_Load);
-            this.categorySection.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.avatarBox)).EndInit();
+            this.userController.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.contractList)).EndInit();
             this.ResumeLayout(false);
 
@@ -279,19 +247,15 @@ namespace PTTK_N15.Leadership
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel categorySection;
-        private Guna.UI2.WinForms.Guna2Button btnLogout;
-        private Guna.UI2.WinForms.Guna2PictureBox avatarBox;
-        private Guna.UI2.WinForms.Guna2DataGridView contractList;
+        private Guna.UI2.WinForms.Guna2Panel userController;
+        private Label contractCount;
         private Guna.UI2.WinForms.Guna2TextBox searchBar;
-        private System.Windows.Forms.Label contractCount;
-        private System.Windows.Forms.Label title;
-        private Label roleLabel;
-        private DataGridViewTextBoxColumn idCol;
+        private Guna.UI2.WinForms.Guna2DataGridView contractList;
+        private DataGridViewTextBoxColumn idContractCol;
         private DataGridViewTextBoxColumn nameContractCol;
-        private DataGridViewTextBoxColumn statusCol;
-        private DataGridViewTextBoxColumn dateSignCol;
+        private DataGridViewTextBoxColumn statusContractCol;
+        private DataGridViewTextBoxColumn signDateCol;
         private DataGridViewTextBoxColumn outOfDateCol;
-        private DataGridViewTextBoxColumn actionsCol;
+        private Guna2ImageButton reloadBtn;
     }
 }
