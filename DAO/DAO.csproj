@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="AdvertiseDAO.cs" />
     <Compile Include="CandidateDAO.cs" />
+    <Compile Include="ContractDAO.cs" />
     <Compile Include="DBProvider.cs" />
     <Compile Include="EnterpriseDAO.cs" />
     <Compile Include="JobDetailDAO.cs" />

@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdvertiseDTO.cs" />
+    <Compile Include="ContractDTO.cs" />
     <Compile Include="JobDetailDTO.cs" />
     <Compile Include="JobPostingDTO.cs" />
     <Compile Include="UserDTO.cs" />

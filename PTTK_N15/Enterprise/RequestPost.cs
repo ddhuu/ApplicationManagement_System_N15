@@ -30,7 +30,7 @@ namespace PTTK_N15.Enterprise
             tbxQuantity.Text = string.Empty;
             tbxDescript.Text = string.Empty;
             dtpStartDate.Value = DateTime.Today;
-            dtpEndDate.Value = DateTime.Today;
+            dtpEndDate.Value = DateTime.Today.AddDays(1);
             cbxTypeAd.SelectedIndex = -1;
 
 
@@ -46,11 +46,10 @@ namespace PTTK_N15.Enterprise
 
             if (daysCount < 0)
             {
-                MessageBox.Show("End date must be after the start date!");
+                MessageBox.Show(this, "End date must be after the start date!", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dtpEndDate.Value = DateTime.Today;
-            }
-            return;
 
+            }
 
         }
 
@@ -58,7 +57,7 @@ namespace PTTK_N15.Enterprise
         {
             if (string.IsNullOrWhiteSpace(tbxPosition.Text) || !int.TryParse(tbxQuantity.Text, out int quantity) || quantity < 1 || string.IsNullOrWhiteSpace(tbxDescript.Text))
             {
-                MessageBox.Show("Invalid input data!");
+                MessageBox.Show(this, "Invalid Data!", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 RequestPost_Load(sender, e);
             }
 
@@ -76,7 +75,8 @@ namespace PTTK_N15.Enterprise
                 var adInfo = new AdvertiseDTO(cbxTypeAd.Text, dtpStartDate.Value, dtpEndDate.Value);
                 int adId = AdvertiseBUS.AddAdvertise(adInfo, JobPostId);
 
-
+                var contract = new ContractDTO(dtpStartDate.Value, dtpEndDate.Value, "Chưa thanh toán");
+                ContractBUS.AddContract(contract, JobPostId);
 
 
                 MessageBox.Show("Request posted successfully!");

@@ -269,6 +269,21 @@ end;
 go
 
 
+create or alter procedure  AddContract
+    @signDate date,
+    @expiredDate date,
+    @idPost int
+as
+begin
+   
+    DECLARE @MaHopDongMoi int;
+    SELECT @MaHopDongMoi = ISNULL(MAX(MaHopDong), 0) + 1 FROM HopDong;
+
+    INSERT INTO HopDong(MaHopDong, TenHopDong, NgayKy, NgayHetHan, TrangThai, MaPhieuDT, LanGiaHan)
+    VALUES(@MaHopDongMoi, N'Hợp đồng ' + CAST(@MaHopDongMoi AS nvarchar(10)), @signDate, @expiredDate, N'Chưa thanh toán', @idPost, 0);
+end
+
+
 
 
 

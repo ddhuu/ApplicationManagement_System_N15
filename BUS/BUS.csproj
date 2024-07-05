@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="AdvertiseBUS.cs" />
     <Compile Include="CandidateBUS.cs" />
+    <Compile Include="ContractBUS.cs" />
     <Compile Include="EnterpriseBUS.cs" />
     <Compile Include="JobDetailBUS.cs" />
     <Compile Include="JobPostingBUS.cs" />

@@ -47,8 +47,7 @@
             // 
             this.lbVTTD.AutoSize = true;
             this.lbVTTD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVTTD.Location = new System.Drawing.Point(21, 54);
-            this.lbVTTD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbVTTD.Location = new System.Drawing.Point(28, 66);
             this.lbVTTD.Name = "lbVTTD";
             this.lbVTTD.Size = new System.Drawing.Size(130, 20);
             this.lbVTTD.TabIndex = 1;
@@ -66,21 +65,20 @@
             this.tbxPosition.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbxPosition.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbxPosition.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbxPosition.Location = new System.Drawing.Point(155, 44);
-            this.tbxPosition.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxPosition.Location = new System.Drawing.Point(207, 54);
+            this.tbxPosition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxPosition.Name = "tbxPosition";
             this.tbxPosition.PasswordChar = '\0';
             this.tbxPosition.PlaceholderText = "";
             this.tbxPosition.SelectedText = "";
-            this.tbxPosition.Size = new System.Drawing.Size(228, 36);
+            this.tbxPosition.Size = new System.Drawing.Size(304, 44);
             this.tbxPosition.TabIndex = 2;
             // 
             // lbSLCT
             // 
             this.lbSLCT.AutoSize = true;
             this.lbSLCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSLCT.Location = new System.Drawing.Point(21, 117);
-            this.lbSLCT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbSLCT.Location = new System.Drawing.Point(28, 144);
             this.lbSLCT.Name = "lbSLCT";
             this.lbSLCT.Size = new System.Drawing.Size(151, 20);
             this.lbSLCT.TabIndex = 3;
@@ -98,21 +96,20 @@
             this.tbxQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbxQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbxQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbxQuantity.Location = new System.Drawing.Point(155, 107);
-            this.tbxQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxQuantity.Location = new System.Drawing.Point(207, 132);
+            this.tbxQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxQuantity.Name = "tbxQuantity";
             this.tbxQuantity.PasswordChar = '\0';
             this.tbxQuantity.PlaceholderText = "";
             this.tbxQuantity.SelectedText = "";
-            this.tbxQuantity.Size = new System.Drawing.Size(228, 35);
+            this.tbxQuantity.Size = new System.Drawing.Size(304, 43);
             this.tbxQuantity.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 162);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(36, 199);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 5;
@@ -130,21 +127,20 @@
             this.tbxDescript.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbxDescript.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbxDescript.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbxDescript.Location = new System.Drawing.Point(25, 200);
-            this.tbxDescript.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxDescript.Location = new System.Drawing.Point(33, 246);
+            this.tbxDescript.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxDescript.Name = "tbxDescript";
             this.tbxDescript.PasswordChar = '\0';
             this.tbxDescript.PlaceholderText = "";
             this.tbxDescript.SelectedText = "";
-            this.tbxDescript.Size = new System.Drawing.Size(358, 103);
+            this.tbxDescript.Size = new System.Drawing.Size(477, 127);
             this.tbxDescript.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(417, 54);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(556, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 20);
             this.label2.TabIndex = 7;
@@ -154,8 +150,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(422, 117);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(563, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 20);
             this.label3.TabIndex = 8;
@@ -165,8 +160,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(422, 174);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(563, 214);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 20);
             this.label4.TabIndex = 9;
@@ -190,10 +184,10 @@
             "Báo giấy",
             "Banner Quảng cáo",
             "Trang mạng"});
-            this.cbxTypeAd.Location = new System.Drawing.Point(566, 47);
-            this.cbxTypeAd.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxTypeAd.Location = new System.Drawing.Point(755, 58);
+            this.cbxTypeAd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxTypeAd.Name = "cbxTypeAd";
-            this.cbxTypeAd.Size = new System.Drawing.Size(189, 36);
+            this.cbxTypeAd.Size = new System.Drawing.Size(251, 36);
             this.cbxTypeAd.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.cbxTypeAd.TabIndex = 12;
             // 
@@ -205,12 +199,12 @@
             this.dtpStartDate.FillColor = System.Drawing.Color.White;
             this.dtpStartDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpStartDate.Location = new System.Drawing.Point(566, 107);
-            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpStartDate.Location = new System.Drawing.Point(755, 132);
+            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpStartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpStartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(188, 35);
+            this.dtpStartDate.Size = new System.Drawing.Size(251, 43);
             this.dtpStartDate.TabIndex = 15;
             this.dtpStartDate.Value = new System.DateTime(2024, 6, 30, 0, 12, 2, 862);
             // 
@@ -222,12 +216,12 @@
             this.dtpEndDate.FillColor = System.Drawing.Color.White;
             this.dtpEndDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpEndDate.Location = new System.Drawing.Point(566, 162);
-            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpEndDate.Location = new System.Drawing.Point(755, 199);
+            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEndDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpEndDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(188, 34);
+            this.dtpEndDate.Size = new System.Drawing.Size(251, 42);
             this.dtpEndDate.TabIndex = 16;
             this.dtpEndDate.Value = new System.DateTime(2024, 6, 30, 0, 12, 2, 862);
             this.dtpEndDate.ValueChanged += new System.EventHandler(this.dtpEndDate_ValueChanged);
@@ -242,19 +236,19 @@
             this.btnRequestPost.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
             this.btnRequestPost.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnRequestPost.ForeColor = System.Drawing.Color.Black;
-            this.btnRequestPost.Location = new System.Drawing.Point(341, 362);
-            this.btnRequestPost.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRequestPost.Location = new System.Drawing.Point(455, 446);
+            this.btnRequestPost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRequestPost.Name = "btnRequestPost";
-            this.btnRequestPost.Size = new System.Drawing.Size(130, 41);
+            this.btnRequestPost.Size = new System.Drawing.Size(173, 50);
             this.btnRequestPost.TabIndex = 17;
             this.btnRequestPost.Text = "Yêu cầu";
             this.btnRequestPost.Click += new System.EventHandler(this.btnRequestPost_Click);
             // 
             // RequestPost
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 427);
+            this.ClientSize = new System.Drawing.Size(1059, 526);
             this.Controls.Add(this.btnRequestPost);
             this.Controls.Add(this.dtpEndDate);
             this.Controls.Add(this.dtpStartDate);
@@ -268,7 +262,7 @@
             this.Controls.Add(this.lbSLCT);
             this.Controls.Add(this.tbxPosition);
             this.Controls.Add(this.lbVTTD);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RequestPost";
             this.Text = "RequestPost";
             this.Load += new System.EventHandler(this.RequestPost_Load);

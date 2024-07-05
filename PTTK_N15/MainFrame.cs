@@ -207,5 +207,10 @@ namespace PTTK_N15
             this.Dispose();
 
         }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
