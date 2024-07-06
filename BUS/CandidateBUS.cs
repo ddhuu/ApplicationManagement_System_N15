@@ -55,7 +55,7 @@ namespace BUS
                 return false;
             }
         }
-        public static void createAUser(string username, string password, string recheckPass, string candidateName, string gender, string address, string cccd, string email,string phoneNumber, ref string response)
+        public static void createAUser(string username, string password, string recheckPass, string candidateName, string gender, string address, string cccd, string email,string phoneNumber, string dob, ref string response)
         {
             if (username == "" || password == "" || recheckPass == "" || candidateName == "" || gender == "" || cccd == "" || address == "" || phoneNumber == "" || !int.TryParse(phoneNumber,out _)|| !IsValidEmail(email))
             {
@@ -68,7 +68,7 @@ namespace BUS
                 return;
             }
 
-            CandidateDAO.createAUser(username, password, candidateName, gender,address,cccd,phoneNumber,email,ref response);
+            CandidateDAO.createAUser(username, password, candidateName, gender,address,cccd,phoneNumber,email, dob, ref response);
         }
     
         public static DataTable getPosts()

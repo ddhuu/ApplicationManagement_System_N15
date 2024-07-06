@@ -54,6 +54,8 @@
             this.emailTB = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.genderCB = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.DOBDTP = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,7 +111,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label9.Location = new System.Drawing.Point(490, 645);
+            this.label9.Location = new System.Drawing.Point(490, 769);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(154, 29);
@@ -128,7 +130,7 @@
             this.phoneNumberTB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.phoneNumberTB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.phoneNumberTB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.phoneNumberTB.Location = new System.Drawing.Point(700, 630);
+            this.phoneNumberTB.Location = new System.Drawing.Point(700, 754);
             this.phoneNumberTB.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.phoneNumberTB.Name = "phoneNumberTB";
             this.phoneNumberTB.PasswordChar = '\0';
@@ -204,13 +206,13 @@
             this.addressTB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.addressTB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.addressTB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.addressTB.Location = new System.Drawing.Point(700, 510);
+            this.addressTB.Location = new System.Drawing.Point(495, 566);
             this.addressTB.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.addressTB.Name = "addressTB";
             this.addressTB.PasswordChar = '\0';
             this.addressTB.PlaceholderText = "";
             this.addressTB.SelectedText = "";
-            this.addressTB.Size = new System.Drawing.Size(903, 61);
+            this.addressTB.Size = new System.Drawing.Size(505, 128);
             this.addressTB.TabIndex = 5;
             // 
             // label11
@@ -279,7 +281,7 @@
             this.registerBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
             this.registerBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.registerBtn.ForeColor = System.Drawing.Color.White;
-            this.registerBtn.Location = new System.Drawing.Point(880, 822);
+            this.registerBtn.Location = new System.Drawing.Point(874, 904);
             this.registerBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(378, 66);
@@ -402,7 +404,7 @@
             this.emailTB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.emailTB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.emailTB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.emailTB.Location = new System.Drawing.Point(1300, 630);
+            this.emailTB.Location = new System.Drawing.Point(1300, 754);
             this.emailTB.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.emailTB.Name = "emailTB";
             this.emailTB.PasswordChar = '\0';
@@ -415,7 +417,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label13.Location = new System.Drawing.Point(1060, 645);
+            this.label13.Location = new System.Drawing.Point(1060, 769);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(74, 29);
@@ -444,11 +446,39 @@
             this.genderCB.TabIndex = 4;
             this.genderCB.SelectedIndexChanged += new System.EventHandler(this.genderCB_SelectedIndexChanged);
             // 
+            // DOBDTP
+            // 
+            this.DOBDTP.Checked = true;
+            this.DOBDTP.FillColor = System.Drawing.Color.White;
+            this.DOBDTP.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DOBDTP.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DOBDTP.Location = new System.Drawing.Point(1065, 566);
+            this.DOBDTP.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DOBDTP.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DOBDTP.Name = "DOBDTP";
+            this.DOBDTP.Size = new System.Drawing.Size(538, 57);
+            this.DOBDTP.TabIndex = 55;
+            this.DOBDTP.Value = new System.DateTime(2024, 7, 6, 20, 10, 23, 160);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label12.Location = new System.Drawing.Point(1060, 525);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(119, 29);
+            this.label12.TabIndex = 56;
+            this.label12.Text = "Ngày sinh";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1644, 1039);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.DOBDTP);
             this.Controls.Add(this.genderCB);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.emailTB);
@@ -508,5 +538,7 @@
         private Guna.UI2.WinForms.Guna2TextBox emailTB;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2ComboBox genderCB;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DOBDTP;
+        private System.Windows.Forms.Label label12;
     }
 }
