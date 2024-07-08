@@ -68,7 +68,7 @@ namespace PTTK_N15
                     btnPostJob.Visible = true;
                     lbUserRole.Text = "Nhân viên đăng tuyển";
                     break;
-                case "NhaVienDuyetHS":
+                case "NhanVienDuyetHoSo":
                     processAplicationBtn.Visible= true;
                     lbUserRole.Text = "Duyệt hồ sơ";
                     break;
@@ -147,8 +147,8 @@ namespace PTTK_N15
                     formToLoad = new
                         PostJob(UserName, Id);
                     break;
-                case "NhanVienDuyetHS":
-                    lbTitle.Text = "Xử lí hồ";
+                case "NhanVienDuyetHoSo":
+                    lbTitle.Text = "Xử lí hồ sơ";
                     formToLoad = new PostToProcess_View(0, this);
                     break;
                 case "UngVien":

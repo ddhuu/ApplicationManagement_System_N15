@@ -100,7 +100,7 @@ namespace DAO
                        "WHERE PhieuDangTuyen.MaPhieuDT = @postID";
                     if(enterpriseID > 0)
                     {
-                        query += " AND PhieuUngTuyen.TrangThai = N'Đã xử lí'";
+                        query += " AND PhieuUngTuyen.TrangThai = N'Đã xử lý'";
                     }
                     else
                     {
@@ -156,7 +156,7 @@ namespace DAO
                        
                     if (enterpriseID != 0)
                     {
-                        query += " WHERE EXISTS(SELECT *  From PhieuUngTuyen WHERE PhieuUngTuyen.MaPhieuDT = PhieuDangTuyen.MaPhieuDT AND PhieuUngTuyen.TrangThai = N'Đã xử lí') AND PhieuDangTuyen.MaDN = @enterpriseID;";
+                        query += " WHERE EXISTS(SELECT *  From PhieuUngTuyen WHERE PhieuUngTuyen.MaPhieuDT = PhieuDangTuyen.MaPhieuDT AND PhieuUngTuyen.TrangThai = N'Đã xử lý') AND PhieuDangTuyen.MaDN = @enterpriseID;";
                         cmd = new SqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@enterpriseID", enterpriseID);
 
@@ -176,7 +176,7 @@ namespace DAO
                         {
                             int PostId = reader.GetInt32(reader.GetOrdinal("MaPhieuDT"));
                             int Amount = reader.GetInt32(reader.GetOrdinal("SoLuongTuyen"));
-                            string description = reader.GetString(reader.GetOrdinal("MoTa"));
+                            string description = reader.IsDBNull(reader.GetOrdinal("MoTa")) ? "" : reader.GetString(reader.GetOrdinal("MoTa"));
                             string occupation = reader.GetString(reader.GetOrdinal("ViTriCanTuyen"));
                             postToProcessDTO = new PostToProcessDTO { Amount = Amount, Description = description, PostID = PostId, Occupation = occupation };
                             posts.Add(postToProcessDTO);
