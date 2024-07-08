@@ -12,7 +12,7 @@ namespace DAO
 {
     public class CandidateDAO
     {
-        public static void createAUser(string username, string password, string candidateName,string gender, string address,string cccd,string phoneNumber, string email, ref string response)
+        public static void createAUser(string username, string password, string candidateName,string gender, string address,string cccd,string phoneNumber, string email, string dob, ref string response)
         {
             try
             {
@@ -31,6 +31,7 @@ namespace DAO
                         cmd.Parameters.AddWithValue("@password", password);
                         cmd.Parameters.AddWithValue("@candidateName", candidateName);
                         cmd.Parameters.AddWithValue("@gender", gender);
+                        cmd.Parameters.AddWithValue("@ngaySinh", dob);
                         cmd.Parameters.AddWithValue("@address", address);
                         cmd.Parameters.AddWithValue("@CCCD", cccd);
                         cmd.Parameters.AddWithValue("@email", email);

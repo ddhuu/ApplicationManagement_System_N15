@@ -54,6 +54,8 @@
             this.emailTB = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.genderCB = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.DOBDTP = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -428,6 +430,32 @@
             this.genderCB.TabIndex = 4;
             this.genderCB.SelectedIndexChanged += new System.EventHandler(this.genderCB_SelectedIndexChanged);
             // 
+            // DOBDTP
+            // 
+            this.DOBDTP.Checked = true;
+            this.DOBDTP.FillColor = System.Drawing.Color.White;
+            this.DOBDTP.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DOBDTP.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DOBDTP.Location = new System.Drawing.Point(1065, 566);
+            this.DOBDTP.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DOBDTP.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DOBDTP.Name = "DOBDTP";
+            this.DOBDTP.Size = new System.Drawing.Size(538, 57);
+            this.DOBDTP.TabIndex = 55;
+            this.DOBDTP.Value = new System.DateTime(2024, 7, 6, 20, 10, 23, 160);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label12.Location = new System.Drawing.Point(1060, 525);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(119, 29);
+            this.label12.TabIndex = 56;
+            this.label12.Text = "Ngày sinh";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -491,5 +519,7 @@
         private Guna.UI2.WinForms.Guna2TextBox emailTB;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2ComboBox genderCB;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DOBDTP;
+        private System.Windows.Forms.Label label12;
     }
 }

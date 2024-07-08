@@ -20,7 +20,7 @@ namespace PTTK_N15.Candidate
         {
             string response = "";
             CandidateBUS.createAUser(userNameTB.Text,passwordTB.Text,recheckPassTB.Text,
-                candidateNameTB.Text,genderCB.Text,addressTB.Text,cccdTB.Text,emailTB.Text,phoneNumberTB.Text,ref response);
+                candidateNameTB.Text,genderCB.Text,addressTB.Text,cccdTB.Text,emailTB.Text,phoneNumberTB.Text, DOBDTP.Value.ToString(), ref response);
             if (response == "")
             {
                 MessageBox.Show("Đăng ký thành công");
@@ -58,6 +58,11 @@ namespace PTTK_N15.Candidate
         }
 
         private void Register_Load(object sender, EventArgs e)
+        {
+            addressTB.Multiline = true;
+        }
+
+        private void label12_Click(object sender, EventArgs e)
         {
 
         }
