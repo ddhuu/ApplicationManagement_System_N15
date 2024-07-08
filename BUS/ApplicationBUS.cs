@@ -16,9 +16,9 @@ namespace BUS
             return ApplicationDAO.viewApplicantDetail(applicantID);
         }
 
-        public static List<ApplicationDTO> getAllApplicantOfAPost(int postID, int enterpriseID)
+        public static List<ApplicationDTO> getAllApplicationOfAPost(int postID, int enterpriseID)
         {
-            return ApplicationDAO.getAllApplicantOfAPost(postID, enterpriseID);
+            return ApplicationDAO.getAllApplicationOfAPost(postID, enterpriseID);
         }
 
         public static List<PostToProcessDTO> getAllPostToProcess(int enterpriseID)

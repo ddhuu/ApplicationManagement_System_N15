@@ -32,7 +32,7 @@ namespace PTTK_N15.Leadership
             contractList.Rows.Add(4, "Tech Company 4", "tech@gmail.com", "15/07/2022", "15/07/2024");
             contractList.Rows.Add(5, "Tech Company 5", "tech@gmail.com", "15/07/2021", "15/07/2024");*/
 
-            string eyeIconPath = "D:\\InformationSysDesign\\PTTK-N15\\PTTK_N15\\Resource\\eye-icon.png";
+            string eyeIconPath = @"..\..\Resource\eye-icon.png";
             DataGridViewImageColumn eyeIconColumn = new DataGridViewImageColumn();
             eyeIconColumn.Name = "viewDetails";
             eyeIconColumn.HeaderText = "XEM CHI TIẾT";

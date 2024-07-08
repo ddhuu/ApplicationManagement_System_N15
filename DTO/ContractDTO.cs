@@ -15,6 +15,7 @@ namespace DTO
 
         public int idContract { get; set; }
         public string nameContract { get; set; }
+        public int extendAmount { get; set; }
         public string statusContract { get; set; }
         public DateTime signDate { get; set; }
         public DateTime outOfDate { get; set; }

@@ -85,7 +85,7 @@ namespace DAO
                 return null;
             }
         }
-        public static List<ApplicationDTO> getAllApplicantOfAPost(int postID, int enterpriseID)
+        public static List<ApplicationDTO> getAllApplicationOfAPost(int postID, int enterpriseID)
         {
             List<ApplicationDTO> applicants = new List<ApplicationDTO>();
             try

@@ -18,7 +18,7 @@ namespace PTTK_N15.Enterprise
         {
             InitializeComponent();
             bindingSource = new BindingSource();
-            bindingSource.DataSource = ApplicationBUS.getAllApplicantOfAPost(postID, EnterpriseBUS.getEnterpriseID(mainFrame.UserName));
+            bindingSource.DataSource = ApplicationBUS.getAllApplicationOfAPost(postID, EnterpriseBUS.getEnterpriseID(mainFrame.UserName));
             this.postID = postID;
             AppproveCandidate_Load();
             this.mainFrame = mainFrame;
@@ -31,7 +31,7 @@ namespace PTTK_N15.Enterprise
             applicationList.AutoGenerateColumns = false;
             applicationList.DataSource = bindingSource;
 
-            string eyeIconPath = "D:\\InformationSysDesign\\PTTK-N15\\PTTK_N15\\Resource\\eye-icon.png";
+            string eyeIconPath = @"..\..\Resource\eye-icon.png";
             DataGridViewImageColumn eyeIconColumn = new DataGridViewImageColumn();
             eyeIconColumn.Name = "ViewDetails";
             eyeIconColumn.HeaderText = "CHI TIẾT";

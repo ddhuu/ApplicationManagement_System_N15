@@ -44,7 +44,7 @@ namespace PTTK_N15.Leadership
             this.contractList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.idContractCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameContractCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusContractCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.extendAmountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.signDateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.outOfDateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userController.SuspendLayout();
@@ -133,7 +133,7 @@ namespace PTTK_N15.Leadership
             this.contractList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idContractCol,
             this.nameContractCol,
-            this.statusContractCol,
+            this.extendAmountCol,
             this.signDateCol,
             this.outOfDateCol});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -206,13 +206,13 @@ namespace PTTK_N15.Leadership
             this.nameContractCol.Name = "nameContractCol";
             this.nameContractCol.ReadOnly = true;
             // 
-            // statusContractCol
+            // extendAmountCol
             // 
-            this.statusContractCol.DataPropertyName = "statusContract";
-            this.statusContractCol.HeaderText = "TRẠNG THÁI";
-            this.statusContractCol.MinimumWidth = 6;
-            this.statusContractCol.Name = "statusContractCol";
-            this.statusContractCol.ReadOnly = true;
+            this.extendAmountCol.DataPropertyName = "extendAmount";
+            this.extendAmountCol.HeaderText = "LẦN GIA HẠN";
+            this.extendAmountCol.MinimumWidth = 6;
+            this.extendAmountCol.Name = "extendAmountCol";
+            this.extendAmountCol.ReadOnly = true;
             // 
             // signDateCol
             // 
@@ -251,11 +251,11 @@ namespace PTTK_N15.Leadership
         private Label contractCount;
         private Guna.UI2.WinForms.Guna2TextBox searchBar;
         private Guna.UI2.WinForms.Guna2DataGridView contractList;
+        private Guna2ImageButton reloadBtn;
         private DataGridViewTextBoxColumn idContractCol;
         private DataGridViewTextBoxColumn nameContractCol;
-        private DataGridViewTextBoxColumn statusContractCol;
+        private DataGridViewTextBoxColumn extendAmountCol;
         private DataGridViewTextBoxColumn signDateCol;
         private DataGridViewTextBoxColumn outOfDateCol;
-        private Guna2ImageButton reloadBtn;
     }
 }

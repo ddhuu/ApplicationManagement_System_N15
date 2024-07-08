@@ -23,7 +23,7 @@ namespace PTTK_N15.Recruiter
         private void PostToProcess_View_Load(object sender, EventArgs e)
         {
             
-             string eyeIconPath = "D:\\InformationSysDesign\\PTTK-N15\\PTTK_N15\\Resource\\eye-icon.png";
+             string eyeIconPath = @"..\..\Resource\eye-icon.png";
              DataGridViewImageColumn eyeIconColumn = new DataGridViewImageColumn();
              eyeIconColumn.Name = "ViewDetails";
              eyeIconColumn.HeaderText = "THỰC HIỆN DUYỆT";

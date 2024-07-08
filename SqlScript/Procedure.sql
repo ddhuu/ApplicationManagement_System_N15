@@ -283,8 +283,6 @@ BEGIN
 END
 go
 
-go
-
 create or alter proc AddJobPost
 	@status nvarchar(50),
 	@price int,
@@ -308,7 +306,7 @@ begin
 end
 go
 
-go
+
 create or alter proc AddJobDetail
     @quantity int,
     @position nvarchar(50),
@@ -335,8 +333,6 @@ end
 go
 
 
-go
-
 create or alter procedure GetDisCount @userName varchar(30) , @discount int output
 as
 begin
@@ -362,6 +358,7 @@ begin
     INSERT INTO HopDong(MaHopDong, TenHopDong, NgayKy, NgayHetHan, TrangThai, MaPhieuDT, LanGiaHan)
     VALUES(@MaHopDongMoi, N'Hợp đồng ' + CAST(@MaHopDongMoi AS nvarchar(10)), @signDate, @expiredDate, N'Chưa thanh toán', @idPost, 0);
 end
+go
 
 
 create or alter proc checkRoleEmp 
@@ -399,7 +396,7 @@ BEGIN
         AND P.TrangThai = N'Đang xét duyệt'
     
 END;
-
+GO
 
 
 CREATE OR ALTER PROCEDURE PostJob
@@ -421,7 +418,6 @@ BEGIN
     END
 END;
 GO
-
 
 
 

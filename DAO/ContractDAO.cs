@@ -41,7 +41,7 @@ namespace DAO
                 {
                     using (new DBProvider.OpenedContext())
                     {
-                        string query = "SELECT HD.MaHopDong, HD.TenHopDong, HD.TrangThai, HD.NgayKy, HD.NgayHetHan, HD.MaPhieuDT " +
+                        string query = "SELECT HD.MaHopDong, HD.TenHopDong, HD.LanGiaHan, HD.TrangThai, HD.NgayKy, HD.NgayHetHan, HD.MaPhieuDT " +
                                        "FROM HopDong HD " +
                                        "JOIN PhieuDangTuyen PDT ON HD.MaPhieuDT = PDT.MaPhieuDT " +
                                        "WHERE HD.MaPhieuDT IN (SELECT MaPhieuDT FROM HoaDon)";
@@ -54,6 +54,7 @@ namespace DAO
                                 {
                                     int id = reader.GetInt32(reader.GetOrdinal("MaHopDong"));
                                     string nameContract = reader.GetString(reader.GetOrdinal("TenHopDong"));
+                                    int extend = reader.GetInt32(reader.GetOrdinal("LanGiaHan"));
                                     string status = reader.GetString(reader.GetOrdinal("TrangThai"));
                                     DateTime signDate = reader.GetDateTime(reader.GetOrdinal("NgayKy"));
                                     DateTime outOfDate = reader.GetDateTime(reader.GetOrdinal("NgayHetHan"));
@@ -65,6 +66,7 @@ namespace DAO
                                         {
                                             idContract = id,
                                             nameContract = nameContract,
+                                            extendAmount = extend,
                                             statusContract = status,
                                             signDate = signDate,
                                             outOfDate = outOfDate,
@@ -164,7 +166,7 @@ namespace DAO
         {
             SqlConnection conn = DBProvider.GetOpenConnection();
 
-            string query = "UPDATE HopDong SET NgayHetHan = @NgayHetHan WHERE MaHopDong = @MaHopDong";
+            string query = "UPDATE HopDong SET NgayHetHan = @NgayHetHan, LanGiaHan = LanGiaHan + 1, TrangThai = N'Chưa thanh toán' WHERE MaHopDong = @MaHopDong";
 
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {

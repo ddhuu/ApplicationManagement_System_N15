@@ -70,9 +70,5 @@ namespace PTTK_N15.Leadership
             }
         }
 
-        private void title_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -71,7 +71,7 @@ namespace BUS
 
         public static double GetDiscount(string userName)
         {
-            return EnterpriseBUS.GetDiscount(userName);
+            return EnterpriseDAO.GetDiscount(userName);
         }
 
         public static EnterpriseDTO getBusinessByContractID(int idContract)

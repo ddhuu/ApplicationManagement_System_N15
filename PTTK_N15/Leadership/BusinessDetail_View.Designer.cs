@@ -45,10 +45,10 @@
             this.positionCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.presentativeLabel = new System.Windows.Forms.Label();
-            this.nameContractLabel = new System.Windows.Forms.Label();
-            this.outOfDateLabel = new System.Windows.Forms.Label();
+            this.nameEnterpriseLabel = new System.Windows.Forms.Label();
+            this.potentialLabel = new System.Windows.Forms.Label();
             this.emailLabel = new System.Windows.Forms.Label();
-            this.idContractLabel = new System.Windows.Forms.Label();
+            this.idEnterpriseLabel = new System.Windows.Forms.Label();
             this.btnSaveChanges = new Guna.UI2.WinForms.Guna2Button();
             this.txtRepresentative = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
@@ -128,10 +128,10 @@
             this.panelMain.Controls.Add(this.potentialCombobox);
             this.panelMain.Controls.Add(this.positionList);
             this.panelMain.Controls.Add(this.presentativeLabel);
-            this.panelMain.Controls.Add(this.nameContractLabel);
-            this.panelMain.Controls.Add(this.outOfDateLabel);
+            this.panelMain.Controls.Add(this.nameEnterpriseLabel);
+            this.panelMain.Controls.Add(this.potentialLabel);
             this.panelMain.Controls.Add(this.emailLabel);
-            this.panelMain.Controls.Add(this.idContractLabel);
+            this.panelMain.Controls.Add(this.idEnterpriseLabel);
             this.panelMain.Controls.Add(this.btnSaveChanges);
             this.panelMain.Controls.Add(this.txtRepresentative);
             this.panelMain.Controls.Add(this.txtEmail);
@@ -285,27 +285,27 @@
             this.presentativeLabel.Text = "Người đại diện:";
             this.presentativeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // nameContractLabel
+            // nameEnterpriseLabel
             // 
-            this.nameContractLabel.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.nameContractLabel.Location = new System.Drawing.Point(423, 21);
-            this.nameContractLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.nameContractLabel.Name = "nameContractLabel";
-            this.nameContractLabel.Size = new System.Drawing.Size(169, 37);
-            this.nameContractLabel.TabIndex = 18;
-            this.nameContractLabel.Text = "Tên doanh nghiệp:";
-            this.nameContractLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nameEnterpriseLabel.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.nameEnterpriseLabel.Location = new System.Drawing.Point(423, 21);
+            this.nameEnterpriseLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nameEnterpriseLabel.Name = "nameEnterpriseLabel";
+            this.nameEnterpriseLabel.Size = new System.Drawing.Size(169, 37);
+            this.nameEnterpriseLabel.TabIndex = 18;
+            this.nameEnterpriseLabel.Text = "Tên doanh nghiệp:";
+            this.nameEnterpriseLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // outOfDateLabel
+            // potentialLabel
             // 
-            this.outOfDateLabel.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.outOfDateLabel.Location = new System.Drawing.Point(47, 138);
-            this.outOfDateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.outOfDateLabel.Name = "outOfDateLabel";
-            this.outOfDateLabel.Size = new System.Drawing.Size(128, 37);
-            this.outOfDateLabel.TabIndex = 17;
-            this.outOfDateLabel.Text = "Tiềm năng:";
-            this.outOfDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.potentialLabel.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.potentialLabel.Location = new System.Drawing.Point(47, 138);
+            this.potentialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.potentialLabel.Name = "potentialLabel";
+            this.potentialLabel.Size = new System.Drawing.Size(128, 37);
+            this.potentialLabel.TabIndex = 17;
+            this.potentialLabel.Text = "Tiềm năng:";
+            this.potentialLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // emailLabel
             // 
@@ -318,16 +318,16 @@
             this.emailLabel.Text = "Email:";
             this.emailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // idContractLabel
+            // idEnterpriseLabel
             // 
-            this.idContractLabel.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.idContractLabel.Location = new System.Drawing.Point(4, 21);
-            this.idContractLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.idContractLabel.Name = "idContractLabel";
-            this.idContractLabel.Size = new System.Drawing.Size(171, 37);
-            this.idContractLabel.TabIndex = 7;
-            this.idContractLabel.Text = "Mã doanh nghiệp:";
-            this.idContractLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.idEnterpriseLabel.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.idEnterpriseLabel.Location = new System.Drawing.Point(4, 21);
+            this.idEnterpriseLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.idEnterpriseLabel.Name = "idEnterpriseLabel";
+            this.idEnterpriseLabel.Size = new System.Drawing.Size(171, 37);
+            this.idEnterpriseLabel.TabIndex = 7;
+            this.idEnterpriseLabel.Text = "Mã doanh nghiệp:";
+            this.idEnterpriseLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnSaveChanges
             // 
@@ -456,10 +456,10 @@
         private Guna.UI2.WinForms.Guna2ComboBox potentialCombobox;
         private Guna.UI2.WinForms.Guna2DataGridView positionList;
         private System.Windows.Forms.Label presentativeLabel;
-        private System.Windows.Forms.Label nameContractLabel;
-        private System.Windows.Forms.Label outOfDateLabel;
+        private System.Windows.Forms.Label nameEnterpriseLabel;
+        private System.Windows.Forms.Label potentialLabel;
         private System.Windows.Forms.Label emailLabel;
-        private System.Windows.Forms.Label idContractLabel;
+        private System.Windows.Forms.Label idEnterpriseLabel;
         private Guna.UI2.WinForms.Guna2Button btnSaveChanges;
         private Guna.UI2.WinForms.Guna2TextBox txtRepresentative;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;

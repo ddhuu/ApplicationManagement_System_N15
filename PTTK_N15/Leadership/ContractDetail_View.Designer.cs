@@ -108,7 +108,6 @@
             this.title.TabIndex = 9;
             this.title.Text = "Thông tin hợp đồng";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.title.Click += new System.EventHandler(this.title_Click);
             // 
             // panelMain
             // 

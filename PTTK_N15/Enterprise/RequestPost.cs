@@ -68,7 +68,7 @@ namespace PTTK_N15.Enterprise
                 var idJobDetail = JobDetailBUS.AddJobDetail(jobDetail);
 
 
-                double discount = EnterpriseDAO.GetDiscount(UserName);
+                double discount = EnterpriseBUS.GetDiscount(UserName);
                 double totalCost = CalculateTotalCost(dtpStartDate.Value, dtpEndDate.Value, cbxTypeAd.SelectedItem.ToString(), discount);
                 var jobPostInfo = new JobPostingDTO("Đang xét duyệt", totalCost, Id);
                 int JobPostId = JobPostingDAO.AddJobPost(jobPostInfo, idJobDetail);
