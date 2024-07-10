@@ -43,15 +43,15 @@
             this.listPostsDGV.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.listPostsDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.listPostsDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.listPostsDGV.ColumnHeadersHeight = 25;
+            this.listPostsDGV.ColumnHeadersHeight = 35;
             this.listPostsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -62,12 +62,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.listPostsDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.listPostsDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.listPostsDGV.Location = new System.Drawing.Point(12, 12);
+            this.listPostsDGV.Location = new System.Drawing.Point(30, 8);
+            this.listPostsDGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listPostsDGV.Name = "listPostsDGV";
             this.listPostsDGV.RowHeadersVisible = false;
             this.listPostsDGV.RowHeadersWidth = 82;
             this.listPostsDGV.RowTemplate.Height = 33;
-            this.listPostsDGV.Size = new System.Drawing.Size(1563, 765);
+            this.listPostsDGV.Size = new System.Drawing.Size(1020, 490);
             this.listPostsDGV.TabIndex = 0;
             this.listPostsDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.listPostsDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -81,7 +82,7 @@
             this.listPostsDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.listPostsDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.listPostsDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.listPostsDGV.ThemeStyle.HeaderStyle.Height = 25;
+            this.listPostsDGV.ThemeStyle.HeaderStyle.Height = 35;
             this.listPostsDGV.ThemeStyle.ReadOnly = false;
             this.listPostsDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.listPostsDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -94,10 +95,11 @@
             // 
             // ViewPosts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1587, 822);
+            this.ClientSize = new System.Drawing.Size(1058, 526);
             this.Controls.Add(this.listPostsDGV);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ViewPosts";
             this.Text = "ViewPosts";
             this.Load += new System.EventHandler(this.ViewPosts_Load);

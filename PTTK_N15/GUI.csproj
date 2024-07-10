@@ -205,6 +205,16 @@
     <Compile Include="Recruiter\PostJobDetail.Designer.cs">
       <DependentUpon>PostJobDetail.cs</DependentUpon>
     </Compile>
+    <None Include="Resources\browse-icon.png" />
+    <None Include="Resources\document-icon.png" />
+    <None Include="Resources\payment-icon.png" />
+    <None Include="Resources\view-icon.png" />
+    <None Include="Resources\upload-icon.png" />
+    <None Include="Resources\request-icon.png" />
+    <Content Include="Resource\browse-icon.png" />
+    <Content Include="Resource\request-icon.png" />
+    <Content Include="Resource\upload-icon.png" />
+    <Content Include="Resource\view-icon.png" />
     <EmbeddedResource Include="Candidate\ApplicationDetail.resx">
       <DependentUpon>ApplicationDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,7 +332,9 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Resource\banlanhdao.png" />
+    <Content Include="Resource\document-icon.png" />
     <Content Include="Resource\eye-icon.png" />
+    <Content Include="Resource\payment-icon.png" />
     <Content Include="Resource\reload-icon.png" />
     <Content Include="Resource\left-icon.png" />
     <Content Include="Resource\toggle.svg" />

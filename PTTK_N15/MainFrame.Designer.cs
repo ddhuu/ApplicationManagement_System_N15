@@ -32,18 +32,18 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbUserRole = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlCommon111 = new System.Windows.Forms.Panel();
+            this.lbTitle = new System.Windows.Forms.Label();
             this.processAplicationBtn = new Guna.UI2.WinForms.Guna2Button();
             this.approveCandidatesBtn = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewContract = new Guna.UI2.WinForms.Guna2Button();
+            this.thanhToanBtn = new Guna.UI2.WinForms.Guna2Button();
             this.viewPostsBTN = new Guna.UI2.WinForms.Guna2Button();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewPosts = new Guna.UI2.WinForms.Guna2Button();
             this.btnPostJob = new Guna.UI2.WinForms.Guna2Button();
             this.btnRequestPost = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlCommon111 = new System.Windows.Forms.Panel();
-            this.lbTitle = new System.Windows.Forms.Label();
-            this.thanhToanBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(258, 631);
+            this.guna2Panel1.Size = new System.Drawing.Size(258, 651);
             this.guna2Panel1.TabIndex = 0;
             // 
             // lbUserRole
@@ -90,6 +90,35 @@
             this.guna2Panel2.TabIndex = 3;
             this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Location = new System.Drawing.Point(35, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(173, 1);
+            this.label1.TabIndex = 2;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pnlCommon111
+            // 
+            this.pnlCommon111.Location = new System.Drawing.Point(261, 76);
+            this.pnlCommon111.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.pnlCommon111.Name = "pnlCommon111";
+            this.pnlCommon111.Size = new System.Drawing.Size(1090, 573);
+            this.pnlCommon111.TabIndex = 3;
+            this.pnlCommon111.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCommon111_Paint);
+            // 
+            // lbTitle
+            // 
+            this.lbTitle.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbTitle.Location = new System.Drawing.Point(261, 18);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(1090, 39);
+            this.lbTitle.TabIndex = 2;
+            this.lbTitle.Text = "Yêu cầu đăng tuyển";
+            this.lbTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // processAplicationBtn
             // 
             this.processAplicationBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -99,8 +128,8 @@
             this.processAplicationBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
             this.processAplicationBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.processAplicationBtn.ForeColor = System.Drawing.Color.Black;
-            this.processAplicationBtn.Image = ((System.Drawing.Image)(resources.GetObject("processAplicationBtn.Image")));
-            this.processAplicationBtn.Location = new System.Drawing.Point(0, 286);
+            this.processAplicationBtn.Image = global::PTTK_N15.Properties.Resources.browse_icon;
+            this.processAplicationBtn.Location = new System.Drawing.Point(0, 404);
             this.processAplicationBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.processAplicationBtn.Name = "processAplicationBtn";
             this.processAplicationBtn.Size = new System.Drawing.Size(255, 59);
@@ -117,8 +146,8 @@
             this.approveCandidatesBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
             this.approveCandidatesBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.approveCandidatesBtn.ForeColor = System.Drawing.Color.Black;
-            this.approveCandidatesBtn.Image = ((System.Drawing.Image)(resources.GetObject("approveCandidatesBtn.Image")));
-            this.approveCandidatesBtn.Location = new System.Drawing.Point(0, 227);
+            this.approveCandidatesBtn.Image = global::PTTK_N15.Properties.Resources.browse_icon;
+            this.approveCandidatesBtn.Location = new System.Drawing.Point(0, 345);
             this.approveCandidatesBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.approveCandidatesBtn.Name = "approveCandidatesBtn";
             this.approveCandidatesBtn.Size = new System.Drawing.Size(255, 59);
@@ -135,8 +164,9 @@
             this.btnViewContract.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
             this.btnViewContract.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnViewContract.ForeColor = System.Drawing.Color.Black;
-            this.btnViewContract.Image = ((System.Drawing.Image)(resources.GetObject("btnViewContract.Image")));
-            this.btnViewContract.Location = new System.Drawing.Point(0, 168);
+            this.btnViewContract.Image = global::PTTK_N15.Properties.Resources.document_icon;
+            this.btnViewContract.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnViewContract.Location = new System.Drawing.Point(0, 286);
             this.btnViewContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnViewContract.Name = "btnViewContract";
             this.btnViewContract.Size = new System.Drawing.Size(255, 59);
@@ -144,24 +174,23 @@
             this.btnViewContract.Text = "Xem hợp đồng";
             this.btnViewContract.Click += new System.EventHandler(this.btnViewContract_Click);
             // 
-            // btnSignOut
+            // thanhToanBtn
             // 
-            this.btnSignOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSignOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSignOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSignOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
-            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSignOut.ForeColor = System.Drawing.Color.Black;
-            this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
-            this.btnSignOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSignOut.Location = new System.Drawing.Point(48, 442);
-            this.btnSignOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(160, 36);
-            this.btnSignOut.TabIndex = 9;
-            this.btnSignOut.Text = "Đăng xuất";
-            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            this.thanhToanBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.thanhToanBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.thanhToanBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.thanhToanBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.thanhToanBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
+            this.thanhToanBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.thanhToanBtn.ForeColor = System.Drawing.Color.Black;
+            this.thanhToanBtn.Image = global::PTTK_N15.Properties.Resources.payment_icon;
+            this.thanhToanBtn.Location = new System.Drawing.Point(0, 227);
+            this.thanhToanBtn.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.thanhToanBtn.Name = "thanhToanBtn";
+            this.thanhToanBtn.Size = new System.Drawing.Size(255, 59);
+            this.thanhToanBtn.TabIndex = 11;
+            this.thanhToanBtn.Text = "Thanh Toán";
+            this.thanhToanBtn.Click += new System.EventHandler(this.thanhToanBtn_Click);
             // 
             // viewPostsBTN
             // 
@@ -172,7 +201,7 @@
             this.viewPostsBTN.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
             this.viewPostsBTN.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.viewPostsBTN.ForeColor = System.Drawing.Color.Black;
-            this.viewPostsBTN.Image = ((System.Drawing.Image)(resources.GetObject("viewPostsBTN.Image")));
+            this.viewPostsBTN.Image = global::PTTK_N15.Properties.Resources.view_icon;
             this.viewPostsBTN.Location = new System.Drawing.Point(0, 168);
             this.viewPostsBTN.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.viewPostsBTN.Name = "viewPostsBTN";
@@ -193,6 +222,7 @@
             this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
             this.btnSignOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSignOut.Location = new System.Drawing.Point(48, 442);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(160, 36);
             this.btnSignOut.TabIndex = 9;
@@ -208,7 +238,7 @@
             this.btnViewPosts.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
             this.btnViewPosts.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnViewPosts.ForeColor = System.Drawing.Color.Black;
-            this.btnViewPosts.Image = ((System.Drawing.Image)(resources.GetObject("btnViewPosts.Image")));
+            this.btnViewPosts.Image = global::PTTK_N15.Properties.Resources.view_icon;
             this.btnViewPosts.Location = new System.Drawing.Point(0, 109);
             this.btnViewPosts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnViewPosts.Name = "btnViewPosts";
@@ -226,7 +256,7 @@
             this.btnPostJob.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
             this.btnPostJob.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnPostJob.ForeColor = System.Drawing.Color.Black;
-            this.btnPostJob.Image = ((System.Drawing.Image)(resources.GetObject("btnPostJob.Image")));
+            this.btnPostJob.Image = global::PTTK_N15.Properties.Resources.upload_icon;
             this.btnPostJob.Location = new System.Drawing.Point(0, 50);
             this.btnPostJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPostJob.Name = "btnPostJob";
@@ -245,7 +275,7 @@
             this.btnRequestPost.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
             this.btnRequestPost.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnRequestPost.ForeColor = System.Drawing.Color.Black;
-            this.btnRequestPost.Image = ((System.Drawing.Image)(resources.GetObject("btnRequestPost.Image")));
+            this.btnRequestPost.Image = global::PTTK_N15.Properties.Resources.request_icon;
             this.btnRequestPost.Location = new System.Drawing.Point(0, 0);
             this.btnRequestPost.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnRequestPost.Name = "btnRequestPost";
@@ -254,67 +284,12 @@
             this.btnRequestPost.Text = "Yêu cầu đăng tuyển";
             this.btnRequestPost.Click += new System.EventHandler(this.btnRequestPost_Click_1);
             // 
-            // label1
-            // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(35, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 1);
-            this.label1.TabIndex = 2;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lbTitle
-            // 
-            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(699, 36);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(369, 39);
-            this.lbTitle.TabIndex = 2;
-            this.lbTitle.Text = "Yêu cầu đăng tuyển";
-            // 
-            // pnlCommon111
-            // 
-            this.pnlCommon111.Location = new System.Drawing.Point(261, 76);
-            this.pnlCommon111.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.pnlCommon111.Name = "pnlCommon111";
-            this.pnlCommon111.Size = new System.Drawing.Size(1024, 580);
-            this.pnlCommon111.TabIndex = 3;
-            this.pnlCommon111.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCommon111_Paint);
-            // 
-            // lbTitle
-            // 
-            this.lbTitle.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbTitle.Location = new System.Drawing.Point(261, 18);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(1090, 39);
-            this.lbTitle.TabIndex = 2;
-            this.lbTitle.Text = "Yêu cầu đăng tuyển";
-            this.lbTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // thanhToanBtn
-            // 
-            this.thanhToanBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.thanhToanBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.thanhToanBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.thanhToanBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.thanhToanBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
-            this.thanhToanBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.thanhToanBtn.ForeColor = System.Drawing.Color.Black;
-            this.thanhToanBtn.Image = ((System.Drawing.Image)(resources.GetObject("thanhToanBtn.Image")));
-            this.thanhToanBtn.Location = new System.Drawing.Point(0, 227);
-            this.thanhToanBtn.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.thanhToanBtn.Name = "thanhToanBtn";
-            this.thanhToanBtn.Size = new System.Drawing.Size(255, 59);
-            this.thanhToanBtn.TabIndex = 11;
-            this.thanhToanBtn.Text = "Thanh Toán";
-            this.thanhToanBtn.Click += new System.EventHandler(this.thanhToanBtn_Click);
-            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1352, 631);
+            this.ClientSize = new System.Drawing.Size(1353, 651);
             this.Controls.Add(this.pnlCommon111);
             this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.guna2Panel1);

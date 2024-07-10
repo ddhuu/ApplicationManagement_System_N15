@@ -53,13 +53,13 @@
             this.EmailTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.EmailTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.EmailTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.EmailTextBox.Location = new System.Drawing.Point(572, 117);
+            this.EmailTextBox.Location = new System.Drawing.Point(612, 164);
             this.EmailTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.PasswordChar = '\0';
             this.EmailTextBox.PlaceholderText = "";
             this.EmailTextBox.SelectedText = "";
-            this.EmailTextBox.Size = new System.Drawing.Size(241, 37);
+            this.EmailTextBox.Size = new System.Drawing.Size(250, 37);
             this.EmailTextBox.TabIndex = 45;
             // 
             // AddressTextBox
@@ -74,7 +74,7 @@
             this.AddressTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.AddressTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddressTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AddressTextBox.Location = new System.Drawing.Point(146, 119);
+            this.AddressTextBox.Location = new System.Drawing.Point(195, 166);
             this.AddressTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AddressTextBox.Name = "AddressTextBox";
             this.AddressTextBox.PasswordChar = '\0';
@@ -86,7 +86,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.Location = new System.Drawing.Point(12, 168);
+            this.label1.Location = new System.Drawing.Point(61, 219);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 37);
@@ -97,7 +97,7 @@
             // emailAddress
             // 
             this.emailAddress.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.emailAddress.Location = new System.Drawing.Point(442, 118);
+            this.emailAddress.Location = new System.Drawing.Point(491, 165);
             this.emailAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emailAddress.Name = "emailAddress";
             this.emailAddress.Size = new System.Drawing.Size(128, 37);
@@ -121,7 +121,7 @@
             // nameContractLabel
             // 
             this.nameContractLabel.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.nameContractLabel.Location = new System.Drawing.Point(442, 65);
+            this.nameContractLabel.Location = new System.Drawing.Point(491, 112);
             this.nameContractLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameContractLabel.Name = "nameContractLabel";
             this.nameContractLabel.Size = new System.Drawing.Size(103, 37);
@@ -132,7 +132,7 @@
             // emailLabel
             // 
             this.emailLabel.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.emailLabel.Location = new System.Drawing.Point(12, 117);
+            this.emailLabel.Location = new System.Drawing.Point(61, 164);
             this.emailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(128, 37);
@@ -143,7 +143,7 @@
             // ApplicantName
             // 
             this.ApplicantName.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ApplicantName.Location = new System.Drawing.Point(12, 64);
+            this.ApplicantName.Location = new System.Drawing.Point(61, 111);
             this.ApplicantName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ApplicantName.Name = "ApplicantName";
             this.ApplicantName.Size = new System.Drawing.Size(128, 37);
@@ -158,7 +158,7 @@
             this.DOBTextBox.FillColor = System.Drawing.Color.White;
             this.DOBTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DOBTextBox.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DOBTextBox.Location = new System.Drawing.Point(563, 66);
+            this.DOBTextBox.Location = new System.Drawing.Point(612, 113);
             this.DOBTextBox.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DOBTextBox.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DOBTextBox.Name = "DOBTextBox";
@@ -178,13 +178,13 @@
             this.PhoneNumberTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.PhoneNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.PhoneNumberTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PhoneNumberTextBox.Location = new System.Drawing.Point(146, 168);
+            this.PhoneNumberTextBox.Location = new System.Drawing.Point(195, 220);
             this.PhoneNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
             this.PhoneNumberTextBox.PasswordChar = '\0';
             this.PhoneNumberTextBox.PlaceholderText = "";
             this.PhoneNumberTextBox.SelectedText = "";
-            this.PhoneNumberTextBox.Size = new System.Drawing.Size(200, 46);
+            this.PhoneNumberTextBox.Size = new System.Drawing.Size(200, 36);
             this.PhoneNumberTextBox.TabIndex = 36;
             // 
             // txtApplicantName
@@ -199,7 +199,7 @@
             this.txtApplicantName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtApplicantName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtApplicantName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtApplicantName.Location = new System.Drawing.Point(146, 66);
+            this.txtApplicantName.Location = new System.Drawing.Point(195, 113);
             this.txtApplicantName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtApplicantName.Name = "txtApplicantName";
             this.txtApplicantName.PasswordChar = '\0';

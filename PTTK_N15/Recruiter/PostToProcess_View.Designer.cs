@@ -77,7 +77,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.PostToProcess.DefaultCellStyle = dataGridViewCellStyle3;
             this.PostToProcess.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.PostToProcess.Location = new System.Drawing.Point(22, 98);
+            this.PostToProcess.Location = new System.Drawing.Point(16, 11);
             this.PostToProcess.Margin = new System.Windows.Forms.Padding(4);
             this.PostToProcess.Name = "PostToProcess";
             this.PostToProcess.ReadOnly = true;
@@ -95,7 +95,7 @@
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.PostToProcess.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.PostToProcess.Size = new System.Drawing.Size(830, 307);
+            this.PostToProcess.Size = new System.Drawing.Size(1042, 509);
             this.PostToProcess.TabIndex = 42;
             this.PostToProcess.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.PostToProcess.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -158,13 +158,13 @@
             this.PostToProcessPanel.Controls.Add(this.PostToProcess);
             this.PostToProcessPanel.Location = new System.Drawing.Point(6, 2);
             this.PostToProcessPanel.Name = "PostToProcessPanel";
-            this.PostToProcessPanel.Size = new System.Drawing.Size(886, 466);
+            this.PostToProcessPanel.Size = new System.Drawing.Size(1090, 573);
             this.PostToProcessPanel.TabIndex = 43;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(337, 225);
+            this.label1.Location = new System.Drawing.Point(445, 194);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(213, 16);
             this.label1.TabIndex = 43;
@@ -174,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 468);
+            this.ClientSize = new System.Drawing.Size(1096, 576);
             this.Controls.Add(this.PostToProcessPanel);
             this.Name = "PostToProcess_View";
             this.Text = "PostToProcess_View";
