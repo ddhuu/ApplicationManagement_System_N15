@@ -73,14 +73,11 @@ namespace PTTK_N15.Recruiter
                 }
             }
         }
-        public void ReLoadData(object sender, EventArgs e)
+ 
+        public void ReLoadData()
         {
             this._bindingSource.DataSource = ApplicationBUS.getAllPostToProcess(enterpriseID);
             PostToProcess.DataSource = this._bindingSource;
-        }
-        public void ReLoadData()
-        {
-            
         }
     }
 }

@@ -53,7 +53,7 @@
             this.txbSoTien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbSoTien.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txbSoTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbSoTien.Location = new System.Drawing.Point(512, 359);
+            this.txbSoTien.Location = new System.Drawing.Point(510, 386);
             this.txbSoTien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbSoTien.Name = "txbSoTien";
             this.txbSoTien.PasswordChar = '\0';
@@ -66,7 +66,7 @@
             // 
             this.lbSoTien.AutoSize = true;
             this.lbSoTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoTien.Location = new System.Drawing.Point(402, 359);
+            this.lbSoTien.Location = new System.Drawing.Point(400, 396);
             this.lbSoTien.Name = "lbSoTien";
             this.lbSoTien.Size = new System.Drawing.Size(66, 20);
             this.lbSoTien.TabIndex = 44;
@@ -85,7 +85,7 @@
             this.hinhThucCB.Items.AddRange(new object[] {
             "Thanh toán bằng tiền mặt",
             "Thanh toán bằng thẻ"});
-            this.hinhThucCB.Location = new System.Drawing.Point(512, 282);
+            this.hinhThucCB.Location = new System.Drawing.Point(510, 319);
             this.hinhThucCB.Name = "hinhThucCB";
             this.hinhThucCB.Size = new System.Drawing.Size(310, 36);
             this.hinhThucCB.StartIndex = 0;
@@ -101,7 +101,7 @@
             this.btnThanhToan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(195)))), ((int)(((byte)(231)))));
             this.btnThanhToan.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnThanhToan.ForeColor = System.Drawing.Color.Black;
-            this.btnThanhToan.Location = new System.Drawing.Point(602, 453);
+            this.btnThanhToan.Location = new System.Drawing.Point(476, 469);
             this.btnThanhToan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(174, 51);
@@ -113,7 +113,7 @@
             // 
             this.lbHinhThuc.AutoSize = true;
             this.lbHinhThuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHinhThuc.Location = new System.Drawing.Point(295, 282);
+            this.lbHinhThuc.Location = new System.Drawing.Point(293, 319);
             this.lbHinhThuc.Name = "lbHinhThuc";
             this.lbHinhThuc.Size = new System.Drawing.Size(174, 20);
             this.lbHinhThuc.TabIndex = 41;
@@ -123,7 +123,7 @@
             // 
             this.lbSoTienCon.AutoSize = true;
             this.lbSoTienCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoTienCon.Location = new System.Drawing.Point(325, 222);
+            this.lbSoTienCon.Location = new System.Drawing.Point(323, 259);
             this.lbSoTienCon.Name = "lbSoTienCon";
             this.lbSoTienCon.Size = new System.Drawing.Size(144, 20);
             this.lbSoTienCon.TabIndex = 40;
@@ -133,7 +133,7 @@
             // 
             this.lbTongTien.AutoSize = true;
             this.lbTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTongTien.Location = new System.Drawing.Point(380, 72);
+            this.lbTongTien.Location = new System.Drawing.Point(378, 109);
             this.lbTongTien.Name = "lbTongTien";
             this.lbTongTien.Size = new System.Drawing.Size(88, 20);
             this.lbTongTien.TabIndex = 39;
@@ -143,7 +143,7 @@
             // 
             this.lbMaPhieu.AutoSize = true;
             this.lbMaPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaPhieu.Location = new System.Drawing.Point(296, 26);
+            this.lbMaPhieu.Location = new System.Drawing.Point(294, 63);
             this.lbMaPhieu.Name = "lbMaPhieu";
             this.lbMaPhieu.Size = new System.Drawing.Size(173, 20);
             this.lbMaPhieu.TabIndex = 38;
@@ -158,7 +158,7 @@
             // 
             this.lbLanTT.AutoSize = true;
             this.lbLanTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLanTT.Location = new System.Drawing.Point(338, 117);
+            this.lbLanTT.Location = new System.Drawing.Point(336, 154);
             this.lbLanTT.Name = "lbLanTT";
             this.lbLanTT.Size = new System.Drawing.Size(130, 20);
             this.lbLanTT.TabIndex = 46;
@@ -168,7 +168,7 @@
             // 
             this.lbDotTT.AutoSize = true;
             this.lbDotTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDotTT.Location = new System.Drawing.Point(338, 167);
+            this.lbDotTT.Location = new System.Drawing.Point(336, 204);
             this.lbDotTT.Name = "lbDotTT";
             this.lbDotTT.Size = new System.Drawing.Size(128, 20);
             this.lbDotTT.TabIndex = 47;

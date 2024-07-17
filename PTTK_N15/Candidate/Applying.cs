@@ -133,7 +133,7 @@ namespace PTTK_N15.Candidate
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 openFileDialog.Filter = "PDF files (*.pdf)|*.pdf";
                 openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;

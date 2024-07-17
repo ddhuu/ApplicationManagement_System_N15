@@ -310,7 +310,7 @@ go
 create or alter proc AddJobDetail
     @quantity int,
     @position nvarchar(50),
-	@description nvarchar(1000),
+	@description nvarchar(500),
     @dayPosting int,
     @startDate date,
     @endDate date,
@@ -325,13 +325,24 @@ begin
     SELECT @MaxMaND = ISNULL(MAX(MaND), 0) + 1 FROM NoiDungDangTuyen;
 
     INSERT INTO NoiDungDangTuyen(MaND, SoLuongTuyen, ViTriCanTuyen, ThoiGianDangTuyen,MoTa, NgayBatDau, NgayKetThuc)
-    VALUES(@MaxMaND, @quantity, @position, @dayPosting,@description, @startDate, @endDate);
+    VALUES(@MaxMaND, @quantity, @position, @dayPosting, @description, @startDate, @endDate);
 
     
     SET @idDetailJob = @MaxMaND;
 end
 go
 
+DECLARE @MaND_temp int
+EXEC AddJobDetail @quantity = 3, @position = N'Phát triển web', @description = N'Phát triển web', @dayPosting = 18, @startDate = '2024-07-18', @endDate = '2024-07-20', @idDetailJob = @MaND_temp OUTPUT
+
+SELECT * FROM PhieuDangTuyen
+SELECT * FROM NoiDungDangTuyen
+SELECT * FROM QuangCao
+SELECT * FROM HopDong
+DELETE FROM HopDong WHERE MaHopDong >= 21
+DELETE FROM PhieuDangTuyen WHERE MaPhieuDT >= 21
+DELETE FROM NoiDungDangTuyen WHERE MaND >= 21
+SELECT * FROM NguoiDung
 
 create or alter procedure GetDisCount @userName varchar(30) , @discount int output
 as

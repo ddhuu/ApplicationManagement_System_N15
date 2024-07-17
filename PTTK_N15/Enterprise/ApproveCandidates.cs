@@ -14,6 +14,10 @@ namespace PTTK_N15.Enterprise
         private BindingSource bindingSource;
         private int postID;
         private MainFrame mainFrame;
+        public event EventHandler dataUpdated;
+
+        public delegate void PostSuccessHandler();
+        public event PostSuccessHandler PostSuccessEvent;
         public ApproveCandidates(int postID, MainFrame mainFrame)
         {
             InitializeComponent();
@@ -76,11 +80,11 @@ namespace PTTK_N15.Enterprise
                 pair += entry.Key.ToString() + entry.Value;
             }
 
-            MessageBox.Show("Đã gửi hồ sơ tới doanh nghiệp " + pair);
-
+            MessageBox.Show("Duyệt thành công.");
+/*            dataUpdated?.Invoke(this, EventArgs.Empty);*/
             this.Dispose();
             int enterpriseID;
-            if (mainFrame.UserName.Equals("DoanhNghiep"))
+            if (mainFrame.Role.Equals("DoanhNghiep"))
             {
                 enterpriseID = EnterpriseBUS.getEnterpriseID(mainFrame.UserName);
             }
@@ -88,8 +92,13 @@ namespace PTTK_N15.Enterprise
             {
                 enterpriseID = 0;
             }
+            /*mainFrame.Refresh();
+            var postToProcess = new PostToProcess_View(enterpriseID, mainFrame);
+*//*            postToProcess.ReLoadData();*//*
             mainFrame.Show();
-            mainFrame.OpenChildForm(new PostToProcess_View(enterpriseID, mainFrame), sender);
+            mainFrame.OpenChildForm(postToProcess, sender);*/
+            PostSuccessEvent?.Invoke();
+            this.Close();
         }
 
         private void ApproveCandidates_Load(object sender, EventArgs e)

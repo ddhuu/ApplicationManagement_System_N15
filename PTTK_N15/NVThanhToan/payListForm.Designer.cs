@@ -31,27 +31,27 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.contractList = new Guna.UI2.WinForms.Guna2DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.contractList)).BeginInit();
+            this.paymentList = new Guna.UI2.WinForms.Guna2DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentList)).BeginInit();
             this.SuspendLayout();
             // 
-            // contractList
+            // paymentList
             // 
-            this.contractList.AllowUserToAddRows = false;
-            this.contractList.AllowUserToDeleteRows = false;
+            this.paymentList.AllowUserToAddRows = false;
+            this.paymentList.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.contractList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.contractList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.paymentList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.paymentList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.contractList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.contractList.ColumnHeadersHeight = 34;
-            this.contractList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.paymentList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.paymentList.ColumnHeadersHeight = 35;
+            this.paymentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -59,54 +59,54 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.contractList.DefaultCellStyle = dataGridViewCellStyle3;
-            this.contractList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.contractList.Location = new System.Drawing.Point(28, 94);
-            this.contractList.Margin = new System.Windows.Forms.Padding(4);
-            this.contractList.MultiSelect = false;
-            this.contractList.Name = "contractList";
-            this.contractList.ReadOnly = true;
-            this.contractList.RowHeadersVisible = false;
-            this.contractList.RowHeadersWidth = 51;
-            this.contractList.Size = new System.Drawing.Size(943, 416);
-            this.contractList.TabIndex = 4;
-            this.contractList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.contractList.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.contractList.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.contractList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.contractList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.contractList.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.contractList.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.contractList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.contractList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.contractList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contractList.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.contractList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.contractList.ThemeStyle.HeaderStyle.Height = 34;
-            this.contractList.ThemeStyle.ReadOnly = true;
-            this.contractList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.contractList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.contractList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contractList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.contractList.ThemeStyle.RowsStyle.Height = 22;
-            this.contractList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.contractList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.contractList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.contractList_CellClick);
+            this.paymentList.DefaultCellStyle = dataGridViewCellStyle3;
+            this.paymentList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.paymentList.Location = new System.Drawing.Point(76, 37);
+            this.paymentList.Margin = new System.Windows.Forms.Padding(4);
+            this.paymentList.MultiSelect = false;
+            this.paymentList.Name = "paymentList";
+            this.paymentList.ReadOnly = true;
+            this.paymentList.RowHeadersVisible = false;
+            this.paymentList.RowHeadersWidth = 51;
+            this.paymentList.Size = new System.Drawing.Size(943, 416);
+            this.paymentList.TabIndex = 4;
+            this.paymentList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.paymentList.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.paymentList.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.paymentList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.paymentList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.paymentList.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.paymentList.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.paymentList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.paymentList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.paymentList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentList.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.paymentList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.paymentList.ThemeStyle.HeaderStyle.Height = 35;
+            this.paymentList.ThemeStyle.ReadOnly = true;
+            this.paymentList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.paymentList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.paymentList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.paymentList.ThemeStyle.RowsStyle.Height = 22;
+            this.paymentList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.paymentList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.paymentList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.contractList_CellClick);
             // 
             // payListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 533);
-            this.Controls.Add(this.contractList);
+            this.ClientSize = new System.Drawing.Size(1072, 526);
+            this.Controls.Add(this.paymentList);
             this.Name = "payListForm";
             this.Text = "payListForm";
-            ((System.ComponentModel.ISupportInitialize)(this.contractList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentList)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2DataGridView contractList;
+        private Guna.UI2.WinForms.Guna2DataGridView paymentList;
     }
 }

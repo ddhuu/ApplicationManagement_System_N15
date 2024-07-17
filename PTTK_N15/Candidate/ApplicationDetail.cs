@@ -32,7 +32,8 @@ namespace PTTK_N15.Candidate
             DOBTextBox.Enabled = false;
             //string path = "D:\\InformationSysDesign\\PTTK-N15\\PTTK_N15\\Resource\\CV.pdf";
             //LoadFile(path);
-            LoadPDf(applicationDetailDTO1.record);
+
+            LoadPDf(@"..\..\..\Resume\" + applicationDetailDTO1.record);
 
 
 

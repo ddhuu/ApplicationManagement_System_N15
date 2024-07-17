@@ -61,7 +61,7 @@ namespace PTTK_N15.Recruiter
                     string status = "Không đủ điều kiện";
                     if (isChecked)
                     {
-                        status = "Đã xử lí";
+                        status = "Đã xử lý";
                     }
                     
                     applicationStatus.Add(new KeyValuePair<int, string>(applicationID, status));
@@ -74,14 +74,14 @@ namespace PTTK_N15.Recruiter
             string pair = "";
             foreach(var entry in applicationStatus)
             {
-                pair += entry.Key.ToString() + entry.Value;
+                pair += entry.Key.ToString() + " " + entry.Value;
             }
             
-            MessageBox.Show("Đã gửi hồ sơ tới doanh nghiệp " + pair);
+            MessageBox.Show("Đã gửi hồ sơ tới doanh nghiệp.");
             dataUpdated?.Invoke(this, EventArgs.Empty);
             this.Dispose();
             int enterpriseID;
-            if (mainFrame.UserName.Equals("DoanhNghiep"))
+            if (mainFrame.Role.Equals("DoanhNghiep"))
             {
                 enterpriseID = EnterpriseBUS.getEnterpriseID(mainFrame.UserName);
             }
@@ -89,15 +89,11 @@ namespace PTTK_N15.Recruiter
             {
                 enterpriseID = 0;
             }
-            enterpriseID = 1;
             mainFrame.Refresh();
             var postToProcess = new PostToProcess_View(enterpriseID, mainFrame);
-            postToProcess.Show();
             postToProcess.ReLoadData();
-            MainFrame f = new MainFrame(mainFrame.UserName, mainFrame.Role, mainFrame.Id);
-            f.Show();
-            //mainFrame.Show();
-            //mainFrame.OpenChildForm(postToProcess, sender);
+            mainFrame.Show();
+            mainFrame.OpenChildForm(postToProcess, sender);
 
 
 
@@ -144,6 +140,7 @@ namespace PTTK_N15.Recruiter
             //View post details
             //Waiting for Hữu section
             
+            
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -159,7 +156,7 @@ namespace PTTK_N15.Recruiter
                     string status = "Không đủ điều kiện";
                     if (isChecked)
                     {
-                        status = "Đã xử lí";
+                        status = "Đã xử lý";
                     }
 
                     applicationStatus.Add(new KeyValuePair<int, string>(applicationID, status));
@@ -175,11 +172,11 @@ namespace PTTK_N15.Recruiter
                 pair += entry.Key.ToString() + entry.Value;
             }
 
-            MessageBox.Show("Đã gửi hồ sơ tới doanh nghiệp " + pair);
+            MessageBox.Show("Đã gửi hồ sơ tới doanh nghiệp.");
 
             this.Dispose();
             int enterpriseID;
-            if (mainFrame.UserName.Equals("DoanhNghiep"))
+            if (mainFrame.Role.Equals("DoanhNghiep"))
             {
                 enterpriseID = EnterpriseBUS.getEnterpriseID(mainFrame.UserName);
             }
@@ -187,8 +184,7 @@ namespace PTTK_N15.Recruiter
             {
                 enterpriseID = 0;
             }
-            mainFrame.Show();
-            mainFrame.OpenChildForm(new PostToProcess_View(enterpriseID, mainFrame), sender);
+
         }
     }
 }

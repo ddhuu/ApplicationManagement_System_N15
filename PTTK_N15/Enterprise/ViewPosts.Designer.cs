@@ -74,7 +74,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_JobPost.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_JobPost.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_JobPost.Location = new System.Drawing.Point(16, 15);
+            this.dgv_JobPost.Location = new System.Drawing.Point(31, 15);
             this.dgv_JobPost.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_JobPost.Name = "dgv_JobPost";
             this.dgv_JobPost.ReadOnly = true;
@@ -90,7 +90,7 @@
             this.dgv_JobPost.RowHeadersVisible = false;
             this.dgv_JobPost.RowHeadersWidth = 51;
             this.dgv_JobPost.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgv_JobPost.Size = new System.Drawing.Size(1043, 496);
+            this.dgv_JobPost.Size = new System.Drawing.Size(1028, 496);
             this.dgv_JobPost.TabIndex = 0;
             this.dgv_JobPost.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_JobPost.ThemeStyle.AlternatingRowsStyle.Font = null;

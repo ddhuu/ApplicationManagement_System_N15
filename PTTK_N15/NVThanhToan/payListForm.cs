@@ -19,7 +19,7 @@ namespace PTTK_N15.NVThanhToan
             InitializeComponent();
             string response = null;
             id = Int32.Parse(NVThanhToanBUS.getMaNV(userName,ref response));  
-            contractList.DataSource = NVThanhToanBUS.getListTT(ref response);
+            paymentList.DataSource = NVThanhToanBUS.getListTT(ref response);
             if(response != null)
             {
                 MessageBox.Show(response);
@@ -31,13 +31,13 @@ namespace PTTK_N15.NVThanhToan
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = contractList.Rows[e.RowIndex];
+                DataGridViewRow row = paymentList.Rows[e.RowIndex];
                 int MaPhieuDT = Int32.Parse(row.Cells["MaPhieuDT"].Value.ToString());
                 payForm f = new payForm(MaPhieuDT,id);
                 this.Hide();
                 f.ShowDialog();
                 string response = null;
-                contractList.DataSource = NVThanhToanBUS.getListTT(ref response);
+                paymentList.DataSource = NVThanhToanBUS.getListTT(ref response);
                 if(response != null)
                 {
                     MessageBox.Show(response);

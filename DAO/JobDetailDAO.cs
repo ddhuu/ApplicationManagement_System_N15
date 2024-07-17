@@ -18,7 +18,7 @@ namespace DAO
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@position", job.Position);
                     cmd.Parameters.AddWithValue("@quantity", job.Quantity);
-                    cmd.Parameters.AddWithValue("@description", job.Description);
+                    cmd.Parameters.Add(new SqlParameter("@description", SqlDbType.NVarChar, 500) { Value = job.Description });
                     cmd.Parameters.AddWithValue("@startDate", job.StartDate);
                     cmd.Parameters.AddWithValue("@endDate", job.EndDate);
                     cmd.Parameters.AddWithValue("@dayPosting", job.DayPosting);
