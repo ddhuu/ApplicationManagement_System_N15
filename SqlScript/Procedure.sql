@@ -167,15 +167,19 @@ GO
 
 
 
-CREATE PROCEDURE GetPostDetail @id int
+CREATE OR ALTER PROCEDURE GetPostDetail @id int
 AS
 BEGIN
     select d.TenDN, d.DiaChi, d.Email, n.*, t.MoTa as TieuChi
-    from PhieuDangTuyen as p, DoanhNghiep as d, NoiDungDangTuyen as n, TieuChi as t
-	where p.MaDN = d.MaDN and p.MaND = n.MaND and t.MaND = n.MaND and p.TrangThai = N'Chấp nhận' and p.MaPhieuDT = @id
+    from PhieuDangTuyen as p JOIN DoanhNghiep as d ON p.MaDN = d.MaDN
+	INNER JOIN NoiDungDangTuyen as n ON p.MaND = n.MaND
+	LEFT JOIN TieuChi as t ON t.MaND = n.MaND
+	where p.TrangThai = N'Chấp nhận' and p.MaPhieuDT = @id
 END;
 GO
-
+SELECT * FROM PhieuDangTuyen
+SELECT * FROM NoiDungDangTuyen
+SELECT * FROM TieuChi
 
 CREATE PROCEDURE GetCandidateInformation @username varchar(50)
 AS

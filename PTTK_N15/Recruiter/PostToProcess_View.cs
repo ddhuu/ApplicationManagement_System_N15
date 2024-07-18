@@ -59,7 +59,7 @@ namespace PTTK_N15.Recruiter
                     if (_mainFrame.Role.Equals("DoanhNghiep"))
                     {
                         ApproveCandidates processApplication = new ApproveCandidates(postID, _mainFrame);
-                        
+                        processApplication.PostSuccessEvent += ReLoadData;
                         processApplication.Show();
                     }
                     else
@@ -73,11 +73,15 @@ namespace PTTK_N15.Recruiter
                 }
             }
         }
- 
+
         public void ReLoadData()
         {
             this._bindingSource.DataSource = ApplicationBUS.getAllPostToProcess(enterpriseID);
             PostToProcess.DataSource = this._bindingSource;
         }
+/*        public void ReLoadData()
+        {
+
+        }*/
     }
 }
